@@ -1,0 +1,15 @@
+{
+  "name": "bettrboxd",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "types": "wrangler types",
+    "build:beautify": "esbuild src/index.js --bundle --format=esm --minify=false --legal-comments=none --outfile=src/index.beautified.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.27.3",
+    "wrangler": "4.64.0"
+  }
+}

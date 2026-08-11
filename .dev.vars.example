@@ -1,0 +1,6 @@
+# Copy to .dev.vars for local development (never commit .dev.vars)
+# TMDB_API_READ_TOKEN is also a Cloudflare secret on the production worker.
+TMDB_API_READ_TOKEN=
+
+# Convenience for local testing: auto-login without credentials
+DEV_AUTO_LOGIN=true

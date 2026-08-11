@@ -1,0 +1,43 @@
+{
+  "name": "bettrboxd",
+  "main": "src/index.js",
+  "compatibility_date": "2026-08-01",
+  "assets": {
+    "directory": "./frontend",
+    "binding": "ASSETS"
+  },
+  "vars": {
+    "ALLOW_ACCESS_AUTH": "false",
+    "API_AUTH_USER_ID": "6f452b75-3d8d-4db4-b4b7-0bb64f23bd88",
+    "AUTH_USERNAME": "KaydenThomas",
+    "CORS_ORIGINS": "",
+    "CF_ACCESS_PRIMARY_SUBJECT": "",
+    "DEV_AUTO_LOGIN": "false"
+  },
+  "ratelimits": [
+    {
+      "name": "API_RATE_LIMITER",
+      "namespace_id": "1002",
+      "simple": {
+        "limit": 120,
+        "period": 60
+      }
+    },
+    {
+      "name": "AUTH_RATE_LIMITER",
+      "namespace_id": "1001",
+      "simple": {
+        "limit": 10,
+        "period": 60
+      }
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "bettrboxd",
+      "database_id": "abe9a4fc-b471-4bcf-b4df-0fbd33375396",
+      "migrations_dir": "migrations"
+    }
+  ]
+}
