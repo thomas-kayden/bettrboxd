@@ -4,3 +4,7 @@
 input.kumo-input-placeholder{border:1px solid var(--color-kumo-line)!important;background-color:var(--color-kumo-base)!important}
 .auth-password-input input.kumo-input-placeholder{border:0!important;background:transparent!important}
 input.kumo-input-placeholder[aria-invalid=true]{border-color:var(--color-kumo-danger)!important}
+
+/* bettrboxd-fix: top-nav-layout sticky header had a transparent background, so the nav vanished while scrolling. Restore the themed background + bottom border. */
+.top-nav-layout header{background:linear-gradient(#192228fa,#0f161bfa)!important;border-bottom:1px solid #ffffff12!important}
+[data-theme=light] .top-nav-layout header{background:linear-gradient(#f8f6f1fa,#eceae4fa)!important;border-bottom:1px solid #d5d1c8!important}
