@@ -14,10 +14,163 @@
       } catch {}
     </script>
     <title>Bettrboxd | Your films, your words</title>
-    <script type="module" crossorigin src="/assets/index-D7aCFurX.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DtI_J7EJ.css">
+    <script>
+      (function () {
+        var NativeMutationObserver = window.MutationObserver;
+        window.MutationObserver = function (callback) {
+          return new NativeMutationObserver(function (records, observer) {
+            var onlySvgChanges = records.length > 0 && records.every(function (record) {
+              return record.addedNodes.length > 0 && Array.prototype.every.call(record.addedNodes, function (node) {
+                return node.nodeType === 1 && (node.tagName === "svg" || (node.querySelector && node.querySelector("svg")));
+              });
+            });
+            if (!onlySvgChanges) callback(records, observer);
+          });
+        };
+        window.MutationObserver.prototype = NativeMutationObserver.prototype;
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-D7aCFurX.js?v=phosphor-nav-3"></script>
+    <script defer src="/assets/mobile-navigation.js?v=react-phosphor-22"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DtI_J7EJ.css?v=react-phosphor-38">
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      (function () {
+        var POSTERS = [
+          ["Spider-Man: Brand New Day", "https://image.tmdb.org/t/p/original/iPOn6DinuVyLY17YM9mKuPofV08.jpg"],
+          ["The Odyssey", "https://image.tmdb.org/t/p/original/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg"],
+          ["Supergirl", "https://image.tmdb.org/t/p/original/1QCWdqzTfh2x9UylVpspIU6QTuM.jpg"],
+          ["Moana", "https://image.tmdb.org/t/p/original/zKVgiv5qHCvCLT4A2ymJi5QeXDH.jpg"],
+          ["Toy Story 5", "https://image.tmdb.org/t/p/original/sfQtVlIHljToOwYjhe21KPGzZWK.jpg"],
+          ["Project Hail Mary", "https://image.tmdb.org/t/p/original/yihdXomYb5kTeSivtFndMy5iDmf.jpg"],
+          ["Wuthering Heights", "https://image.tmdb.org/t/p/original/3YBce6dTh1D5oCMITXk2S5QhPt.jpg"],
+          ["28 Years Later: The Bone Temple", "https://image.tmdb.org/t/p/original/kK1BGkG3KAvWB0WMV1DfOx9yTMZ.jpg"],
+          ["Inception", "https://image.tmdb.org/t/p/original/oYuLEt3zVCKq57qu2F8dT7NIa6f.jpg"],
+          ["Interstellar", "https://image.tmdb.org/t/p/original/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg"],
+          ["Parasite", "https://image.tmdb.org/t/p/original/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg"],
+          ["Dune: Part Two", "https://image.tmdb.org/t/p/original/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg"],
+          ["The Batman", "https://image.tmdb.org/t/p/original/74xTEgt7R36Fpooo50r9T25onhq.jpg"],
+          ["Everything Everywhere All at Once", "https://image.tmdb.org/t/p/original/w3LxiVYdWWRvEVdn5RYq6jIqkb1.jpg"],
+          ["Arrival", "https://image.tmdb.org/t/p/original/x2FJsf1ElAgr63Y3PNPtJrcmpoe.jpg"],
+          ["Blade Runner 2049", "https://image.tmdb.org/t/p/original/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg"],
+          ["Moonlight", "https://image.tmdb.org/t/p/original/4911T5FbJ9eD2Faz5Z8cT3SUhU3.jpg"],
+          ["Mad Max: Fury Road", "https://image.tmdb.org/t/p/original/hA2ple9q4qnwxp3hKVNhroipsir.jpg"],
+          ["Spirited Away", "https://image.tmdb.org/t/p/original/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg"],
+          ["The Grand Budapest Hotel", "https://image.tmdb.org/t/p/original/eWdyYQreja6JGCzqHWXpWHDrrPo.jpg"],
+          ["Aftersun", "https://image.tmdb.org/t/p/original/jeXmhP2zbUkREMRqFOYIwQOk49T.jpg"],
+          ["Portrait of a Lady on Fire", "https://image.tmdb.org/t/p/original/2LquGwEhbg3soxSCs9VNyh5VJd9.jpg"]
+        ];
+        var picked = false;
+        var lastWall = null;
+        function pickPoster() {
+          var wall = document.querySelector(".auth-poster-wall");
+          if (!wall) { picked = false; return false; }
+          if (wall !== lastWall) { picked = false; lastWall = wall; }
+          if (picked) return true;
+          var imgs = wall.querySelectorAll("img");
+          if (imgs.length === 0) return false;
+          var n = (Math.random() * imgs.length) | 0;
+          var chosen = imgs[n];
+          imgs.forEach(function (img, i) { if (i !== n) img.remove(); });
+          var src = chosen.src.replace("/t/p/w500/", "/t/p/original/").replace("/t/p/w342/", "/t/p/original/");
+          chosen.src = src;
+          chosen.style.cssText = "position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;-o-object-fit:cover!important;object-position:center!important;opacity:1!important;filter:none!important;border:0!important;border-radius:0!important;transform:none!important;display:block!important;z-index:1!important";
+          picked = true;
+          return true;
+        }
+        function init() {
+          pickPoster();
+          var mo = new MutationObserver(function () {
+            pickPoster();
+          });
+          mo.observe(document.documentElement, { childList: true, subtree: true });
+          setInterval(pickPoster, 500);
+        }
+        if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
+        else init();
+      })();
+    </script>
+    <script>
+      (function () {
+        function enhanceAuth() {
+          var gate = document.querySelector(".auth-gate");
+          var card = gate && gate.querySelector(".auth-gate-card");
+          var mode = card && card.querySelector(".auth-mode");
+          var heading = card && card.querySelector(".auth-heading h1");
+          var form = card && card.querySelector(".auth-form");
+          var wall = gate && gate.querySelector(".auth-poster-wall");
+          if (!gate || !card || !mode || !heading || !form || !wall) return false;
+
+          heading.textContent = "Sign in to Bettrboxd";
+          card.classList.add("auth-cloudflare-layout");
+
+          var loginButton = Array.from(mode.querySelectorAll("button")).find(function (button) {
+            return button.textContent.trim() === "Log in";
+          });
+          var signupButton = Array.from(mode.querySelectorAll("button")).find(function (button) {
+            return button.textContent.trim() === "Sign up";
+          });
+          if (!card.querySelector(".auth-switch")) {
+            var switchCopy = document.createElement("p");
+            switchCopy.className = "auth-switch";
+             switchCopy.append("Don't have an account? ");
+            var switchLink = document.createElement("button");
+            switchLink.type = "button";
+            switchLink.textContent = "Sign up";
+            switchLink.addEventListener("click", function () {
+              if (signupButton) signupButton.click();
+            });
+            switchCopy.append(switchLink);
+            form.after(switchCopy);
+          }
+
+          var switchCopy = card.querySelector(".auth-switch");
+          var switchLink = card.querySelector(".auth-switch button");
+           function syncMode() {
+             var signup = mode.querySelector('[aria-selected="true"]') === signupButton;
+             heading.textContent = signup ? "Create your Bettrboxd account" : "Log in to Bettrboxd";
+             if (switchCopy && switchCopy.firstChild) {
+               switchCopy.firstChild.textContent = signup ? "Already have an account? " : "Don't have an account? ";
+             }
+             if (switchLink) {
+              switchLink.textContent = signup ? "Log in" : "Sign up";
+              switchLink.onclick = function () {
+                (signup ? loginButton : signupButton)?.click();
+              };
+            }
+          }
+          if (!card.dataset.authHistoryBound) {
+            card.dataset.authHistoryBound = "true";
+            var restoringHistory = false;
+            var buttons = mode.querySelectorAll("button");
+            buttons.forEach(function (button) {
+              button.addEventListener("click", function () {
+                if (!restoringHistory) {
+                  history.pushState({}, "", location.pathname + location.search + (button === signupButton ? "#signup" : "#login"));
+                }
+                setTimeout(syncMode, 0);
+              });
+            });
+            window.addEventListener("popstate", function () {
+              restoringHistory = true;
+              (location.hash === "#signup" ? signupButton : loginButton)?.click();
+              restoringHistory = false;
+              syncMode();
+            });
+            if (location.hash === "#signup") signupButton?.click();
+          }
+          syncMode();
+          return true;
+        }
+
+        var observer = new MutationObserver(function () {
+          if (enhanceAuth()) observer.disconnect();
+        });
+        observer.observe(document.documentElement, { childList: true, subtree: true });
+        enhanceAuth();
+      })();
+    </script>
   </body>
 </html>

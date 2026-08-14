@@ -32326,12 +32326,22 @@ async function upsertMovie(db, movie) {
     existing = await db.prepare("SELECT * FROM movies WHERE id = ?").bind(existing.id).first();
     return mapMovie(existing);
   }
+  const existing = await db.prepare("SELECT * FROM movies WHERE media_type = ? AND lower(title) = lower(?) AND ifnull(year, -1) = ifnull(?, -1) ORDER BY CASE WHEN tmdb_media_id IS NULL THEN 1 ELSE 0 END, rowid LIMIT 1").bind(mediaType, movie.title, movie.year ?? null).first();
+  if (existing) {
+    await db.prepare(`
+      UPDATE movies SET title = ?, year = ?,
+        director = CASE WHEN ? <> '' THEN ? ELSE director END,
+        poster = CASE WHEN ? <> '' THEN ? ELSE poster END,
+        updated_at = ? WHERE id = ?
+    `).bind(movie.title, movie.year ?? null, movie.director || "", movie.director || "", movie.poster || "", movie.poster || "", now, existing.id).run();
+    return mapMovie(await db.prepare("SELECT * FROM movies WHERE id = ?").bind(existing.id).first());
+  }
   await db.prepare(`
     INSERT INTO movies (id, title, year, director, poster, media_type, created_at, updated_at)
     VALUES (?, ?, ?, ?, ?, ?, ?, ?)
     ON CONFLICT DO NOTHING
   `).bind(id, movie.title, movie.year ?? null, movie.director || "", movie.poster || "", mediaType, now, now).run();
-  return mapMovie(await db.prepare("SELECT * FROM movies WHERE media_type = ? AND lower(title) = lower(?) AND ifnull(year, -1) = ifnull(?, -1) AND tmdb_media_id IS NULL").bind(mediaType, movie.title, movie.year ?? null).first());
+  return mapMovie(await db.prepare("SELECT * FROM movies WHERE id = ?").bind(id).first());
 }
 __name(upsertMovie, "upsertMovie");
 var IMPORT_LIMITS = Object.freeze({ records: 2e4, files: 100, chunkRecords: 10, chunkBytes: 200 * 1024, rawBytes: 50 * 1024 * 1024, dailyWrites: 4e4 });
@@ -32573,6 +32583,231 @@ async function finalizeExportImport(db, userId, jobId) {
   return statusForJob(db, userId, job.id);
 }
 __name(finalizeExportImport, "finalizeExportImport");
+function extractXmlTag(xml, tag) {
+  const match = xml.match(new RegExp(`<${tag}(?:\\s[^>]*)?>([\\s\\S]*?)<\\/${tag}>`, "i"));
+  return match ? match[1] : "";
+}
+__name(extractXmlTag, "extractXmlTag");
+function decodeXmlEntities(value) {
+  return value.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&apos;/g, "'").replace(/&amp;/g, "&");
+}
+__name(decodeXmlEntities, "decodeXmlEntities");
+function parseLetterboxdRssFeed(xml) {
+  const entries = [];
+  const blocks = String(xml || "").split(/<item[^>]*>/i).slice(1);
+  for (const raw of blocks) {
+    const end = raw.toLowerCase().indexOf("</item>");
+    if (end < 0) continue;
+    const block = raw.slice(0, end);
+    const link = decodeXmlEntities(extractXmlTag(block, "link")).trim();
+    if (!link) continue;
+    const filmTitle = decodeXmlEntities(extractXmlTag(block, "letterboxd:filmTitle")).trim();
+    const filmYear = decodeXmlEntities(extractXmlTag(block, "letterboxd:filmYear")).trim();
+    const watchedDate = decodeXmlEntities(extractXmlTag(block, "letterboxd:watchedDate")).trim();
+    const ratingRaw = decodeXmlEntities(extractXmlTag(block, "letterboxd:memberRating")).trim();
+    let review = decodeXmlEntities(extractXmlTag(block, "description").replace(/^<!\[CDATA\[|\]\]>$/g, "").replace(/<[^>]+>/g, " ").replace(/&nbsp;/g, " ").replace(/\s+/g, " ")).trim();
+    const spoilers = /^This review may contain spoilers\.?\s*/i.test(review) ? 1 : 0;
+    review = review.replace(/^This review may contain spoilers\.?\s*/i, "").trim();
+    const rating = ratingRaw ? Number(ratingRaw) : NaN;
+    entries.push({ link, filmTitle, filmYear, watchedDate, rating: Number.isFinite(rating) ? rating : null, review, spoilers });
+  }
+  return entries;
+}
+__name(parseLetterboxdRssFeed, "parseLetterboxdRssFeed");
+async function importLetterboxdRss(db, userId, username, env) {
+  const clean = String(username || "").trim().replace(/^https?:\/\/(?:www\.)?letterboxd\.com\//i, "").replace(/\/.*$/, "").replace(/\/+$/, "");
+  if (!/^[a-z0-9_-]{2,40}$/i.test(clean)) throw new Error("Enter a valid Letterboxd username");
+  const base = `https://letterboxd.com/${encodeURIComponent(clean)}`;
+  const settled = await Promise.allSettled([fetch(`${base}/rss/`), fetch(`${base}/rss/reviews/`)]);
+  const ok = settled.filter((result) => result.status === "fulfilled" && result.value.ok);
+  if (ok.length === 0) throw new Error("Could not reach the Letterboxd feed. Check the username and that the account is public.");
+  const seen = /* @__PURE__ */ new Set();
+  const entries = [];
+  for (const result of ok) {
+    let xml = "";
+    try {
+      xml = await result.value.text();
+    } catch {
+      continue;
+    }
+    for (const entry of parseLetterboxdRssFeed(xml)) {
+      if (seen.has(entry.link)) continue;
+      seen.add(entry.link);
+      entries.push(entry);
+    }
+  }
+  let imported = 0, skipped = 0;
+  const errors = [];
+  let estimate = 0;
+  const now = (/* @__PURE__ */ new Date()).toISOString();
+  for (const entry of entries) {
+    try {
+      const rawTitle = (entry.filmTitle || "").trim();
+      const title = rawTitle || entry.link.split("/")[4]?.replace(/[_-]/g, " ").trim() || "";
+      if (!title) {
+        skipped++;
+        continue;
+      }
+      const year = entry.filmYear ? Number(entry.filmYear) : NaN;
+      const rating = entry.rating != null ? Math.round(entry.rating * 2) / 2 : null;
+      const review = entry.review.slice(0, 2e4);
+      if (!(rating != null && rating >= 0.5 && rating <= 5) && !review) {
+        skipped++;
+        continue;
+      }
+      const watchedAt = new Date(entry.watchedDate ? `${entry.watchedDate}T00:00:00Z` : now);
+      if (isNaN(watchedAt.valueOf())) {
+        skipped++;
+        continue;
+      }
+      let movie = await upsertMovie(db, {
+        title: title.slice(0, 300),
+        year: Number.isFinite(year) && year >= 1870 && year <= 2200 ? year : null,
+        director: "",
+        poster: "",
+        tmdbId: null,
+        mediaType: "movie"
+      });
+      if (!movie) {
+        skipped++;
+        continue;
+      }
+      if (!movie.tmdbId && !movie.poster && env) {
+        try {
+          const lookup = await searchTmdbMovie(env, movie.title, movie.year);
+          if (lookup) {
+            const existingTmdb = await db.prepare("SELECT * FROM movies WHERE media_type = ? AND tmdb_media_id = ?").bind(movie.mediaType || "movie", lookup.tmdbId).first();
+            if (existingTmdb && existingTmdb.id !== movie.id) {
+              await db.batch([
+                db.prepare(`INSERT OR IGNORE INTO watchlist_items (user_id, movie_id, created_at) SELECT user_id, ?, created_at FROM watchlist_items WHERE movie_id = ?`).bind(existingTmdb.id, movie.id),
+                db.prepare("DELETE FROM watchlist_items WHERE movie_id = ?").bind(movie.id),
+                db.prepare("UPDATE reviews SET movie_id = ?, updated_at = ? WHERE movie_id = ?").bind(existingTmdb.id, now, movie.id),
+                db.prepare("DELETE FROM movies WHERE id = ?").bind(movie.id)
+              ]);
+              movie = mapMovie(existingTmdb);
+            } else {
+              await db.prepare("UPDATE movies SET tmdb_media_id = ?, poster = ?, updated_at = ? WHERE id = ?").bind(lookup.tmdbId, lookup.poster, now, movie.id).run();
+            }
+            estimate += 1;
+          }
+        } catch {}
+      }
+      const externalId = entry.link.slice(0, 200);
+      const effectiveRating = rating != null && rating >= 0.5 && rating <= 5 ? rating : 3;
+      const result = await db.prepare(`INSERT INTO reviews (id, user_id, movie_id, rating, text, text_format, spoilers, watched_at, source, external_id, external_url, created_at, updated_at)
+        VALUES (?, ?, ?, ?, ?, 'plain', ?, ?, 'letterboxd', ?, ?, ?, ?)
+        ON CONFLICT(user_id, source, external_id) WHERE external_id IS NOT NULL DO NOTHING`).bind(crypto.randomUUID(), userId, movie.id, effectiveRating, review, entry.spoilers || 0, watchedAt.toISOString(), externalId, externalId, now, now).run();
+      if (result.meta.changes) {
+        imported++;
+        estimate += 4;
+      } else {
+        skipped++;
+      }
+    } catch (error) {
+      if (String(error?.message || error).includes("APP_WRITE_BUDGET_EXCEEDED")) throw new Error("This app's UTC-day D1 write budget is paused. Nothing more was imported; resume after 00:00 UTC.");
+      errors.push(String(error?.message || error).slice(0, 200));
+    }
+  }
+  if (estimate) {
+    try {
+      await db.batch([budgetStatement(db, estimate, now)]);
+    } catch (error) {
+      budgetError(error);
+    }
+  }
+  const summary = errors.slice(0, 5).join("; ").slice(0, 1e3);
+  try {
+    await db.prepare(`UPDATE users SET letterboxd_username = ?, letterboxd_last_import_at = ?, letterboxd_last_import_error = ?, updated_at = ? WHERE id = ?`).bind(clean, now, summary || null, now, userId).run();
+  } catch (error) {
+    budgetError(error);
+  }
+  return { username: clean, imported, skipped, errors: errors.slice(0, 50), lastImportAt: now, lastImportError: summary || null };
+}
+__name(importLetterboxdRss, "importLetterboxdRss");
+async function mergeExportImport(db, userId, jobId) {
+  const job = assertJobOwnershipState(await db.prepare("SELECT * FROM export_import_jobs WHERE id = ?").bind(jobId).first(), userId, ["complete"]);
+  const records = await db.prepare(`SELECT * FROM export_records WHERE job_id = ? ORDER BY row_index`).bind(job.id).all();
+  let reviewsImported = 0, watchlistImported = 0, skipped = 0;
+  const errors = [];
+  let estimate = 0;
+  const now = (/* @__PURE__ */ new Date()).toISOString();
+  const flushBudget = async () => {
+    if (!estimate) return;
+    try {
+      await db.batch([budgetStatement(db, estimate, now)]);
+    } catch (error) {
+      budgetError(error);
+    }
+    estimate = 0;
+  };
+  for (const record of records.results) {
+    try {
+      const title = (record.title || "").trim();
+      if (!title) {
+        skipped++;
+        continue;
+      }
+      const movie = await upsertMovie(db, {
+        title: title.slice(0, 300),
+        year: record.year && record.year >= 1870 && record.year <= 2200 ? record.year : null,
+        director: "",
+        poster: "",
+        tmdbId: null,
+        mediaType: "movie"
+      });
+      if (!movie) {
+        skipped++;
+        continue;
+      }
+      if (record.category === "watchlist") {
+        const added = await db.prepare("INSERT OR IGNORE INTO watchlist_items (user_id, movie_id, created_at) VALUES (?, ?, ?)").bind(userId, movie.id, now).run();
+        if (added.meta.changes) {
+          watchlistImported++;
+          estimate += 3;
+        } else {
+          skipped++;
+        }
+        continue;
+      }
+      if (!["diary", "watched", "ratings", "reviews"].includes(record.category)) {
+        skipped++;
+        continue;
+      }
+      const review = (record.record_text || "").trim().slice(0, 2e4);
+      const rating = record.rating != null ? Math.round(Number(record.rating) * 2) / 2 : null;
+      const isReviewEntry = record.category === "reviews" || record.category === "ratings";
+      if (!(rating != null && rating >= 0.5 && rating <= 5) && !(isReviewEntry && review)) {
+        skipped++;
+        continue;
+      }
+      const watchedAt = new Date(record.record_date ? `${record.record_date}T00:00:00Z` : now);
+      if (isNaN(watchedAt.valueOf())) {
+        skipped++;
+        continue;
+      }
+      const externalId = (record.letterboxd_uri || `lbx:${record.fingerprint}`).slice(0, 200);
+      const effectiveRating = rating != null && rating >= 0.5 && rating <= 5 ? rating : 3;
+      const result = await db.prepare(`INSERT INTO reviews (id, user_id, movie_id, rating, text, text_format, spoilers, watched_at, source, external_id, external_url, created_at, updated_at)
+        VALUES (?, ?, ?, ?, ?, 'plain', 0, ?, 'letterboxd', ?, ?, ?, ?)
+        ON CONFLICT(user_id, source, external_id) WHERE external_id IS NOT NULL DO NOTHING`).bind(crypto.randomUUID(), userId, movie.id, effectiveRating, review, watchedAt.toISOString(), externalId, record.letterboxd_uri || "", now, now).run();
+      if (result.meta.changes) {
+        reviewsImported++;
+        estimate += 4;
+      } else {
+        skipped++;
+      }
+    } catch (error) {
+      if (String(error?.message || error).includes("APP_WRITE_BUDGET_EXCEEDED")) {
+        await flushBudget();
+        throw new Error("This app's UTC-day D1 write budget is paused. The merge stopped partway; resume after 00:00 UTC and merge again (already-merged records are skipped).");
+      }
+      errors.push(String(error?.message || error).slice(0, 200));
+    }
+  }
+  await flushBudget();
+  return { jobId: job.id, reviewsImported, watchlistImported, skipped, errors: errors.slice(0, 50), budgetPaused: false };
+}
+__name(mergeExportImport, "mergeExportImport");
 async function cleanupExportImports(db, userId) {
   const oldCount = (await db.prepare(`SELECT count(*) AS count FROM export_records r
     JOIN export_import_jobs j ON j.id = r.job_id
@@ -32770,11 +33005,47 @@ function tmdbMediaCandidates(results, limit) {
     const title = String(item.media_type === "tv" ? item.name || "" : item.title || "").trim().slice(0, 300);
     const date = item.media_type === "tv" ? item.first_air_date : item.release_date;
     const year = /^\d{4}/.test(date || "") ? Number(date.slice(0, 4)) : null;
-    const poster = /^\/[A-Za-z0-9._/-]+$/.test(item.poster_path || "") ? `https://image.tmdb.org/t/p/w500${item.poster_path}` : "";
+    const poster = /^\/[A-Za-z0-9._/-]+$/.test(item.poster_path || "") ? `https://image.tmdb.org/t/p/w780${item.poster_path}` : "";
     return Number.isInteger(tmdbId) && tmdbId > 0 && title ? [{ tmdbId, title, year, director: "", poster, mediaType: item.media_type }] : [];
   }).slice(0, limit);
 }
 __name(tmdbMediaCandidates, "tmdbMediaCandidates");
+async function searchTmdbMovie(env, title, year, fetchImpl = fetch) {
+  if (!env.TMDB_API_READ_TOKEN && !env.TMDB_API_KEY) return null;
+  const url = new URL("https://api.themoviedb.org/3/search/movie");
+  url.searchParams.set("query", String(title || "").trim().slice(0, 200));
+  url.searchParams.set("include_adult", "false");
+  const headers = { accept: "application/json" };
+  if (env.TMDB_API_READ_TOKEN) headers.authorization = `Bearer ${env.TMDB_API_READ_TOKEN}`;
+  else url.searchParams.set("api_key", env.TMDB_API_KEY);
+  let data;
+  try {
+    const response = await fetchImpl(url, { headers, signal: AbortSignal.timeout(7e3) });
+    if (!response.ok) return null;
+    data = await response.json();
+  } catch {
+    return null;
+  }
+  const normalize = (value) => String(value || "").toLocaleLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  const needle = normalize(title);
+  const yearNumber = Number.isFinite(Number(year)) ? Number(year) : null;
+  const scored = [];
+  for (const item of Array.isArray(data.results) ? data.results : []) {
+    const tmdbId = Number(item.id);
+    const candidateTitle = String(item.title || "").trim();
+    const candidateYear = /^\d{4}/.test(item.release_date || "") ? Number(item.release_date.slice(0, 4)) : null;
+    const poster = /^\/[A-Za-z0-9._/-]+$/.test(item.poster_path || "") ? `https://image.tmdb.org/t/p/w780${item.poster_path}` : "";
+    if (!Number.isInteger(tmdbId) || tmdbId < 1 || !candidateTitle || !needle) continue;
+    const exact = candidateTitle.toLocaleLowerCase() === String(title || "").toLocaleLowerCase().trim();
+    const normalized = normalize(candidateTitle) === needle;
+    if (!exact && !normalized) continue;
+    const yearMatch = yearNumber != null && candidateYear === yearNumber;
+    scored.push({ tmdbId, poster, score: (exact ? 4 : 2) + (yearMatch ? 1 : 0) });
+  }
+  scored.sort((a, b) => b.score - a.score);
+  return scored.length ? { tmdbId: scored[0].tmdbId, poster: scored[0].poster } : null;
+}
+__name(searchTmdbMovie, "searchTmdbMovie");
 var import_depth_limit = __toESM(require_dist(), 1);
 var import_graphql48 = __toESM(require_graphql2(), 1);
 function countRootFields(selections, fragments, visiting = /* @__PURE__ */ new Set()) {
@@ -32828,7 +33099,7 @@ var yogaCache = /* @__PURE__ */ new Map();
 var typeDefs = (
   /* GraphQL */
   `
-  type User { id: ID!, username: String!, displayName: String!, avatar: String!, theme: String!, isFollowing: Boolean! }
+  type User { id: ID!, username: String!, displayName: String!, avatar: String!, theme: String!, isFollowing: Boolean!, letterboxdUsername: String!, lastImportAt: String, lastImportError: String }
   type Movie { id: ID!, title: String!, year: Int, director: String!, poster: String!, tmdbId: Int, mediaType: String! }
   type MovieSearchPage { items: [Movie!]!, page: Int!, totalPages: Int!, totalResults: Int! }
   type WatchlistItem { movie: Movie!, addedAt: String! }
@@ -32855,6 +33126,12 @@ var typeDefs = (
     createdAt: String!, completedAt: String, error: String, files: [ExportImportFile!]!, categories: [ExportCategoryCount!]!
   }
   type ExportImportStatus { current: ExportImportJob, active: ExportImportJob, appDailyWriteCeiling: Int!, budgetNotice: String!, cleanupRemaining: Int! }
+  type LetterboxdImportResult {
+    username: String!, imported: Int!, skipped: Int!, errors: [String!]!, lastImportAt: String, lastImportError: String
+  }
+  type ImportMergeResult {
+    jobId: ID!, reviewsImported: Int!, watchlistImported: Int!, skipped: Int!, errors: [String!]!, budgetPaused: Boolean!
+  }
   type LibraryEntry {
     fingerprint: ID!, category: String!, file: String!, title: String, year: Int, letterboxdUri: String,
     date: String, rating: Float, rewatch: Boolean, tags: String, text: String, listName: String, position: Int, rawJson: String!
@@ -32923,6 +33200,8 @@ var typeDefs = (
     finalizeExportImport(jobId: ID!): ExportImportJob!
     cleanupExportImports: ExportImportStatus!
     cancelExportImport(jobId: ID!): ExportImportStatus!
+    importLetterboxd(username: String!): LetterboxdImportResult!
+    mergeExportImport(jobId: ID!): ImportMergeResult!
   }
 `
 );
@@ -33077,7 +33356,9 @@ var resolvers = {
     uploadExportChunk: /* @__PURE__ */ __name((_, { input }, context) => uploadExportChunk(context.env.DB, requireUser(context).id, input), "uploadExportChunk"),
     finalizeExportImport: /* @__PURE__ */ __name((_, { jobId }, context) => finalizeExportImport(context.env.DB, requireUser(context).id, jobId), "finalizeExportImport"),
     cleanupExportImports: /* @__PURE__ */ __name((_, __, context) => cleanupExportImports(context.env.DB, requireUser(context).id), "cleanupExportImports"),
-    cancelExportImport: /* @__PURE__ */ __name((_, { jobId }, context) => cancelExportImport(context.env.DB, requireUser(context).id, jobId), "cancelExportImport")
+    cancelExportImport: /* @__PURE__ */ __name((_, { jobId }, context) => cancelExportImport(context.env.DB, requireUser(context).id, jobId), "cancelExportImport"),
+    importLetterboxd: /* @__PURE__ */ __name((_, { username }, context) => importLetterboxdRss(context.env.DB, requireUser(context).id, username, context.env), "importLetterboxd"),
+    mergeExportImport: /* @__PURE__ */ __name((_, { jobId }, context) => mergeExportImport(context.env.DB, requireUser(context).id, jobId), "mergeExportImport")
   }
 };
 function createGraphQL(env) {

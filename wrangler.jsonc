@@ -12,7 +12,8 @@
     "AUTH_USERNAME": "KaydenThomas",
     "CORS_ORIGINS": "",
     "CF_ACCESS_PRIMARY_SUBJECT": "",
-    "DEV_AUTO_LOGIN": "false"
+    "DEV_AUTO_LOGIN": "false",
+    "GOOGLE_CLIENT_ID": "949353580177-fonheo9i5e9na857oh9e6l0tan3ov9ij.apps.googleusercontent.com"
   },
   "ratelimits": [
     {

@@ -1,3 +1,4 @@
+// src/index.beautified.js
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -28,8 +29,6 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
   isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
   mod
 ));
-
-// node_modules/graphql/version.js
 var require_version = __commonJS({
   "node_modules/graphql/version.js"(exports) {
     "use strict";
@@ -48,8 +47,6 @@ var require_version = __commonJS({
     exports.versionInfo = versionInfo5;
   }
 });
-
-// node_modules/graphql/jsutils/devAssert.js
 var require_devAssert = __commonJS({
   "node_modules/graphql/jsutils/devAssert.js"(exports) {
     "use strict";
@@ -66,8 +63,6 @@ var require_devAssert = __commonJS({
     __name(devAssert, "devAssert");
   }
 });
-
-// node_modules/graphql/jsutils/isPromise.js
 var require_isPromise = __commonJS({
   "node_modules/graphql/jsutils/isPromise.js"(exports) {
     "use strict";
@@ -81,8 +76,6 @@ var require_isPromise = __commonJS({
     __name(isPromise2, "isPromise");
   }
 });
-
-// node_modules/graphql/jsutils/isObjectLike.js
 var require_isObjectLike = __commonJS({
   "node_modules/graphql/jsutils/isObjectLike.js"(exports) {
     "use strict";
@@ -96,8 +89,6 @@ var require_isObjectLike = __commonJS({
     __name(isObjectLike3, "isObjectLike");
   }
 });
-
-// node_modules/graphql/jsutils/invariant.js
 var require_invariant = __commonJS({
   "node_modules/graphql/jsutils/invariant.js"(exports) {
     "use strict";
@@ -116,8 +107,6 @@ var require_invariant = __commonJS({
     __name(invariant2, "invariant");
   }
 });
-
-// node_modules/graphql/language/location.js
 var require_location = __commonJS({
   "node_modules/graphql/language/location.js"(exports) {
     "use strict";
@@ -146,8 +135,6 @@ var require_location = __commonJS({
     __name(getLocation, "getLocation");
   }
 });
-
-// node_modules/graphql/language/printLocation.js
 var require_printLocation = __commonJS({
   "node_modules/graphql/language/printLocation.js"(exports) {
     "use strict";
@@ -207,8 +194,6 @@ var require_printLocation = __commonJS({
     __name(printPrefixedLines, "printPrefixedLines");
   }
 });
-
-// node_modules/graphql/error/GraphQLError.js
 var require_GraphQLError = __commonJS({
   "node_modules/graphql/error/GraphQLError.js"(exports) {
     "use strict";
@@ -495,8 +480,6 @@ var require_GraphQLError = __commonJS({
     __name(formatError2, "formatError");
   }
 });
-
-// node_modules/graphql/error/syntaxError.js
 var require_syntaxError = __commonJS({
   "node_modules/graphql/error/syntaxError.js"(exports) {
     "use strict";
@@ -514,8 +497,6 @@ var require_syntaxError = __commonJS({
     __name(syntaxError, "syntaxError");
   }
 });
-
-// node_modules/graphql/language/ast.js
 var require_ast = __commonJS({
   "node_modules/graphql/language/ast.js"(exports) {
     "use strict";
@@ -778,8 +759,6 @@ var require_ast = __commonJS({
     })(OperationTypeNode || (exports.OperationTypeNode = OperationTypeNode = {}));
   }
 });
-
-// node_modules/graphql/language/directiveLocation.js
 var require_directiveLocation = __commonJS({
   "node_modules/graphql/language/directiveLocation.js"(exports) {
     "use strict";
@@ -813,8 +792,6 @@ var require_directiveLocation = __commonJS({
     })(DirectiveLocation2 || (exports.DirectiveLocation = DirectiveLocation2 = {}));
   }
 });
-
-// node_modules/graphql/language/kinds.js
 var require_kinds = __commonJS({
   "node_modules/graphql/language/kinds.js"(exports) {
     "use strict";
@@ -877,8 +854,6 @@ var require_kinds = __commonJS({
     })(Kind26 || (exports.Kind = Kind26 = {}));
   }
 });
-
-// node_modules/graphql/language/characterClasses.js
 var require_characterClasses = __commonJS({
   "node_modules/graphql/language/characterClasses.js"(exports) {
     "use strict";
@@ -913,8 +888,6 @@ var require_characterClasses = __commonJS({
     __name(isNameContinue, "isNameContinue");
   }
 });
-
-// node_modules/graphql/language/blockString.js
 var require_blockString = __commonJS({
   "node_modules/graphql/language/blockString.js"(exports) {
     "use strict";
@@ -1039,8 +1012,6 @@ var require_blockString = __commonJS({
     __name(printBlockString2, "printBlockString");
   }
 });
-
-// node_modules/graphql/language/tokenKind.js
 var require_tokenKind = __commonJS({
   "node_modules/graphql/language/tokenKind.js"(exports) {
     "use strict";
@@ -1077,8 +1048,6 @@ var require_tokenKind = __commonJS({
     })(TokenKind2 || (exports.TokenKind = TokenKind2 = {}));
   }
 });
-
-// node_modules/graphql/language/lexer.js
 var require_lexer = __commonJS({
   "node_modules/graphql/language/lexer.js"(exports) {
     "use strict";
@@ -1774,8 +1743,6 @@ var require_lexer = __commonJS({
     __name(readName, "readName");
   }
 });
-
-// node_modules/graphql/language/schemaCoordinateLexer.js
 var require_schemaCoordinateLexer = __commonJS({
   "node_modules/graphql/language/schemaCoordinateLexer.js"(exports) {
     "use strict";
@@ -1909,8 +1876,6 @@ var require_schemaCoordinateLexer = __commonJS({
     __name(readNextToken, "readNextToken");
   }
 });
-
-// node_modules/graphql/jsutils/inspect.js
 var require_inspect = __commonJS({
   "node_modules/graphql/jsutils/inspect.js"(exports) {
     "use strict";
@@ -2008,8 +1973,6 @@ var require_inspect = __commonJS({
     __name(getObjectTag2, "getObjectTag");
   }
 });
-
-// node_modules/graphql/jsutils/instanceOf.js
 var require_instanceOf = __commonJS({
   "node_modules/graphql/jsutils/instanceOf.js"(exports) {
     "use strict";
@@ -2058,8 +2021,6 @@ spurious results.`);
     exports.instanceOf = instanceOf;
   }
 });
-
-// node_modules/graphql/language/source.js
 var require_source = __commonJS({
   "node_modules/graphql/language/source.js"(exports) {
     "use strict";
@@ -2133,8 +2094,6 @@ var require_source = __commonJS({
     __name(isSource, "isSource");
   }
 });
-
-// node_modules/graphql/language/parser.js
 var require_parser = __commonJS({
   "node_modules/graphql/language/parser.js"(exports) {
     "use strict";
@@ -3715,8 +3674,6 @@ var require_parser = __commonJS({
     __name(getTokenKindDesc, "getTokenKindDesc");
   }
 });
-
-// node_modules/graphql/jsutils/didYouMean.js
 var require_didYouMean = __commonJS({
   "node_modules/graphql/jsutils/didYouMean.js"(exports) {
     "use strict";
@@ -3747,8 +3704,6 @@ var require_didYouMean = __commonJS({
     __name(didYouMean, "didYouMean");
   }
 });
-
-// node_modules/graphql/jsutils/identityFunc.js
 var require_identityFunc = __commonJS({
   "node_modules/graphql/jsutils/identityFunc.js"(exports) {
     "use strict";
@@ -3762,8 +3717,6 @@ var require_identityFunc = __commonJS({
     __name(identityFunc, "identityFunc");
   }
 });
-
-// node_modules/graphql/jsutils/keyMap.js
 var require_keyMap = __commonJS({
   "node_modules/graphql/jsutils/keyMap.js"(exports) {
     "use strict";
@@ -3781,8 +3734,6 @@ var require_keyMap = __commonJS({
     __name(keyMap, "keyMap");
   }
 });
-
-// node_modules/graphql/jsutils/keyValMap.js
 var require_keyValMap = __commonJS({
   "node_modules/graphql/jsutils/keyValMap.js"(exports) {
     "use strict";
@@ -3800,8 +3751,6 @@ var require_keyValMap = __commonJS({
     __name(keyValMap, "keyValMap");
   }
 });
-
-// node_modules/graphql/jsutils/mapValue.js
 var require_mapValue = __commonJS({
   "node_modules/graphql/jsutils/mapValue.js"(exports) {
     "use strict";
@@ -3819,8 +3768,6 @@ var require_mapValue = __commonJS({
     __name(mapValue, "mapValue");
   }
 });
-
-// node_modules/graphql/jsutils/naturalCompare.js
 var require_naturalCompare = __commonJS({
   "node_modules/graphql/jsutils/naturalCompare.js"(exports) {
     "use strict";
@@ -3875,8 +3822,6 @@ var require_naturalCompare = __commonJS({
     __name(isDigit, "isDigit");
   }
 });
-
-// node_modules/graphql/jsutils/suggestionList.js
 var require_suggestionList = __commonJS({
   "node_modules/graphql/jsutils/suggestionList.js"(exports) {
     "use strict";
@@ -3981,8 +3926,6 @@ var require_suggestionList = __commonJS({
     __name(stringToArray, "stringToArray");
   }
 });
-
-// node_modules/graphql/jsutils/toObjMap.js
 var require_toObjMap = __commonJS({
   "node_modules/graphql/jsutils/toObjMap.js"(exports) {
     "use strict";
@@ -4006,8 +3949,6 @@ var require_toObjMap = __commonJS({
     __name(toObjMap, "toObjMap");
   }
 });
-
-// node_modules/graphql/language/printString.js
 var require_printString = __commonJS({
   "node_modules/graphql/language/printString.js"(exports) {
     "use strict";
@@ -4193,8 +4134,6 @@ var require_printString = __commonJS({
     ];
   }
 });
-
-// node_modules/graphql/language/visitor.js
 var require_visitor = __commonJS({
   "node_modules/graphql/language/visitor.js"(exports) {
     "use strict";
@@ -4405,8 +4344,6 @@ var require_visitor = __commonJS({
     __name(getVisitFn, "getVisitFn");
   }
 });
-
-// node_modules/graphql/language/printer.js
 var require_printer = __commonJS({
   "node_modules/graphql/language/printer.js"(exports) {
     "use strict";
@@ -4697,8 +4634,6 @@ var require_printer = __commonJS({
     __name(hasMultilineItems2, "hasMultilineItems");
   }
 });
-
-// node_modules/graphql/utilities/valueFromASTUntyped.js
 var require_valueFromASTUntyped = __commonJS({
   "node_modules/graphql/utilities/valueFromASTUntyped.js"(exports) {
     "use strict";
@@ -4737,8 +4672,6 @@ var require_valueFromASTUntyped = __commonJS({
     __name(valueFromASTUntyped5, "valueFromASTUntyped");
   }
 });
-
-// node_modules/graphql/type/assertName.js
 var require_assertName = __commonJS({
   "node_modules/graphql/type/assertName.js"(exports) {
     "use strict";
@@ -4784,8 +4717,6 @@ var require_assertName = __commonJS({
     __name(assertEnumValueName, "assertEnumValueName");
   }
 });
-
-// node_modules/graphql/type/definition.js
 var require_definition = __commonJS({
   "node_modules/graphql/type/definition.js"(exports) {
     "use strict";
@@ -6864,8 +6795,6 @@ var require_definition = __commonJS({
     __name(isRequiredInputField, "isRequiredInputField");
   }
 });
-
-// node_modules/graphql/utilities/typeComparators.js
 var require_typeComparators = __commonJS({
   "node_modules/graphql/utilities/typeComparators.js"(exports) {
     "use strict";
@@ -6932,8 +6861,6 @@ var require_typeComparators = __commonJS({
     __name(doTypesOverlap, "doTypesOverlap");
   }
 });
-
-// node_modules/graphql/type/scalars.js
 var require_scalars = __commonJS({
   "node_modules/graphql/type/scalars.js"(exports) {
     "use strict";
@@ -7215,8 +7142,6 @@ var require_scalars = __commonJS({
     __name(serializeObject, "serializeObject");
   }
 });
-
-// node_modules/graphql/type/directives.js
 var require_directives = __commonJS({
   "node_modules/graphql/type/directives.js"(exports) {
     "use strict";
@@ -7505,8 +7430,6 @@ var require_directives = __commonJS({
     __name(isSpecifiedDirective3, "isSpecifiedDirective");
   }
 });
-
-// node_modules/graphql/jsutils/isIterableObject.js
 var require_isIterableObject = __commonJS({
   "node_modules/graphql/jsutils/isIterableObject.js"(exports) {
     "use strict";
@@ -7520,8 +7443,6 @@ var require_isIterableObject = __commonJS({
     __name(isIterableObject3, "isIterableObject");
   }
 });
-
-// node_modules/graphql/utilities/astFromValue.js
 var require_astFromValue = __commonJS({
   "node_modules/graphql/utilities/astFromValue.js"(exports) {
     "use strict";
@@ -7644,8 +7565,6 @@ var require_astFromValue = __commonJS({
     var integerStringRegExp3 = /^-?(?:0|[1-9][0-9]*)$/;
   }
 });
-
-// node_modules/graphql/type/introspection.js
 var require_introspection = __commonJS({
   "node_modules/graphql/type/introspection.js"(exports) {
     "use strict";
@@ -8196,8 +8115,6 @@ var require_introspection = __commonJS({
     __name(isIntrospectionType2, "isIntrospectionType");
   }
 });
-
-// node_modules/graphql/type/schema.js
 var require_schema = __commonJS({
   "node_modules/graphql/type/schema.js"(exports) {
     "use strict";
@@ -8839,8 +8756,6 @@ var require_schema = __commonJS({
     __name(collectReferencedTypes, "collectReferencedTypes");
   }
 });
-
-// node_modules/graphql/type/validate.js
 var require_validate = __commonJS({
   "node_modules/graphql/type/validate.js"(exports) {
     "use strict";
@@ -9334,8 +9249,6 @@ var require_validate = __commonJS({
     __name(getDeprecatedDirectiveNode, "getDeprecatedDirectiveNode");
   }
 });
-
-// node_modules/graphql/utilities/typeFromAST.js
 var require_typeFromAST = __commonJS({
   "node_modules/graphql/utilities/typeFromAST.js"(exports) {
     "use strict";
@@ -9362,8 +9275,6 @@ var require_typeFromAST = __commonJS({
     __name(typeFromAST3, "typeFromAST");
   }
 });
-
-// node_modules/graphql/utilities/TypeInfo.js
 var require_TypeInfo = __commonJS({
   "node_modules/graphql/utilities/TypeInfo.js"(exports) {
     "use strict";
@@ -10048,8 +9959,6 @@ var require_TypeInfo = __commonJS({
     __name(visitWithTypeInfo, "visitWithTypeInfo");
   }
 });
-
-// node_modules/graphql/language/predicates.js
 var require_predicates = __commonJS({
   "node_modules/graphql/language/predicates.js"(exports) {
     "use strict";
@@ -10114,8 +10023,6 @@ var require_predicates = __commonJS({
     __name(isSchemaCoordinateNode, "isSchemaCoordinateNode");
   }
 });
-
-// node_modules/graphql/validation/rules/ExecutableDefinitionsRule.js
 var require_ExecutableDefinitionsRule = __commonJS({
   "node_modules/graphql/validation/rules/ExecutableDefinitionsRule.js"(exports) {
     "use strict";
@@ -10149,8 +10056,6 @@ var require_ExecutableDefinitionsRule = __commonJS({
     __name(ExecutableDefinitionsRule, "ExecutableDefinitionsRule");
   }
 });
-
-// node_modules/graphql/validation/rules/FieldsOnCorrectTypeRule.js
 var require_FieldsOnCorrectTypeRule = __commonJS({
   "node_modules/graphql/validation/rules/FieldsOnCorrectTypeRule.js"(exports) {
     "use strict";
@@ -10241,8 +10146,6 @@ var require_FieldsOnCorrectTypeRule = __commonJS({
     __name(getSuggestedFieldNames, "getSuggestedFieldNames");
   }
 });
-
-// node_modules/graphql/validation/rules/FragmentsOnCompositeTypesRule.js
 var require_FragmentsOnCompositeTypesRule = __commonJS({
   "node_modules/graphql/validation/rules/FragmentsOnCompositeTypesRule.js"(exports) {
     "use strict";
@@ -10298,8 +10201,6 @@ var require_FragmentsOnCompositeTypesRule = __commonJS({
     __name(FragmentsOnCompositeTypesRule, "FragmentsOnCompositeTypesRule");
   }
 });
-
-// node_modules/graphql/validation/rules/KnownArgumentNamesRule.js
 var require_KnownArgumentNamesRule = __commonJS({
   "node_modules/graphql/validation/rules/KnownArgumentNamesRule.js"(exports) {
     "use strict";
@@ -10386,8 +10287,6 @@ var require_KnownArgumentNamesRule = __commonJS({
     __name(KnownArgumentNamesOnDirectivesRule, "KnownArgumentNamesOnDirectivesRule");
   }
 });
-
-// node_modules/graphql/validation/rules/KnownDirectivesRule.js
 var require_KnownDirectivesRule = __commonJS({
   "node_modules/graphql/validation/rules/KnownDirectivesRule.js"(exports) {
     "use strict";
@@ -10514,8 +10413,6 @@ var require_KnownDirectivesRule = __commonJS({
     __name(getDirectiveLocationForOperation, "getDirectiveLocationForOperation");
   }
 });
-
-// node_modules/graphql/validation/rules/KnownFragmentNamesRule.js
 var require_KnownFragmentNamesRule = __commonJS({
   "node_modules/graphql/validation/rules/KnownFragmentNamesRule.js"(exports) {
     "use strict";
@@ -10545,8 +10442,6 @@ var require_KnownFragmentNamesRule = __commonJS({
     __name(KnownFragmentNamesRule, "KnownFragmentNamesRule");
   }
 });
-
-// node_modules/graphql/validation/rules/KnownTypeNamesRule.js
 var require_KnownTypeNamesRule = __commonJS({
   "node_modules/graphql/validation/rules/KnownTypeNamesRule.js"(exports) {
     "use strict";
@@ -10610,8 +10505,6 @@ var require_KnownTypeNamesRule = __commonJS({
     __name(isSDLNode, "isSDLNode");
   }
 });
-
-// node_modules/graphql/validation/rules/LoneAnonymousOperationRule.js
 var require_LoneAnonymousOperationRule = __commonJS({
   "node_modules/graphql/validation/rules/LoneAnonymousOperationRule.js"(exports) {
     "use strict";
@@ -10646,8 +10539,6 @@ var require_LoneAnonymousOperationRule = __commonJS({
     __name(LoneAnonymousOperationRule, "LoneAnonymousOperationRule");
   }
 });
-
-// node_modules/graphql/validation/rules/LoneSchemaDefinitionRule.js
 var require_LoneSchemaDefinitionRule = __commonJS({
   "node_modules/graphql/validation/rules/LoneSchemaDefinitionRule.js"(exports) {
     "use strict";
@@ -10691,8 +10582,6 @@ var require_LoneSchemaDefinitionRule = __commonJS({
     __name(LoneSchemaDefinitionRule, "LoneSchemaDefinitionRule");
   }
 });
-
-// node_modules/graphql/validation/rules/MaxIntrospectionDepthRule.js
 var require_MaxIntrospectionDepthRule = __commonJS({
   "node_modules/graphql/validation/rules/MaxIntrospectionDepthRule.js"(exports) {
     "use strict";
@@ -10759,8 +10648,6 @@ var require_MaxIntrospectionDepthRule = __commonJS({
     __name(MaxIntrospectionDepthRule, "MaxIntrospectionDepthRule");
   }
 });
-
-// node_modules/graphql/validation/rules/NoFragmentCyclesRule.js
 var require_NoFragmentCyclesRule = __commonJS({
   "node_modules/graphql/validation/rules/NoFragmentCyclesRule.js"(exports) {
     "use strict";
@@ -10821,8 +10708,6 @@ var require_NoFragmentCyclesRule = __commonJS({
     __name(NoFragmentCyclesRule, "NoFragmentCyclesRule");
   }
 });
-
-// node_modules/graphql/validation/rules/NoUndefinedVariablesRule.js
 var require_NoUndefinedVariablesRule = __commonJS({
   "node_modules/graphql/validation/rules/NoUndefinedVariablesRule.js"(exports) {
     "use strict";
@@ -10863,8 +10748,6 @@ var require_NoUndefinedVariablesRule = __commonJS({
     __name(NoUndefinedVariablesRule, "NoUndefinedVariablesRule");
   }
 });
-
-// node_modules/graphql/validation/rules/NoUnusedFragmentsRule.js
 var require_NoUnusedFragmentsRule = __commonJS({
   "node_modules/graphql/validation/rules/NoUnusedFragmentsRule.js"(exports) {
     "use strict";
@@ -10915,8 +10798,6 @@ var require_NoUnusedFragmentsRule = __commonJS({
     __name(NoUnusedFragmentsRule, "NoUnusedFragmentsRule");
   }
 });
-
-// node_modules/graphql/validation/rules/NoUnusedVariablesRule.js
 var require_NoUnusedVariablesRule = __commonJS({
   "node_modules/graphql/validation/rules/NoUnusedVariablesRule.js"(exports) {
     "use strict";
@@ -10961,8 +10842,6 @@ var require_NoUnusedVariablesRule = __commonJS({
     __name(NoUnusedVariablesRule, "NoUnusedVariablesRule");
   }
 });
-
-// node_modules/graphql/utilities/sortValueNode.js
 var require_sortValueNode = __commonJS({
   "node_modules/graphql/utilities/sortValueNode.js"(exports) {
     "use strict";
@@ -11000,8 +10879,6 @@ var require_sortValueNode = __commonJS({
     __name(sortFields, "sortFields");
   }
 });
-
-// node_modules/graphql/validation/rules/OverlappingFieldsCanBeMergedRule.js
 var require_OverlappingFieldsCanBeMergedRule = __commonJS({
   "node_modules/graphql/validation/rules/OverlappingFieldsCanBeMergedRule.js"(exports) {
     "use strict";
@@ -11551,8 +11428,6 @@ var require_OverlappingFieldsCanBeMergedRule = __commonJS({
     };
   }
 });
-
-// node_modules/graphql/validation/rules/PossibleFragmentSpreadsRule.js
 var require_PossibleFragmentSpreadsRule = __commonJS({
   "node_modules/graphql/validation/rules/PossibleFragmentSpreadsRule.js"(exports) {
     "use strict";
@@ -11626,8 +11501,6 @@ var require_PossibleFragmentSpreadsRule = __commonJS({
     __name(getFragmentType, "getFragmentType");
   }
 });
-
-// node_modules/graphql/validation/rules/PossibleTypeExtensionsRule.js
 var require_PossibleTypeExtensionsRule = __commonJS({
   "node_modules/graphql/validation/rules/PossibleTypeExtensionsRule.js"(exports) {
     "use strict";
@@ -11762,8 +11635,6 @@ var require_PossibleTypeExtensionsRule = __commonJS({
     __name(extensionKindToTypeName, "extensionKindToTypeName");
   }
 });
-
-// node_modules/graphql/validation/rules/ProvidedRequiredArgumentsRule.js
 var require_ProvidedRequiredArgumentsRule = __commonJS({
   "node_modules/graphql/validation/rules/ProvidedRequiredArgumentsRule.js"(exports) {
     "use strict";
@@ -11871,8 +11742,6 @@ var require_ProvidedRequiredArgumentsRule = __commonJS({
     __name(isRequiredArgumentNode, "isRequiredArgumentNode");
   }
 });
-
-// node_modules/graphql/validation/rules/ScalarLeafsRule.js
 var require_ScalarLeafsRule = __commonJS({
   "node_modules/graphql/validation/rules/ScalarLeafsRule.js"(exports) {
     "use strict";
@@ -11932,8 +11801,6 @@ var require_ScalarLeafsRule = __commonJS({
     __name(ScalarLeafsRule, "ScalarLeafsRule");
   }
 });
-
-// node_modules/graphql/jsutils/printPathArray.js
 var require_printPathArray = __commonJS({
   "node_modules/graphql/jsutils/printPathArray.js"(exports) {
     "use strict";
@@ -11949,8 +11816,6 @@ var require_printPathArray = __commonJS({
     __name(printPathArray2, "printPathArray");
   }
 });
-
-// node_modules/graphql/jsutils/Path.js
 var require_Path = __commonJS({
   "node_modules/graphql/jsutils/Path.js"(exports) {
     "use strict";
@@ -11979,8 +11844,6 @@ var require_Path = __commonJS({
     __name(pathToArray2, "pathToArray");
   }
 });
-
-// node_modules/graphql/utilities/coerceInputValue.js
 var require_coerceInputValue = __commonJS({
   "node_modules/graphql/utilities/coerceInputValue.js"(exports) {
     "use strict";
@@ -12153,8 +12016,6 @@ var require_coerceInputValue = __commonJS({
     __name(coerceInputValueImpl, "coerceInputValueImpl");
   }
 });
-
-// node_modules/graphql/utilities/valueFromAST.js
 var require_valueFromAST = __commonJS({
   "node_modules/graphql/utilities/valueFromAST.js"(exports) {
     "use strict";
@@ -12281,8 +12142,6 @@ var require_valueFromAST = __commonJS({
     __name(hasOwnProperty3, "hasOwnProperty");
   }
 });
-
-// node_modules/graphql/execution/values.js
 var require_values = __commonJS({
   "node_modules/graphql/execution/values.js"(exports) {
     "use strict";
@@ -12497,8 +12356,6 @@ var require_values = __commonJS({
     __name(hasOwnProperty3, "hasOwnProperty");
   }
 });
-
-// node_modules/graphql/execution/collectFields.js
 var require_collectFields = __commonJS({
   "node_modules/graphql/execution/collectFields.js"(exports) {
     "use strict";
@@ -12645,8 +12502,6 @@ var require_collectFields = __commonJS({
     __name(getFieldEntryKey2, "getFieldEntryKey");
   }
 });
-
-// node_modules/graphql/validation/rules/SingleFieldSubscriptionsRule.js
 var require_SingleFieldSubscriptionsRule = __commonJS({
   "node_modules/graphql/validation/rules/SingleFieldSubscriptionsRule.js"(exports) {
     "use strict";
@@ -12715,8 +12570,6 @@ var require_SingleFieldSubscriptionsRule = __commonJS({
     __name(SingleFieldSubscriptionsRule, "SingleFieldSubscriptionsRule");
   }
 });
-
-// node_modules/graphql/jsutils/groupBy.js
 var require_groupBy = __commonJS({
   "node_modules/graphql/jsutils/groupBy.js"(exports) {
     "use strict";
@@ -12740,8 +12593,6 @@ var require_groupBy = __commonJS({
     __name(groupBy, "groupBy");
   }
 });
-
-// node_modules/graphql/validation/rules/UniqueArgumentDefinitionNamesRule.js
 var require_UniqueArgumentDefinitionNamesRule = __commonJS({
   "node_modules/graphql/validation/rules/UniqueArgumentDefinitionNamesRule.js"(exports) {
     "use strict";
@@ -12800,8 +12651,6 @@ var require_UniqueArgumentDefinitionNamesRule = __commonJS({
     __name(UniqueArgumentDefinitionNamesRule, "UniqueArgumentDefinitionNamesRule");
   }
 });
-
-// node_modules/graphql/validation/rules/UniqueArgumentNamesRule.js
 var require_UniqueArgumentNamesRule = __commonJS({
   "node_modules/graphql/validation/rules/UniqueArgumentNamesRule.js"(exports) {
     "use strict";
@@ -12841,8 +12690,6 @@ var require_UniqueArgumentNamesRule = __commonJS({
     __name(UniqueArgumentNamesRule, "UniqueArgumentNamesRule");
   }
 });
-
-// node_modules/graphql/validation/rules/UniqueDirectiveNamesRule.js
 var require_UniqueDirectiveNamesRule = __commonJS({
   "node_modules/graphql/validation/rules/UniqueDirectiveNamesRule.js"(exports) {
     "use strict";
@@ -12887,8 +12734,6 @@ var require_UniqueDirectiveNamesRule = __commonJS({
     __name(UniqueDirectiveNamesRule, "UniqueDirectiveNamesRule");
   }
 });
-
-// node_modules/graphql/validation/rules/UniqueDirectivesPerLocationRule.js
 var require_UniqueDirectivesPerLocationRule = __commonJS({
   "node_modules/graphql/validation/rules/UniqueDirectivesPerLocationRule.js"(exports) {
     "use strict";
@@ -12965,8 +12810,6 @@ var require_UniqueDirectivesPerLocationRule = __commonJS({
     __name(UniqueDirectivesPerLocationRule, "UniqueDirectivesPerLocationRule");
   }
 });
-
-// node_modules/graphql/validation/rules/UniqueEnumValueNamesRule.js
 var require_UniqueEnumValueNamesRule = __commonJS({
   "node_modules/graphql/validation/rules/UniqueEnumValueNamesRule.js"(exports) {
     "use strict";
@@ -13024,8 +12867,6 @@ var require_UniqueEnumValueNamesRule = __commonJS({
     __name(UniqueEnumValueNamesRule, "UniqueEnumValueNamesRule");
   }
 });
-
-// node_modules/graphql/validation/rules/UniqueFieldDefinitionNamesRule.js
 var require_UniqueFieldDefinitionNamesRule = __commonJS({
   "node_modules/graphql/validation/rules/UniqueFieldDefinitionNamesRule.js"(exports) {
     "use strict";
@@ -13093,8 +12934,6 @@ var require_UniqueFieldDefinitionNamesRule = __commonJS({
     __name(hasField, "hasField");
   }
 });
-
-// node_modules/graphql/validation/rules/UniqueFragmentNamesRule.js
 var require_UniqueFragmentNamesRule = __commonJS({
   "node_modules/graphql/validation/rules/UniqueFragmentNamesRule.js"(exports) {
     "use strict";
@@ -13128,8 +12967,6 @@ var require_UniqueFragmentNamesRule = __commonJS({
     __name(UniqueFragmentNamesRule, "UniqueFragmentNamesRule");
   }
 });
-
-// node_modules/graphql/validation/rules/UniqueInputFieldNamesRule.js
 var require_UniqueInputFieldNamesRule = __commonJS({
   "node_modules/graphql/validation/rules/UniqueInputFieldNamesRule.js"(exports) {
     "use strict";
@@ -13174,8 +13011,6 @@ var require_UniqueInputFieldNamesRule = __commonJS({
     __name(UniqueInputFieldNamesRule, "UniqueInputFieldNamesRule");
   }
 });
-
-// node_modules/graphql/validation/rules/UniqueOperationNamesRule.js
 var require_UniqueOperationNamesRule = __commonJS({
   "node_modules/graphql/validation/rules/UniqueOperationNamesRule.js"(exports) {
     "use strict";
@@ -13214,8 +13049,6 @@ var require_UniqueOperationNamesRule = __commonJS({
     __name(UniqueOperationNamesRule, "UniqueOperationNamesRule");
   }
 });
-
-// node_modules/graphql/validation/rules/UniqueOperationTypesRule.js
 var require_UniqueOperationTypesRule = __commonJS({
   "node_modules/graphql/validation/rules/UniqueOperationTypesRule.js"(exports) {
     "use strict";
@@ -13271,8 +13104,6 @@ var require_UniqueOperationTypesRule = __commonJS({
     __name(UniqueOperationTypesRule, "UniqueOperationTypesRule");
   }
 });
-
-// node_modules/graphql/validation/rules/UniqueTypeNamesRule.js
 var require_UniqueTypeNamesRule = __commonJS({
   "node_modules/graphql/validation/rules/UniqueTypeNamesRule.js"(exports) {
     "use strict";
@@ -13324,8 +13155,6 @@ var require_UniqueTypeNamesRule = __commonJS({
     __name(UniqueTypeNamesRule, "UniqueTypeNamesRule");
   }
 });
-
-// node_modules/graphql/validation/rules/UniqueVariableNamesRule.js
 var require_UniqueVariableNamesRule = __commonJS({
   "node_modules/graphql/validation/rules/UniqueVariableNamesRule.js"(exports) {
     "use strict";
@@ -13362,8 +13191,6 @@ var require_UniqueVariableNamesRule = __commonJS({
     __name(UniqueVariableNamesRule, "UniqueVariableNamesRule");
   }
 });
-
-// node_modules/graphql/validation/rules/ValuesOfCorrectTypeRule.js
 var require_ValuesOfCorrectTypeRule = __commonJS({
   "node_modules/graphql/validation/rules/ValuesOfCorrectTypeRule.js"(exports) {
     "use strict";
@@ -13556,8 +13383,6 @@ var require_ValuesOfCorrectTypeRule = __commonJS({
     __name(validateOneOfInputObject, "validateOneOfInputObject");
   }
 });
-
-// node_modules/graphql/validation/rules/VariablesAreInputTypesRule.js
 var require_VariablesAreInputTypesRule = __commonJS({
   "node_modules/graphql/validation/rules/VariablesAreInputTypesRule.js"(exports) {
     "use strict";
@@ -13594,8 +13419,6 @@ var require_VariablesAreInputTypesRule = __commonJS({
     __name(VariablesAreInputTypesRule, "VariablesAreInputTypesRule");
   }
 });
-
-// node_modules/graphql/validation/rules/VariablesInAllowedPositionRule.js
 var require_VariablesInAllowedPositionRule = __commonJS({
   "node_modules/graphql/validation/rules/VariablesInAllowedPositionRule.js"(exports) {
     "use strict";
@@ -13681,8 +13504,6 @@ var require_VariablesInAllowedPositionRule = __commonJS({
     __name(allowedVariableUsage, "allowedVariableUsage");
   }
 });
-
-// node_modules/graphql/validation/specifiedRules.js
 var require_specifiedRules = __commonJS({
   "node_modules/graphql/validation/specifiedRules.js"(exports) {
     "use strict";
@@ -13779,8 +13600,6 @@ var require_specifiedRules = __commonJS({
     exports.specifiedSDLRules = specifiedSDLRules;
   }
 });
-
-// node_modules/graphql/validation/ValidationContext.js
 var require_ValidationContext = __commonJS({
   "node_modules/graphql/validation/ValidationContext.js"(exports) {
     "use strict";
@@ -14358,8 +14177,6 @@ var require_ValidationContext = __commonJS({
     exports.ValidationContext = ValidationContext;
   }
 });
-
-// node_modules/graphql/validation/validate.js
 var require_validate2 = __commonJS({
   "node_modules/graphql/validation/validate.js"(exports) {
     "use strict";
@@ -14453,8 +14270,6 @@ var require_validate2 = __commonJS({
     __name(assertValidSDLExtension, "assertValidSDLExtension");
   }
 });
-
-// node_modules/graphql/jsutils/memoize3.js
 var require_memoize3 = __commonJS({
   "node_modules/graphql/jsutils/memoize3.js"(exports) {
     "use strict";
@@ -14489,8 +14304,6 @@ var require_memoize3 = __commonJS({
     __name(memoize32, "memoize3");
   }
 });
-
-// node_modules/graphql/jsutils/promiseForObject.js
 var require_promiseForObject = __commonJS({
   "node_modules/graphql/jsutils/promiseForObject.js"(exports) {
     "use strict";
@@ -14510,8 +14323,6 @@ var require_promiseForObject = __commonJS({
     __name(promiseForObject2, "promiseForObject");
   }
 });
-
-// node_modules/graphql/jsutils/promiseReduce.js
 var require_promiseReduce = __commonJS({
   "node_modules/graphql/jsutils/promiseReduce.js"(exports) {
     "use strict";
@@ -14530,8 +14341,6 @@ var require_promiseReduce = __commonJS({
     __name(promiseReduce2, "promiseReduce");
   }
 });
-
-// node_modules/graphql/jsutils/toError.js
 var require_toError = __commonJS({
   "node_modules/graphql/jsutils/toError.js"(exports) {
     "use strict";
@@ -14556,8 +14365,6 @@ var require_toError = __commonJS({
     };
   }
 });
-
-// node_modules/graphql/error/locatedError.js
 var require_locatedError = __commonJS({
   "node_modules/graphql/error/locatedError.js"(exports) {
     "use strict";
@@ -14588,8 +14395,6 @@ var require_locatedError = __commonJS({
     __name(isLocatedGraphQLError, "isLocatedGraphQLError");
   }
 });
-
-// node_modules/graphql/execution/execute.js
 var require_execute = __commonJS({
   "node_modules/graphql/execution/execute.js"(exports) {
     "use strict";
@@ -15277,8 +15082,6 @@ var require_execute = __commonJS({
     __name(getFieldDef2, "getFieldDef");
   }
 });
-
-// node_modules/graphql/graphql.js
 var require_graphql = __commonJS({
   "node_modules/graphql/graphql.js"(exports) {
     "use strict";
@@ -15354,8 +15157,6 @@ var require_graphql = __commonJS({
     __name(graphqlImpl, "graphqlImpl");
   }
 });
-
-// node_modules/graphql/type/index.js
 var require_type = __commonJS({
   "node_modules/graphql/type/index.js"(exports) {
     "use strict";
@@ -15905,8 +15706,6 @@ var require_type = __commonJS({
     var _assertName = require_assertName();
   }
 });
-
-// node_modules/graphql/language/index.js
 var require_language = __commonJS({
   "node_modules/graphql/language/index.js"(exports) {
     "use strict";
@@ -16125,8 +15924,6 @@ var require_language = __commonJS({
     var _directiveLocation = require_directiveLocation();
   }
 });
-
-// node_modules/graphql/jsutils/isAsyncIterable.js
 var require_isAsyncIterable = __commonJS({
   "node_modules/graphql/jsutils/isAsyncIterable.js"(exports) {
     "use strict";
@@ -16140,8 +15937,6 @@ var require_isAsyncIterable = __commonJS({
     __name(isAsyncIterable5, "isAsyncIterable");
   }
 });
-
-// node_modules/graphql/execution/mapAsyncIterator.js
 var require_mapAsyncIterator = __commonJS({
   "node_modules/graphql/execution/mapAsyncIterator.js"(exports) {
     "use strict";
@@ -16195,8 +15990,6 @@ var require_mapAsyncIterator = __commonJS({
     __name(mapAsyncIterator2, "mapAsyncIterator");
   }
 });
-
-// node_modules/graphql/execution/subscribe.js
 var require_subscribe = __commonJS({
   "node_modules/graphql/execution/subscribe.js"(exports) {
     "use strict";
@@ -16338,8 +16131,6 @@ var require_subscribe = __commonJS({
     __name(executeSubscription2, "executeSubscription");
   }
 });
-
-// node_modules/graphql/execution/index.js
 var require_execution = __commonJS({
   "node_modules/graphql/execution/index.js"(exports) {
     "use strict";
@@ -16412,8 +16203,6 @@ var require_execution = __commonJS({
     var _values = require_values();
   }
 });
-
-// node_modules/graphql/validation/rules/custom/NoDeprecatedCustomRule.js
 var require_NoDeprecatedCustomRule = __commonJS({
   "node_modules/graphql/validation/rules/custom/NoDeprecatedCustomRule.js"(exports) {
     "use strict";
@@ -16513,8 +16302,6 @@ var require_NoDeprecatedCustomRule = __commonJS({
     __name(NoDeprecatedCustomRule, "NoDeprecatedCustomRule");
   }
 });
-
-// node_modules/graphql/validation/rules/custom/NoSchemaIntrospectionCustomRule.js
 var require_NoSchemaIntrospectionCustomRule = __commonJS({
   "node_modules/graphql/validation/rules/custom/NoSchemaIntrospectionCustomRule.js"(exports) {
     "use strict";
@@ -16545,8 +16332,6 @@ var require_NoSchemaIntrospectionCustomRule = __commonJS({
     __name(NoSchemaIntrospectionCustomRule, "NoSchemaIntrospectionCustomRule");
   }
 });
-
-// node_modules/graphql/validation/index.js
 var require_validation = __commonJS({
   "node_modules/graphql/validation/index.js"(exports) {
     "use strict";
@@ -16841,8 +16626,6 @@ var require_validation = __commonJS({
     var _NoSchemaIntrospectionCustomRule = require_NoSchemaIntrospectionCustomRule();
   }
 });
-
-// node_modules/graphql/error/index.js
 var require_error = __commonJS({
   "node_modules/graphql/error/index.js"(exports) {
     "use strict";
@@ -16884,8 +16667,6 @@ var require_error = __commonJS({
     var _locatedError4 = require_locatedError();
   }
 });
-
-// node_modules/graphql/utilities/getIntrospectionQuery.js
 var require_getIntrospectionQuery = __commonJS({
   "node_modules/graphql/utilities/getIntrospectionQuery.js"(exports) {
     "use strict";
@@ -17013,8 +16794,6 @@ ${indent2}}`;
     __name(getIntrospectionQuery, "getIntrospectionQuery");
   }
 });
-
-// node_modules/graphql/utilities/getOperationAST.js
 var require_getOperationAST = __commonJS({
   "node_modules/graphql/utilities/getOperationAST.js"(exports) {
     "use strict";
@@ -17043,8 +16822,6 @@ var require_getOperationAST = __commonJS({
     __name(getOperationAST4, "getOperationAST");
   }
 });
-
-// node_modules/graphql/utilities/getOperationRootType.js
 var require_getOperationRootType = __commonJS({
   "node_modules/graphql/utilities/getOperationRootType.js"(exports) {
     "use strict";
@@ -17100,8 +16877,6 @@ var require_getOperationRootType = __commonJS({
     __name(getOperationRootType, "getOperationRootType");
   }
 });
-
-// node_modules/graphql/utilities/introspectionFromSchema.js
 var require_introspectionFromSchema = __commonJS({
   "node_modules/graphql/utilities/introspectionFromSchema.js"(exports) {
     "use strict";
@@ -17136,8 +16911,6 @@ var require_introspectionFromSchema = __commonJS({
     __name(introspectionFromSchema, "introspectionFromSchema");
   }
 });
-
-// node_modules/graphql/utilities/buildClientSchema.js
 var require_buildClientSchema = __commonJS({
   "node_modules/graphql/utilities/buildClientSchema.js"(exports) {
     "use strict";
@@ -17445,8 +17218,6 @@ var require_buildClientSchema = __commonJS({
     __name(buildClientSchema, "buildClientSchema");
   }
 });
-
-// node_modules/graphql/utilities/extendSchema.js
 var require_extendSchema = __commonJS({
   "node_modules/graphql/utilities/extendSchema.js"(exports) {
     "use strict";
@@ -17990,8 +17761,6 @@ var require_extendSchema = __commonJS({
     __name(isOneOf, "isOneOf");
   }
 });
-
-// node_modules/graphql/utilities/buildASTSchema.js
 var require_buildASTSchema = __commonJS({
   "node_modules/graphql/utilities/buildASTSchema.js"(exports) {
     "use strict";
@@ -18069,8 +17838,6 @@ var require_buildASTSchema = __commonJS({
     __name(buildSchema2, "buildSchema");
   }
 });
-
-// node_modules/graphql/utilities/lexicographicSortSchema.js
 var require_lexicographicSortSchema = __commonJS({
   "node_modules/graphql/utilities/lexicographicSortSchema.js"(exports) {
     "use strict";
@@ -18221,8 +17988,6 @@ var require_lexicographicSortSchema = __commonJS({
     __name(sortBy, "sortBy");
   }
 });
-
-// node_modules/graphql/utilities/printSchema.js
 var require_printSchema = __commonJS({
   "node_modules/graphql/utilities/printSchema.js"(exports) {
     "use strict";
@@ -18452,8 +18217,6 @@ ${operationTypes.join("\n")}
     __name(printDescription, "printDescription");
   }
 });
-
-// node_modules/graphql/utilities/concatAST.js
 var require_concatAST = __commonJS({
   "node_modules/graphql/utilities/concatAST.js"(exports) {
     "use strict";
@@ -18475,8 +18238,6 @@ var require_concatAST = __commonJS({
     __name(concatAST, "concatAST");
   }
 });
-
-// node_modules/graphql/utilities/separateOperations.js
 var require_separateOperations = __commonJS({
   "node_modules/graphql/utilities/separateOperations.js"(exports) {
     "use strict";
@@ -18543,8 +18304,6 @@ var require_separateOperations = __commonJS({
     __name(collectDependencies, "collectDependencies");
   }
 });
-
-// node_modules/graphql/utilities/stripIgnoredCharacters.js
 var require_stripIgnoredCharacters = __commonJS({
   "node_modules/graphql/utilities/stripIgnoredCharacters.js"(exports) {
     "use strict";
@@ -18588,8 +18347,6 @@ var require_stripIgnoredCharacters = __commonJS({
     __name(stripIgnoredCharacters, "stripIgnoredCharacters");
   }
 });
-
-// node_modules/graphql/utilities/assertValidName.js
 var require_assertValidName = __commonJS({
   "node_modules/graphql/utilities/assertValidName.js"(exports) {
     "use strict";
@@ -18625,8 +18382,6 @@ var require_assertValidName = __commonJS({
     __name(isValidNameError, "isValidNameError");
   }
 });
-
-// node_modules/graphql/utilities/findBreakingChanges.js
 var require_findBreakingChanges = __commonJS({
   "node_modules/graphql/utilities/findBreakingChanges.js"(exports) {
     "use strict";
@@ -19055,8 +18810,6 @@ var require_findBreakingChanges = __commonJS({
     __name(diff, "diff");
   }
 });
-
-// node_modules/graphql/utilities/resolveSchemaCoordinate.js
 var require_resolveSchemaCoordinate = __commonJS({
   "node_modules/graphql/utilities/resolveSchemaCoordinate.js"(exports) {
     "use strict";
@@ -19239,8 +18992,6 @@ var require_resolveSchemaCoordinate = __commonJS({
     __name(resolveASTSchemaCoordinate, "resolveASTSchemaCoordinate");
   }
 });
-
-// node_modules/graphql/utilities/index.js
 var require_utilities = __commonJS({
   "node_modules/graphql/utilities/index.js"(exports) {
     "use strict";
@@ -19469,8 +19220,6 @@ var require_utilities = __commonJS({
     var _resolveSchemaCoordinate = require_resolveSchemaCoordinate();
   }
 });
-
-// node_modules/graphql/index.js
 var require_graphql2 = __commonJS({
   "node_modules/graphql/index.js"(exports) {
     "use strict";
@@ -20777,8 +20526,6 @@ var require_graphql2 = __commonJS({
     var _index6 = require_utilities();
   }
 });
-
-// node_modules/@whatwg-node/fetch/dist/global-ponyfill.js
 var require_global_ponyfill = __commonJS({
   "node_modules/@whatwg-node/fetch/dist/global-ponyfill.js"(exports, module) {
     module.exports.fetch = globalThis.fetch;
@@ -20805,8 +20552,6 @@ var require_global_ponyfill = __commonJS({
     module.exports.createFetch = () => globalThis;
   }
 });
-
-// node_modules/@graphile/depth-limit/dist/interfaces.js
 var require_interfaces = __commonJS({
   "node_modules/@graphile/depth-limit/dist/interfaces.js"(exports) {
     "use strict";
@@ -20818,8 +20563,6 @@ var require_interfaces = __commonJS({
     exports.INTROSPECTION_LIST_DEPTH = "$$introspectionListDepth";
   }
 });
-
-// node_modules/@graphile/depth-limit/dist/envelop.js
 var require_envelop = __commonJS({
   "node_modules/@graphile/depth-limit/dist/envelop.js"(exports) {
     "use strict";
@@ -20838,8 +20581,6 @@ var require_envelop = __commonJS({
     exports.useDepthLimit = useDepthLimit;
   }
 });
-
-// node_modules/@graphile/depth-limit/dist/index.js
 var require_dist = __commonJS({
   "node_modules/@graphile/depth-limit/dist/index.js"(exports) {
     "use strict";
@@ -21134,8 +20875,6 @@ var require_dist = __commonJS({
     exports.countOperationDepths = countOperationDepths;
   }
 });
-
-// worker/auth.js
 var encoder = new TextEncoder();
 var jwksCache = /* @__PURE__ */ new Map();
 var MAX_JWKS_BYTES = 256 * 1024;
@@ -21456,8 +21195,6 @@ async function authenticateRequest(request, env, options) {
   return null;
 }
 __name(authenticateRequest, "authenticateRequest");
-
-// worker/validation.js
 var POSTER_HOSTS = /* @__PURE__ */ new Set(["a.ltrbxd.com", "image.tmdb.org", "media.themoviedb.org", "images.metahub.space", "m.media-amazon.com"]);
 var LETTERBOXD_HOSTS = /* @__PURE__ */ new Set(["boxd.it", "letterboxd.com", "www.letterboxd.com"]);
 function safeUrl(value, allowedHosts) {
@@ -21535,8 +21272,6 @@ function validateId(id, label = "user") {
   return id;
 }
 __name(validateId, "validateId");
-
-// worker/auth-routes.js
 var MAX_AUTH_BODY_BYTES = 4096;
 var INVALID_CREDENTIALS = "We couldn't log you in. Check your username or email and password, then try again.";
 function isSameOrigin(request, env = {}) {
@@ -21690,8 +21425,236 @@ async function handleAuthRequest(request, env) {
   return errorResponse("Not found", 404);
 }
 __name(handleAuthRequest, "handleAuthRequest");
-
-// node_modules/@graphql-yoga/logger/esm/index.js
+var GOOGLE_ISSUER = "https://accounts.google.com";
+var GOOGLE_OAUTH_STATE_COOKIE = "bettrboxd_oauth_state";
+var GOOGLE_OAUTH_NEXT_COOKIE = "bettrboxd_oauth_next";
+var GOOGLE_AUTH_URL = "https://accounts.google.com/o/oauth2/v2/auth";
+var GOOGLE_TOKEN_URL = "https://oauth2.googleapis.com/token";
+var GOOGLE_USERINFO_URL = "https://www.googleapis.com/oauth2/v3/userinfo";
+function googleClient(env) {
+  const clientId = env.GOOGLE_CLIENT_ID || "";
+  const clientSecret = env.GOOGLE_CLIENT_SECRET || "";
+  return clientId && clientSecret ? { clientId, clientSecret } : null;
+}
+__name(googleClient, "googleClient");
+function googleRedirectUri(request) {
+  return `${new URL(request.url).origin}/auth/google/callback`;
+}
+__name(googleRedirectUri, "googleRedirectUri");
+function googleSecureFlag(env) {
+  return env.ENVIRONMENT === "production" ? "; Secure" : "";
+}
+__name(googleSecureFlag, "googleSecureFlag");
+function googleStateCookie(token, env) {
+  return `${GOOGLE_OAUTH_STATE_COOKIE}=${token}; Path=/; HttpOnly; SameSite=Lax; Max-Age=600${googleSecureFlag(env)}`;
+}
+__name(googleStateCookie, "googleStateCookie");
+function googleStateClearCookie(env) {
+  return `${GOOGLE_OAUTH_STATE_COOKIE}=; Path=/; HttpOnly; SameSite=Lax; Max-Age=0${googleSecureFlag(env)}`;
+}
+function safeNext(value) {
+  if (!value || value.length > 2048) return null;
+  if (!value.startsWith("/") || value.startsWith("//") || value.startsWith("/\\")) return null;
+  return value;
+}
+__name(safeNext, "safeNext");
+function googleNextCookie(value, env) {
+  return `${GOOGLE_OAUTH_NEXT_COOKIE}=${value}; Path=/; HttpOnly; SameSite=Lax; Max-Age=600${googleSecureFlag(env)}`;
+}
+__name(googleNextCookie, "googleNextCookie");
+function googleNextClearCookie(env) {
+  return `${GOOGLE_OAUTH_NEXT_COOKIE}=; Path=/; HttpOnly; SameSite=Lax; Max-Age=0${googleSecureFlag(env)}`;
+}
+__name(googleNextClearCookie, "googleNextClearCookie");
+function googleNextValue(request) {
+  const header = request.headers.get("cookie") || "";
+  if (header.length > 4096) return null;
+  for (const part of header.split(";")) {
+    const separator = part.indexOf("=");
+    if (separator < 0 || part.slice(0, separator).trim() !== GOOGLE_OAUTH_NEXT_COOKIE) continue;
+    const value = part.slice(separator + 1).trim();
+    if (value) return safeNext(value);
+  }
+  return null;
+}
+__name(googleNextValue, "googleNextValue");
+__name(googleStateClearCookie, "googleStateClearCookie");
+function googleStateValue(request) {
+  const header = request.headers.get("cookie") || "";
+  if (header.length > 4096) return null;
+  for (const part of header.split(";")) {
+    const separator = part.indexOf("=");
+    if (separator < 0 || part.slice(0, separator).trim() !== GOOGLE_OAUTH_STATE_COOKIE) continue;
+    const value = part.slice(separator + 1).trim();
+    return value ? value : null;
+  }
+  return null;
+}
+__name(googleStateValue, "googleStateValue");
+function googleErrorPage(message) {
+  return new Response(`<!doctype html><meta charset="utf-8"><title>Google sign-in</title><style>body{font-family:system-ui,sans-serif;background:#fff;color:#172229;display:grid;place-items:center;min-height:100vh;margin:0;padding:24px}h1{font-size:24px}p{max-width:36rem;text-align:center;color:#5F6B74;line-height:1.5}</style><h1>Google sign-in</h1><p>${message}</p>`, {
+    status: 200,
+    headers: { "content-type": "text/html; charset=utf-8", "cache-control": "no-store" }
+  });
+}
+__name(googleErrorPage, "googleErrorPage");
+function googleStart(request, env) {
+  const client = googleClient(env);
+  if (!client) return googleErrorPage("Google sign-in is not configured yet. Ask the app owner to add the Google OAuth client ID and secret.");
+  const state = randomBase64Url(32);
+  const params = new URLSearchParams({
+    client_id: client.clientId,
+    redirect_uri: googleRedirectUri(request),
+    response_type: "code",
+    scope: "openid email profile",
+    state,
+    prompt: "select_account",
+    include_granted_scopes: "true"
+  });
+  const next = safeNext(new URL(request.url).searchParams.get("next") || "");
+  const headers = new Headers({ location: `${GOOGLE_AUTH_URL}?${params}`, "cache-control": "no-store" });
+  headers.append("set-cookie", googleStateCookie(state, env));
+  if (next) headers.append("set-cookie", googleNextCookie(next, env));
+  return new Response(null, { status: 302, headers });
+}
+__name(googleStart, "googleStart");
+async function googleExchangeCode(request, code, env) {
+  const client = googleClient(env);
+  try {
+    const response = await fetch(GOOGLE_TOKEN_URL, {
+      method: "POST",
+      headers: { "content-type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
+        code,
+        client_id: client.clientId,
+        client_secret: client.clientSecret,
+        redirect_uri: googleRedirectUri(request),
+        grant_type: "authorization_code"
+      })
+    });
+    const payload = await response.json().catch(() => ({}));
+    if (!response.ok || typeof payload.access_token !== "string") return null;
+    return payload;
+  } catch {
+    return null;
+  }
+}
+__name(googleExchangeCode, "googleExchangeCode");
+async function googleProfile(accessToken) {
+  try {
+    const response = await fetch(GOOGLE_USERINFO_URL, { headers: { authorization: `Bearer ${accessToken}` } });
+    const profile = await response.json().catch(() => ({}));
+    if (!response.ok || typeof profile.sub !== "string" || profile.sub.length === 0) return null;
+    return profile;
+  } catch {
+    return null;
+  }
+}
+__name(googleProfile, "googleProfile");
+function googleUsernameBase(email) {
+  const base = (email.split("@")[0] || "user").replace(/[^A-Za-z0-9._-]/g, "").slice(0, 60);
+  return /^[A-Za-z0-9._-]{2,}$/.test(base) ? base : `user${base || "1"}`;
+}
+__name(googleUsernameBase, "googleUsernameBase");
+async function googleUniqueUsername(env, base) {
+  let candidate = base;
+  for (let attempt = 0; attempt < 20; attempt += 1) {
+    if (attempt > 0) candidate = `${base.slice(0, 60)}${attempt}`;
+    const taken = await env.DB.prepare("SELECT 1 FROM users WHERE username = ? COLLATE NOCASE LIMIT 1").bind(candidate).first();
+    if (!taken) return candidate;
+  }
+  return `${base.slice(0, 70)}${Date.now().toString(36).slice(-4)}`;
+}
+__name(googleUniqueUsername, "googleUniqueUsername");
+async function googleLinkOrCreate(env, profile) {
+  const identity = await env.DB.prepare(`
+    SELECT user_id FROM access_identities WHERE issuer = ? AND subject = ? LIMIT 1
+  `).bind(GOOGLE_ISSUER, profile.sub).first();
+  if (identity) return identity.user_id;
+  const existing = await env.DB.prepare(`
+    SELECT u.id FROM native_credentials c JOIN users u ON u.id = c.user_id
+    WHERE c.email = ? COLLATE NOCASE LIMIT 1
+  `).bind(profile.email).first();
+  if (existing) {
+    const linked = await env.DB.prepare(`
+      SELECT 1 FROM access_identities WHERE user_id = ? LIMIT 1
+    `).bind(existing.id).first();
+    if (!linked) {
+      await env.DB.prepare(`
+        INSERT INTO access_identities (issuer, subject, user_id, created_at) VALUES (?, ?, ?, ?)
+      `).bind(GOOGLE_ISSUER, profile.sub, existing.id, (/* @__PURE__ */ new Date()).toISOString()).run();
+    }
+    return existing.id;
+  }
+  const username = await googleUniqueUsername(env, googleUsernameBase(profile.email || ""));
+  const displayName = (profile.name || profile.given_name || username).slice(0, 120);
+  const avatar = typeof profile.picture === "string" ? profile.picture : "";
+  const id = crypto.randomUUID();
+  const now = (/* @__PURE__ */ new Date()).toISOString();
+  await env.DB.batch([
+    env.DB.prepare(`
+      INSERT INTO users (id, username, display_name, avatar, theme, created_at, updated_at)
+      VALUES (?, ?, ?, ?, 'light', ?, ?)
+    `).bind(id, username, displayName, avatar, now, now),
+    env.DB.prepare(`
+      INSERT INTO access_identities (issuer, subject, user_id, created_at) VALUES (?, ?, ?, ?)
+    `).bind(GOOGLE_ISSUER, profile.sub, id, now)
+  ]);
+  return id;
+}
+__name(googleLinkOrCreate, "googleLinkOrCreate");
+async function googleCallback(request, env) {
+  const url = new URL(request.url);
+  if (!googleClient(env)) return googleErrorPage("Google sign-in is not configured yet. Ask the app owner to add the Google OAuth client ID and secret.");
+  const state = url.searchParams.get("state") || "";
+  const saved = googleStateValue(request);
+  if (!saved || saved !== state) return googleErrorPage("The sign-in session expired. Please go back and try again.");
+  const clearState = googleStateClearCookie(env);
+  const next = googleNextValue(request);
+  const clearNext = next ? googleNextClearCookie(env) : null;
+  const redirect = (path, param) => {
+    const target = new URL(next || path, request.url);
+    if (param) target.searchParams.set("auth", param);
+    const headers = new Headers({ location: target.toString(), "cache-control": "no-store" });
+    headers.append("set-cookie", clearState);
+    if (clearNext) headers.append("set-cookie", clearNext);
+    return new Response(null, { status: 302, headers });
+  };
+  if (url.searchParams.get("error")) return redirect("/?auth=google-denied", "google-denied");
+  const code = url.searchParams.get("code") || "";
+  if (!code) return redirect("/?auth=google-error", "google-error");
+  const tokens = await googleExchangeCode(request, code, env);
+  if (!tokens) return redirect("/?auth=google-error", "google-error");
+  const profile = await googleProfile(tokens.access_token);
+  if (!profile) return redirect("/?auth=google-error", "google-error");
+  if (String(profile.email_verified) !== "true" || typeof profile.email !== "string" || profile.email.length < 3) {
+    return redirect("/?auth=google-error", "google-error");
+  }
+  let userId;
+  try {
+    userId = await googleLinkOrCreate(env, profile);
+  } catch (error) {
+    console.error(JSON.stringify({ event: "google_link_or_create_failed", message: error instanceof Error ? error.message : "Unknown error" }));
+    return redirect("/?auth=google-error", "google-error");
+  }
+  const session = await createNativeSession(env, userId);
+  const location = new URL(next || "/", request.url);
+  location.searchParams.set("auth", "google");
+  const headers = new Headers({ location: location.toString(), "cache-control": "no-store" });
+  headers.append("set-cookie", clearState);
+  if (clearNext) headers.append("set-cookie", clearNext);
+  headers.append("set-cookie", sessionCookie(env, session.token, session.expiresAt));
+  return new Response(null, { status: 302, headers });
+}
+__name(googleCallback, "googleCallback");
+async function handleGoogleAuthRequest(request, env) {
+  if (request.method !== "GET") return errorResponse("Method not allowed", 405);
+  const pathname = new URL(request.url).pathname;
+  if (pathname === "/auth/google") return googleStart(request, env);
+  if (pathname === "/auth/google/callback") return googleCallback(request, env);
+  return errorResponse("Not found", 404);
+}
+__name(handleGoogleAuthRequest, "handleGoogleAuthRequest");
 var ansiCodes = {
   red: "\x1B[31m",
   yellow: "\x1B[33m",
@@ -21726,8 +21689,6 @@ var createLogger = /* @__PURE__ */ __name((logLevel = globalThis.process?.env["D
     error: score > logLevelScores.error ? noop : errorLog
   };
 }, "createLogger");
-
-// node_modules/@whatwg-node/promise-helpers/esm/index.js
 var kFakePromise = /* @__PURE__ */ Symbol.for("@whatwg-node/promise-helpers/FakePromise");
 function isPromise(value) {
   return value?.then != null;
@@ -21982,11 +21943,7 @@ function unfakePromise(promise) {
   return promise;
 }
 __name(unfakePromise, "unfakePromise");
-
-// node_modules/graphql-yoga/esm/graphiql-html.js
 var graphiql_html_default = '<!doctype html><html lang=en><head><meta charset=utf-8><title>__TITLE__</title><link rel=icon href=https://raw.githubusercontent.com/graphql-hive/graphql-yoga/refs/heads/main/website/src/app/favicon.ico><link crossorigin rel=stylesheet href=https://unpkg.com/@graphql-yoga/graphiql@4.4.4/dist/graphiql.css></head><body id=body class=no-focus-outline><noscript>You need to enable JavaScript to run this app.</noscript><div id=root>Loading __TITLE__...</div><script>function prepareBlob(r){const o=new Blob([r],{type:"application/javascript"});return URL.createObjectURL(o)}const workers={},workerUrls={editorWorkerService:"https://unpkg.com/@graphql-yoga/graphiql@4.4.4/dist/monacoeditorwork/editor.worker.bundle.js",json:"https://unpkg.com/@graphql-yoga/graphiql@4.4.4/dist/monacoeditorwork/json.worker.bundle.js",graphql:"https://unpkg.com/@graphql-yoga/graphiql@4.4.4/dist/monacoeditorwork/graphql.worker..bundle.js"};function prepareWorkers(){return Promise.all(Object.entries(workerUrls).map(async([r,o])=>{const e=await fetch(o),t=await e.text();workers[r]=prepareBlob(t)}))}self.MonacoEnvironment={globalAPI:!1,getWorkerUrl:function(r,o){return workers[o]}}<\/script><script src=https://unpkg.com/@graphql-yoga/graphiql@4.4.4/dist/yoga-graphiql.umd.js><\/script><script>prepareWorkers().finally(()=>{YogaGraphiQL.renderYogaGraphiQL(root,__OPTS__)})<\/script></body></html>';
-
-// node_modules/graphql-yoga/esm/plugins/use-graphiql.js
 function shouldRenderGraphiQL({ headers, method }) {
   return method === "GET" && !!headers?.get("accept")?.includes("text/html");
 }
@@ -22030,8 +21987,6 @@ function useGraphiQL(config) {
   };
 }
 __name(useGraphiQL, "useGraphiQL");
-
-// node_modules/graphql-yoga/esm/plugins/use-schema.js
 function isGraphQLSchema(schemaDef) {
   return schemaDef?.[Symbol.toStringTag] === "GraphQLSchema";
 }
@@ -22104,14 +22059,8 @@ var useSchema = /* @__PURE__ */ __name((schemaDef) => {
   }
   throw new Error(`Invalid schema definition provided, expected a schema, promise or function.`);
 }, "useSchema");
-
-// node_modules/@graphql-tools/schema/esm/assertResolversPresent.js
 var import_graphql9 = __toESM(require_graphql2(), 1);
-
-// node_modules/@graphql-tools/schema/node_modules/@graphql-tools/utils/esm/helpers.js
 var asArray = /* @__PURE__ */ __name((fns) => Array.isArray(fns) ? fns : fns ? [fns] : [], "asArray");
-
-// node_modules/cross-inspect/esm/index.js
 var MAX_RECURSIVE_DEPTH = 3;
 function inspect(value) {
   return formatValue(value, []);
@@ -22205,8 +22154,6 @@ function getObjectTag(object) {
   return tag;
 }
 __name(getObjectTag, "getObjectTag");
-
-// node_modules/@graphql-tools/schema/node_modules/@graphql-tools/utils/esm/Interfaces.js
 var MapperKind;
 (function(MapperKind2) {
   MapperKind2["TYPE"] = "MapperKind.TYPE";
@@ -22235,11 +22182,7 @@ var MapperKind;
   MapperKind2["ARGUMENT"] = "MapperKind.ARGUMENT";
   MapperKind2["ENUM_VALUE"] = "MapperKind.ENUM_VALUE";
 })(MapperKind || (MapperKind = {}));
-
-// node_modules/@graphql-tools/schema/node_modules/@graphql-tools/utils/esm/mapSchema.js
 var import_graphql5 = __toESM(require_graphql2(), 1);
-
-// node_modules/@graphql-tools/schema/node_modules/@graphql-tools/utils/esm/getObjectTypeFromTypeMap.js
 var import_graphql = __toESM(require_graphql2(), 1);
 function getObjectTypeFromTypeMap(typeMap, type) {
   if (type) {
@@ -22250,11 +22193,7 @@ function getObjectTypeFromTypeMap(typeMap, type) {
   }
 }
 __name(getObjectTypeFromTypeMap, "getObjectTypeFromTypeMap");
-
-// node_modules/@graphql-tools/schema/node_modules/@graphql-tools/utils/esm/rewire.js
 var import_graphql3 = __toESM(require_graphql2(), 1);
-
-// node_modules/@graphql-tools/schema/node_modules/@graphql-tools/utils/esm/stub.js
 var import_graphql2 = __toESM(require_graphql2(), 1);
 function isNamedStub(type) {
   if ("getFields" in type) {
@@ -22284,8 +22223,6 @@ function getBuiltInForStub(type) {
   }
 }
 __name(getBuiltInForStub, "getBuiltInForStub");
-
-// node_modules/@graphql-tools/schema/node_modules/@graphql-tools/utils/esm/rewire.js
 function rewireTypes(originalTypeMap, directives) {
   const referenceTypeMap = /* @__PURE__ */ Object.create(null);
   for (const typeName in originalTypeMap) {
@@ -22441,8 +22378,6 @@ function rewireTypes(originalTypeMap, directives) {
   __name(rewireType, "rewireType");
 }
 __name(rewireTypes, "rewireTypes");
-
-// node_modules/@graphql-tools/schema/node_modules/@graphql-tools/utils/esm/transformInputValue.js
 var import_graphql4 = __toESM(require_graphql2(), 1);
 function transformInputValue(type, value, inputLeafValueTransformer = null, inputObjectValueTransformer = null) {
   if (value == null) {
@@ -22486,8 +22421,6 @@ function parseInputValue(type, value) {
   });
 }
 __name(parseInputValue, "parseInputValue");
-
-// node_modules/@graphql-tools/schema/node_modules/@graphql-tools/utils/esm/mapSchema.js
 function mapSchema(schema, schemaMapper = {}) {
   const newTypeMap = mapArguments(mapFields(mapTypes(mapDefaultValues(mapEnumValues(mapTypes(mapDefaultValues(schema.getTypeMap(), schema, serializeInputValue), schema, schemaMapper, (type) => (0, import_graphql5.isLeafType)(type)), schema, schemaMapper), schema, parseInputValue), schema, schemaMapper, (type) => !(0, import_graphql5.isLeafType)(type)), schema, schemaMapper), schema, schemaMapper);
   const originalDirectives = schema.getDirectives();
@@ -22931,8 +22864,6 @@ function correctASTNodes(type) {
   }
 }
 __name(correctASTNodes, "correctASTNodes");
-
-// node_modules/@graphql-tools/schema/node_modules/@graphql-tools/utils/esm/heal.js
 var import_graphql6 = __toESM(require_graphql2(), 1);
 function healSchema(schema) {
   healTypes(schema.getTypeMap(), schema.getDirectives());
@@ -23059,8 +22990,6 @@ function healTypes(originalTypeMap, directives) {
   __name(healType, "healType");
 }
 __name(healTypes, "healTypes");
-
-// node_modules/@graphql-tools/schema/node_modules/@graphql-tools/utils/esm/forEachField.js
 var import_graphql7 = __toESM(require_graphql2(), 1);
 function forEachField(schema, fn) {
   const typeMap = schema.getTypeMap();
@@ -23076,8 +23005,6 @@ function forEachField(schema, fn) {
   }
 }
 __name(forEachField, "forEachField");
-
-// node_modules/@graphql-tools/schema/node_modules/@graphql-tools/utils/esm/forEachDefaultValue.js
 var import_graphql8 = __toESM(require_graphql2(), 1);
 function forEachDefaultValue(schema, fn) {
   const typeMap = schema.getTypeMap();
@@ -23103,8 +23030,6 @@ function forEachDefaultValue(schema, fn) {
   }
 }
 __name(forEachDefaultValue, "forEachDefaultValue");
-
-// node_modules/@graphql-tools/schema/esm/assertResolversPresent.js
 function assertResolversPresent(schema, resolverValidationOptions = {}) {
   const { requireResolversForArgs, requireResolversForNonScalar, requireResolversForAllFields } = resolverValidationOptions;
   if (requireResolversForAllFields && (requireResolversForArgs || requireResolversForNonScalar)) {
@@ -23143,11 +23068,7 @@ To disable this validator, use:
   }
 }
 __name(expectResolver, "expectResolver");
-
-// node_modules/@graphql-tools/schema/esm/addResolversToSchema.js
 var import_graphql10 = __toESM(require_graphql2(), 1);
-
-// node_modules/@graphql-tools/schema/esm/checkForResolveTypeResolver.js
 function checkForResolveTypeResolver(schema, requireResolversForResolveType) {
   mapSchema(schema, {
     [MapperKind.ABSTRACT_TYPE]: (type) => {
@@ -23165,8 +23086,6 @@ function checkForResolveTypeResolver(schema, requireResolversForResolveType) {
   });
 }
 __name(checkForResolveTypeResolver, "checkForResolveTypeResolver");
-
-// node_modules/@graphql-tools/schema/esm/extendResolversFromInterfaces.js
 function extendResolversFromInterfaces(schema, resolvers2) {
   const extendedResolvers = {};
   const typeMap = schema.getTypeMap();
@@ -23198,8 +23117,6 @@ function extendResolversFromInterfaces(schema, resolvers2) {
   return extendedResolvers;
 }
 __name(extendResolversFromInterfaces, "extendResolversFromInterfaces");
-
-// node_modules/@graphql-tools/schema/esm/addResolversToSchema.js
 function addResolversToSchema({ schema, resolvers: inputResolvers, defaultFieldResolver: defaultFieldResolver2, resolverValidationOptions = {}, inheritResolversFromInterfaces = false, updateResolversInPlace = false }) {
   const { requireResolversToMatchSchema = "error", requireResolversForResolveType } = resolverValidationOptions;
   const resolvers2 = inheritResolversFromInterfaces ? extendResolversFromInterfaces(schema, inputResolvers) : inputResolvers;
@@ -23477,11 +23394,7 @@ function setFieldProperties(field, propertiesObj) {
   }
 }
 __name(setFieldProperties, "setFieldProperties");
-
-// node_modules/@graphql-tools/schema/esm/makeExecutableSchema.js
 var import_graphql34 = __toESM(require_graphql2(), 1);
-
-// node_modules/@graphql-tools/merge/node_modules/@graphql-tools/utils/esm/helpers.js
 function compareStrings(a, b) {
   if (String(a) < String(b)) {
     return -1;
@@ -23519,14 +23432,8 @@ function isSome(input) {
   return input != null;
 }
 __name(isSome, "isSome");
-
-// node_modules/@graphql-tools/merge/node_modules/@graphql-tools/utils/esm/getDirectiveExtensions.js
 var import_graphql13 = __toESM(require_graphql2(), 1);
-
-// node_modules/@graphql-tools/merge/node_modules/@graphql-tools/utils/esm/getArgumentValues.js
 var import_graphql12 = __toESM(require_graphql2(), 1);
-
-// node_modules/@graphql-tools/merge/node_modules/@graphql-tools/utils/esm/errors.js
 var import_graphql11 = __toESM(require_graphql2(), 1);
 var possibleGraphQLErrorProperties = [
   "message",
@@ -23559,8 +23466,6 @@ function createGraphQLError(message, options) {
   return error;
 }
 __name(createGraphQLError, "createGraphQLError");
-
-// node_modules/@graphql-tools/merge/node_modules/@graphql-tools/utils/esm/jsutils.js
 function isIterableObject(value) {
   return value != null && typeof value === "object" && Symbol.iterator in value;
 }
@@ -23573,8 +23478,6 @@ function hasOwnProperty(obj, prop) {
   return Object.prototype.hasOwnProperty.call(obj, prop);
 }
 __name(hasOwnProperty, "hasOwnProperty");
-
-// node_modules/@graphql-tools/merge/node_modules/@graphql-tools/utils/esm/getArgumentValues.js
 function getArgumentValues(def, node, variableValues = {}) {
   const coercedValues = {};
   const argumentNodes = node.arguments ?? [];
@@ -23628,8 +23531,6 @@ function getArgumentValues(def, node, variableValues = {}) {
   return coercedValues;
 }
 __name(getArgumentValues, "getArgumentValues");
-
-// node_modules/@graphql-tools/merge/node_modules/@graphql-tools/utils/esm/memoize.js
 function memoize1(fn) {
   const memoize1cache = /* @__PURE__ */ new WeakMap();
   return /* @__PURE__ */ __name(function memoized(a1) {
@@ -23643,8 +23544,6 @@ function memoize1(fn) {
   }, "memoized");
 }
 __name(memoize1, "memoize1");
-
-// node_modules/@graphql-tools/merge/node_modules/@graphql-tools/utils/esm/getDirectiveExtensions.js
 function getDirectiveExtensions(directableObj, schema, pathToDirectivesInExtensions = ["directives"]) {
   const directiveExtensions = {};
   if (directableObj.extensions) {
@@ -23725,8 +23624,6 @@ function getDirectiveExtensions(directableObj, schema, pathToDirectivesInExtensi
   return directiveExtensions;
 }
 __name(getDirectiveExtensions, "getDirectiveExtensions");
-
-// node_modules/@graphql-tools/merge/node_modules/@graphql-tools/utils/esm/get-directives.js
 function getDirectivesInExtensions(node, pathToDirectivesInExtensions = ["directives"]) {
   const directiveExtensions = getDirectiveExtensions(node, void 0, pathToDirectivesInExtensions);
   return Object.entries(directiveExtensions).map(([directiveName, directiveArgsArr]) => directiveArgsArr?.map((directiveArgs) => ({
@@ -23735,11 +23632,7 @@ function getDirectivesInExtensions(node, pathToDirectivesInExtensions = ["direct
   }))).flat(Infinity).filter(Boolean);
 }
 __name(getDirectivesInExtensions, "getDirectivesInExtensions");
-
-// node_modules/@graphql-tools/merge/node_modules/@graphql-tools/utils/esm/print-schema-with-directives.js
 var import_graphql19 = __toESM(require_graphql2(), 1);
-
-// node_modules/@graphql-tools/merge/node_modules/@graphql-tools/utils/esm/astFromType.js
 var import_graphql14 = __toESM(require_graphql2(), 1);
 function astFromType(type) {
   if ((0, import_graphql14.isNonNullType)(type)) {
@@ -23766,11 +23659,7 @@ function astFromType(type) {
   };
 }
 __name(astFromType, "astFromType");
-
-// node_modules/@graphql-tools/merge/node_modules/@graphql-tools/utils/esm/astFromValue.js
 var import_graphql16 = __toESM(require_graphql2(), 1);
-
-// node_modules/@graphql-tools/merge/node_modules/@graphql-tools/utils/esm/astFromValueUntyped.js
 var import_graphql15 = __toESM(require_graphql2(), 1);
 function astFromValueUntyped(value) {
   if (value === null) {
@@ -23824,8 +23713,6 @@ function astFromValueUntyped(value) {
 }
 __name(astFromValueUntyped, "astFromValueUntyped");
 var integerStringRegExp = /^-?(?:0|[1-9][0-9]*)$/;
-
-// node_modules/@graphql-tools/merge/node_modules/@graphql-tools/utils/esm/astFromValue.js
 function astFromValue(value, type) {
   if ((0, import_graphql16.isNonNullType)(type)) {
     const astValue = astFromValue(value, type.ofType);
@@ -23899,8 +23786,6 @@ function astFromValue(value, type) {
 }
 __name(astFromValue, "astFromValue");
 var integerStringRegExp2 = /^-?(?:0|[1-9][0-9]*)$/;
-
-// node_modules/@graphql-tools/merge/node_modules/@graphql-tools/utils/esm/defaultValueAstFromType.js
 var import_graphql17 = __toESM(require_graphql2(), 1);
 var defaultValueAstFromType = /* @__PURE__ */ __name((arg) => {
   if ("default" in arg) {
@@ -23915,8 +23800,6 @@ var defaultValueAstFromType = /* @__PURE__ */ __name((arg) => {
   }
   return arg.defaultValue !== void 0 ? astFromValue(arg.defaultValue, arg.type) ?? void 0 : void 0;
 }, "defaultValueAstFromType");
-
-// node_modules/@graphql-tools/merge/node_modules/@graphql-tools/utils/esm/descriptionFromObject.js
 var import_graphql18 = __toESM(require_graphql2(), 1);
 function getDescriptionNode(obj) {
   if (obj.astNode?.description) {
@@ -23934,8 +23817,6 @@ function getDescriptionNode(obj) {
   }
 }
 __name(getDescriptionNode, "getDescriptionNode");
-
-// node_modules/@graphql-tools/merge/node_modules/@graphql-tools/utils/esm/rootTypes.js
 var getRootTypeNames = memoize1(/* @__PURE__ */ __name(function getRootTypeNames2(schema) {
   const rootTypes = getRootTypes(schema);
   return new Set([...rootTypes].map((type) => type.name));
@@ -23960,8 +23841,6 @@ var getRootTypeMap = memoize1(/* @__PURE__ */ __name(function getRootTypeMap2(sc
   }
   return rootTypeMap;
 }, "getRootTypeMap"));
-
-// node_modules/@graphql-tools/merge/node_modules/@graphql-tools/utils/esm/print-schema-with-directives.js
 function getDocumentNodeFromSchema(schema, options = {}) {
   const pathToDirectivesInExtensions = options.pathToDirectivesInExtensions;
   const typesMap = schema.getTypeMap();
@@ -24316,8 +24195,6 @@ function makeDirectiveNodes(schema, directiveValues) {
   return directiveNodes;
 }
 __name(makeDirectiveNodes, "makeDirectiveNodes");
-
-// node_modules/@graphql-tools/merge/node_modules/@graphql-tools/utils/esm/comments.js
 var import_graphql20 = __toESM(require_graphql2(), 1);
 var MAX_LINE_LENGTH = 80;
 var commentsRegistry = {};
@@ -24661,8 +24538,6 @@ function isBlank(str) {
   return leadingWhitespace(str) === str.length;
 }
 __name(isBlank, "isBlank");
-
-// node_modules/@graphql-tools/merge/node_modules/@graphql-tools/utils/esm/mergeDeep.js
 function mergeDeep(sources, respectPrototype = false, respectArrays = false, respectArrayLength = false, respectNonEnumerableSymbols = false) {
   if (sources.length === 0) {
     return;
@@ -24754,15 +24629,11 @@ function isObject(item) {
   return item && typeof item === "object" && !Array.isArray(item);
 }
 __name(isObject, "isObject");
-
-// node_modules/@graphql-tools/merge/node_modules/@graphql-tools/utils/esm/isDocumentNode.js
 var import_graphql21 = __toESM(require_graphql2(), 1);
 function isDocumentNode(object) {
   return object && typeof object === "object" && "kind" in object && object.kind === import_graphql21.Kind.DOCUMENT;
 }
 __name(isDocumentNode, "isDocumentNode");
-
-// node_modules/@graphql-tools/merge/esm/merge-resolvers.js
 function mergeResolvers(resolversDefinitions, options) {
   if (!resolversDefinitions || Array.isArray(resolversDefinitions) && resolversDefinitions.length === 0) {
     return {};
@@ -24799,8 +24670,6 @@ function mergeResolvers(resolversDefinitions, options) {
   return result;
 }
 __name(mergeResolvers, "mergeResolvers");
-
-// node_modules/@graphql-tools/merge/esm/typedefs-mergers/arguments.js
 function mergeArguments(args1, args2, config) {
   const result = deduplicateArguments([...args2, ...args1].filter(isSome), config);
   if (config && config.sort) {
@@ -24821,8 +24690,6 @@ function deduplicateArguments(args, config) {
   }, []);
 }
 __name(deduplicateArguments, "deduplicateArguments");
-
-// node_modules/@graphql-tools/merge/esm/typedefs-mergers/directives.js
 var import_graphql22 = __toESM(require_graphql2(), 1);
 function isRepeatableDirective(directive, directives, repeatableLinkImports) {
   return !!(directives?.[directive.name.value]?.repeatable ?? repeatableLinkImports?.has(directive.name.value));
@@ -24937,8 +24804,6 @@ function deduplicateLists(source, target, filterFn) {
   return source.concat(target.filter((val) => filterFn(val, source)));
 }
 __name(deduplicateLists, "deduplicateLists");
-
-// node_modules/@graphql-tools/merge/esm/typedefs-mergers/enum-values.js
 function mergeEnumValues(first, second, config, directives) {
   if (config?.consistentEnumMerge) {
     const reversed = [];
@@ -24973,8 +24838,6 @@ function mergeEnumValues(first, second, config, directives) {
   return result;
 }
 __name(mergeEnumValues, "mergeEnumValues");
-
-// node_modules/@graphql-tools/merge/esm/typedefs-mergers/enum.js
 var import_graphql23 = __toESM(require_graphql2(), 1);
 function mergeEnum(e1, e2, config, directives) {
   if (e2) {
@@ -24993,8 +24856,6 @@ function mergeEnum(e1, e2, config, directives) {
   } : e1;
 }
 __name(mergeEnum, "mergeEnum");
-
-// node_modules/@graphql-tools/merge/esm/typedefs-mergers/utils.js
 var import_graphql24 = __toESM(require_graphql2(), 1);
 function isStringTypes(types) {
   return typeof types === "string";
@@ -25057,8 +24918,6 @@ function defaultStringComparator(a, b) {
   return CompareVal.A_EQUALS_B;
 }
 __name(defaultStringComparator, "defaultStringComparator");
-
-// node_modules/@graphql-tools/merge/esm/typedefs-mergers/fields.js
 function fieldAlreadyExists(fieldsArr, otherField) {
   const resultIndex = fieldsArr.findIndex((field) => field.name.value === otherField.name.value);
   return [resultIndex > -1 ? fieldsArr[resultIndex] : null, resultIndex];
@@ -25129,8 +24988,6 @@ function safeChangeForFieldType(oldType, newType, ignoreNullability = false) {
   return false;
 }
 __name(safeChangeForFieldType, "safeChangeForFieldType");
-
-// node_modules/@graphql-tools/merge/esm/typedefs-mergers/input-type.js
 var import_graphql25 = __toESM(require_graphql2(), 1);
 function mergeInputType(node, existingNode, config, directives) {
   if (existingNode) {
@@ -25153,11 +25010,7 @@ function mergeInputType(node, existingNode, config, directives) {
   } : node;
 }
 __name(mergeInputType, "mergeInputType");
-
-// node_modules/@graphql-tools/merge/esm/typedefs-mergers/interface.js
 var import_graphql26 = __toESM(require_graphql2(), 1);
-
-// node_modules/@graphql-tools/merge/esm/typedefs-mergers/merge-named-type-array.js
 function alreadyExists(arr, other) {
   return !!arr.find((i) => i.name.value === other.name.value);
 }
@@ -25170,8 +25023,6 @@ function mergeNamedTypeArray(first = [], second = [], config = {}) {
   return result;
 }
 __name(mergeNamedTypeArray, "mergeNamedTypeArray");
-
-// node_modules/@graphql-tools/merge/esm/typedefs-mergers/interface.js
 function mergeInterface(node, existingNode, config, directives) {
   if (existingNode) {
     try {
@@ -25194,11 +25045,7 @@ function mergeInterface(node, existingNode, config, directives) {
   } : node;
 }
 __name(mergeInterface, "mergeInterface");
-
-// node_modules/@graphql-tools/merge/esm/typedefs-mergers/merge-nodes.js
 var import_graphql31 = __toESM(require_graphql2(), 1);
-
-// node_modules/@graphql-tools/merge/esm/typedefs-mergers/scalar.js
 var import_graphql27 = __toESM(require_graphql2(), 1);
 function mergeScalar(node, existingNode, config, directives) {
   if (existingNode) {
@@ -25216,8 +25063,6 @@ function mergeScalar(node, existingNode, config, directives) {
   } : node;
 }
 __name(mergeScalar, "mergeScalar");
-
-// node_modules/@graphql-tools/merge/esm/typedefs-mergers/schema-def.js
 var import_graphql28 = __toESM(require_graphql2(), 1);
 var DEFAULT_OPERATION_TYPE_NAME_MAP = {
   query: "Query",
@@ -25250,8 +25095,6 @@ function mergeSchemaDefs(node, existingNode, config, directives) {
   } : node;
 }
 __name(mergeSchemaDefs, "mergeSchemaDefs");
-
-// node_modules/@graphql-tools/merge/esm/typedefs-mergers/type.js
 var import_graphql29 = __toESM(require_graphql2(), 1);
 function mergeType(node, existingNode, config, directives) {
   if (existingNode) {
@@ -25275,8 +25118,6 @@ function mergeType(node, existingNode, config, directives) {
   } : node;
 }
 __name(mergeType, "mergeType");
-
-// node_modules/@graphql-tools/merge/esm/typedefs-mergers/union.js
 var import_graphql30 = __toESM(require_graphql2(), 1);
 function mergeUnion(first, second, config, directives) {
   if (second) {
@@ -25296,8 +25137,6 @@ function mergeUnion(first, second, config, directives) {
   } : first;
 }
 __name(mergeUnion, "mergeUnion");
-
-// node_modules/@graphql-tools/merge/esm/typedefs-mergers/merge-nodes.js
 var schemaDefSymbol = "SCHEMA_DEF_SYMBOL";
 function isNamedDefinitionNode(definitionNode) {
   return "name" in definitionNode;
@@ -25366,11 +25205,7 @@ function isASTNode(node) {
   return node != null && typeof node === "object" && "kind" in node && typeof node.kind === "string";
 }
 __name(isASTNode, "isASTNode");
-
-// node_modules/@graphql-tools/merge/esm/typedefs-mergers/merge-typedefs.js
 var import_graphql33 = __toESM(require_graphql2(), 1);
-
-// node_modules/@graphql-tools/merge/esm/links.js
 var import_graphql32 = __toESM(require_graphql2(), 1);
 function namespace(link) {
   return link.as ?? link.url.name;
@@ -25519,8 +25354,6 @@ function parseFederationLinkUrl(urlSource) {
   };
 }
 __name(parseFederationLinkUrl, "parseFederationLinkUrl");
-
-// node_modules/@graphql-tools/merge/esm/typedefs-mergers/merge-typedefs.js
 function mergeTypeDefs(typeSource, config) {
   resetComments();
   const doc = {
@@ -25650,8 +25483,6 @@ function mergeGraphQLTypes(typeSource, config) {
   return mergedNodeDefinitions;
 }
 __name(mergeGraphQLTypes, "mergeGraphQLTypes");
-
-// node_modules/@graphql-tools/merge/esm/extensions.js
 function applyExtensionObject(obj, extensions) {
   if (!obj || !extensions || extensions === obj.extensions) {
     return;
@@ -25695,8 +25526,6 @@ function applyExtensions(schema, extensions) {
   return schema;
 }
 __name(applyExtensions, "applyExtensions");
-
-// node_modules/@graphql-tools/schema/esm/makeExecutableSchema.js
 function makeExecutableSchema({ typeDefs: typeDefs2, resolvers: resolvers2 = {}, resolverValidationOptions = {}, inheritResolversFromInterfaces = false, updateResolversInPlace = false, schemaExtensions, defaultFieldResolver: defaultFieldResolver2, ...otherOptions }) {
   if (typeof resolverValidationOptions !== "object") {
     throw new Error("Expected `resolverValidationOptions` to be an object");
@@ -25736,17 +25565,11 @@ function makeExecutableSchema({ typeDefs: typeDefs2, resolvers: resolvers2 = {},
   return schema;
 }
 __name(makeExecutableSchema, "makeExecutableSchema");
-
-// node_modules/graphql-yoga/esm/schema.js
 function createSchema(opts) {
   return makeExecutableSchema(opts);
 }
 __name(createSchema, "createSchema");
-
-// node_modules/graphql-yoga/esm/server.js
 var import_graphql47 = __toESM(require_graphql2(), 1);
-
-// node_modules/@envelop/instrumentation/esm/instrumentation.js
 function chain(first, next) {
   const merged = { ...next, ...first };
   for (const key of Object.keys(merged)) {
@@ -25793,11 +25616,7 @@ var getInstrumented = /* @__PURE__ */ __name((payload) => ({
     };
   }
 }), "getInstrumented");
-
-// node_modules/@envelop/core/esm/document-string-map.js
 var documentStringMap = /* @__PURE__ */ new WeakMap();
-
-// node_modules/@envelop/core/esm/utils.js
 function getSubscribeArgs(args) {
   return args.length === 1 ? args[0] : {
     schema: args[0],
@@ -25922,8 +25741,6 @@ function errorAsyncIterator(source, onError) {
   };
 }
 __name(errorAsyncIterator, "errorAsyncIterator");
-
-// node_modules/@envelop/core/esm/orchestrator.js
 function throwEngineFunctionError(name) {
   throw Error(`No \`${name}\` function found! Register it using "useEngine" plugin.`);
 }
@@ -26325,8 +26142,6 @@ function createEnvelopOrchestrator({ plugins }) {
   };
 }
 __name(createEnvelopOrchestrator, "createEnvelopOrchestrator");
-
-// node_modules/@envelop/core/esm/create.js
 function notEmpty(value) {
   return value != null;
 }
@@ -26354,8 +26169,6 @@ function envelop(options) {
   return getEnveloped;
 }
 __name(envelop, "envelop");
-
-// node_modules/@envelop/core/esm/plugins/use-masked-errors.js
 var DEFAULT_ERROR_MESSAGE = "Unexpected error.";
 function isGraphQLError(error) {
   return error instanceof Error && error.name === "GraphQLError";
@@ -26439,15 +26252,11 @@ function useMaskedErrors(opts) {
   };
 }
 __name(useMaskedErrors, "useMaskedErrors");
-
-// node_modules/@envelop/core/esm/plugins/use-extend-context.js
 var useExtendContext = /* @__PURE__ */ __name((contextFactory) => ({
   onContextBuilding({ context, extendContext }) {
     return handleMaybePromise(() => contextFactory(context), (result) => extendContext(result));
   }
 }), "useExtendContext");
-
-// node_modules/@envelop/core/esm/plugins/use-engine.js
 var useEngine = /* @__PURE__ */ __name((engine) => {
   return {
     onExecute: /* @__PURE__ */ __name(({ setExecuteFn }) => {
@@ -26473,14 +26282,8 @@ var useEngine = /* @__PURE__ */ __name((engine) => {
     }, "onSubscribe")
   };
 }, "useEngine");
-
-// node_modules/@graphql-tools/executor/esm/execution/execute.js
 var import_graphql40 = __toESM(require_graphql2(), 1);
-
-// node_modules/@graphql-tools/executor/node_modules/@graphql-tools/utils/esm/getArgumentValues.js
 var import_graphql36 = __toESM(require_graphql2(), 1);
-
-// node_modules/@graphql-tools/executor/node_modules/@graphql-tools/utils/esm/errors.js
 var import_graphql35 = __toESM(require_graphql2(), 1);
 var possibleGraphQLErrorProperties2 = [
   "message",
@@ -26524,8 +26327,6 @@ function locatedError(rawError, nodes, path, info) {
   return error;
 }
 __name(locatedError, "locatedError");
-
-// node_modules/@graphql-tools/executor/node_modules/@graphql-tools/utils/esm/jsutils.js
 function isIterableObject2(value) {
   return value != null && typeof value === "object" && Symbol.iterator in value;
 }
@@ -26546,8 +26347,6 @@ function hasOwnProperty2(obj, prop) {
   return Object.prototype.hasOwnProperty.call(obj, prop);
 }
 __name(hasOwnProperty2, "hasOwnProperty");
-
-// node_modules/@graphql-tools/executor/node_modules/@graphql-tools/utils/esm/getArgumentValues.js
 function getArgumentValues2(def, node, variableValues = {}) {
   const coercedValues = {};
   const argumentNodes = node.arguments ?? [];
@@ -26601,8 +26400,6 @@ function getArgumentValues2(def, node, variableValues = {}) {
   return coercedValues;
 }
 __name(getArgumentValues2, "getArgumentValues");
-
-// node_modules/@graphql-tools/executor/node_modules/@graphql-tools/utils/esm/memoize.js
 function memoize12(fn) {
   const memoize1cache = /* @__PURE__ */ new WeakMap();
   return /* @__PURE__ */ __name(function memoized(a1) {
@@ -26704,8 +26501,6 @@ function memoize5(fn) {
   }, "memoized");
 }
 __name(memoize5, "memoize5");
-
-// node_modules/@graphql-tools/executor/node_modules/@graphql-tools/utils/esm/rootTypes.js
 function getDefinedRootType(schema, operation, nodes) {
   const rootTypeMap = getRootTypeMap3(schema);
   const rootType = rootTypeMap.get(operation);
@@ -26741,11 +26536,7 @@ var getRootTypeMap3 = memoize12(/* @__PURE__ */ __name(function getRootTypeMap4(
   }
   return rootTypeMap;
 }, "getRootTypeMap"));
-
-// node_modules/@graphql-tools/executor/node_modules/@graphql-tools/utils/esm/collectFields.js
 var import_graphql38 = __toESM(require_graphql2(), 1);
-
-// node_modules/@graphql-tools/executor/node_modules/@graphql-tools/utils/esm/AccumulatorMap.js
 var AccumulatorMap = class extends Map {
   static {
     __name(this, "AccumulatorMap");
@@ -26762,8 +26553,6 @@ var AccumulatorMap = class extends Map {
     }
   }
 };
-
-// node_modules/@graphql-tools/executor/node_modules/@graphql-tools/utils/esm/directives.js
 var import_graphql37 = __toESM(require_graphql2(), 1);
 var GraphQLDeferDirective = new import_graphql37.GraphQLDirective({
   name: "defer",
@@ -26802,8 +26591,6 @@ var GraphQLStreamDirective = new import_graphql37.GraphQLDirective({
     }
   }
 });
-
-// node_modules/@graphql-tools/executor/node_modules/@graphql-tools/utils/esm/collectFields.js
 function collectFieldsImpl(schema, fragments, variableValues, runtimeType, selectionSet, fields, patches, visitedFragmentNames) {
   for (const selection of selectionSet.selections) {
     switch (selection.kind) {
@@ -26930,14 +26717,10 @@ var collectSubFields = memoize5(/* @__PURE__ */ __name(function collectSubfields
   }
   return subFieldsAndPatches;
 }, "collectSubfields"));
-
-// node_modules/@graphql-tools/executor/node_modules/@graphql-tools/utils/esm/isAsyncIterable.js
 function isAsyncIterable2(value) {
   return value?.[Symbol.asyncIterator] != null;
 }
 __name(isAsyncIterable2, "isAsyncIterable");
-
-// node_modules/@graphql-tools/executor/node_modules/@graphql-tools/utils/esm/Path.js
 function addPath(prev, key, typename) {
   return { prev, key, typename };
 }
@@ -26956,8 +26739,6 @@ function printPathArray(path) {
   return path.map((key) => typeof key === "number" ? "[" + key.toString() + "]" : "." + key).join("");
 }
 __name(printPathArray, "printPathArray");
-
-// node_modules/@whatwg-node/disposablestack/esm/SupressedError.js
 var PonyfillSuppressedError = class extends Error {
   static {
     __name(this, "PonyfillSuppressedError");
@@ -26973,8 +26754,6 @@ var PonyfillSuppressedError = class extends Error {
     Error.captureStackTrace(this, this.constructor);
   }
 };
-
-// node_modules/@whatwg-node/disposablestack/esm/symbols.js
 var DisposableSymbols = {
   get dispose() {
     return Symbol.dispose || /* @__PURE__ */ Symbol.for("dispose");
@@ -26983,8 +26762,6 @@ var DisposableSymbols = {
     return Symbol.asyncDispose || /* @__PURE__ */ Symbol.for("asyncDispose");
   }
 };
-
-// node_modules/@whatwg-node/disposablestack/esm/utils.js
 function isSyncDisposable(obj) {
   return obj?.[DisposableSymbols.dispose] != null;
 }
@@ -26993,8 +26770,6 @@ function isAsyncDisposable(obj) {
   return obj?.[DisposableSymbols.asyncDispose] != null;
 }
 __name(isAsyncDisposable, "isAsyncDisposable");
-
-// node_modules/@whatwg-node/disposablestack/esm/AsyncDisposableStack.js
 var SuppressedError2 = globalThis.SuppressedError || PonyfillSuppressedError;
 var PonyfillAsyncDisposableStack = class _PonyfillAsyncDisposableStack {
   static {
@@ -27062,8 +26837,6 @@ var PonyfillAsyncDisposableStack = class _PonyfillAsyncDisposableStack {
   }
   [Symbol.toStringTag] = "AsyncDisposableStack";
 };
-
-// node_modules/@whatwg-node/disposablestack/esm/DisposableStack.js
 var SuppressedError3 = globalThis.SuppressedError || PonyfillSuppressedError;
 var PonyfillDisposableStack = class _PonyfillDisposableStack {
   static {
@@ -27121,13 +26894,9 @@ var PonyfillDisposableStack = class _PonyfillDisposableStack {
   }
   [Symbol.toStringTag] = "DisposableStack";
 };
-
-// node_modules/@whatwg-node/disposablestack/esm/index.js
 var DisposableStack = globalThis.DisposableStack || PonyfillDisposableStack;
 var AsyncDisposableStack = globalThis.AsyncDisposableStack || PonyfillAsyncDisposableStack;
 var SuppressedError4 = globalThis.SuppressedError || PonyfillSuppressedError;
-
-// node_modules/@graphql-tools/executor/esm/execution/coerceError.js
 function coerceError(error) {
   if (error instanceof Error) {
     return error;
@@ -27151,8 +26920,6 @@ function coerceError(error) {
   return new Error(String(error));
 }
 __name(coerceError, "coerceError");
-
-// node_modules/@graphql-tools/executor/esm/execution/flattenAsyncIterable.js
 function flattenAsyncIterable(iterable) {
   const topIterator = iterable[Symbol.asyncIterator]();
   let currentNestedIterator;
@@ -27222,16 +26989,12 @@ function flattenAsyncIterable(iterable) {
   };
 }
 __name(flattenAsyncIterable, "flattenAsyncIterable");
-
-// node_modules/@graphql-tools/executor/esm/execution/invariant.js
 function invariant(condition, message) {
   if (!condition) {
     throw new Error(message != null ? message : "Unexpected invariant triggered.");
   }
 }
 __name(invariant, "invariant");
-
-// node_modules/@graphql-tools/executor/esm/execution/promiseForObject.js
 function promiseForObject(object, signal, signalPromise) {
   signal?.throwIfAborted();
   const resolvedObject = /* @__PURE__ */ Object.create(null);
@@ -27254,8 +27017,6 @@ function promiseForObject(object, signal, signalPromise) {
   return promiseAll.then(() => resolvedObject);
 }
 __name(promiseForObject, "promiseForObject");
-
-// node_modules/@graphql-tools/executor/esm/execution/values.js
 var import_graphql39 = __toESM(require_graphql2(), 1);
 function getVariableValues(schema, varDefNodes, inputs, options) {
   const errors = [];
@@ -27319,8 +27080,6 @@ function coerceVariableValues(schema, varDefNodes, inputs, onError) {
   return coercedValues;
 }
 __name(coerceVariableValues, "coerceVariableValues");
-
-// node_modules/@graphql-tools/executor/esm/execution/execute.js
 var collectSubfields2 = memoize3((exeContext, returnType, fieldNodes) => collectSubFields(exeContext.schema, exeContext.fragments, exeContext.variableValues, returnType, fieldNodes));
 function execute(args) {
   const exeContext = buildExecutionContext(args);
@@ -28433,8 +28192,6 @@ function getFieldDef(schema, parentType, fieldNode) {
   return parentType.getFields()[fieldName];
 }
 __name(getFieldDef, "getFieldDef");
-
-// node_modules/@graphql-tools/executor/esm/execution/normalizedExecutor.js
 var import_graphql41 = __toESM(require_graphql2(), 1);
 function normalizedExecutor(args) {
   const operationAST = (0, import_graphql41.getOperationAST)(args.document, args.operationName);
@@ -28466,14 +28223,8 @@ var executorFromSchema = memoize12(/* @__PURE__ */ __name(function executorFromS
     });
   }, "schemaExecutor");
 }, "executorFromSchema"));
-
-// node_modules/graphql-yoga/esm/server.js
 var defaultFetchAPI = __toESM(require_global_ponyfill(), 1);
-
-// node_modules/@whatwg-node/server/esm/createServerAdapter.js
 var DefaultFetchAPI = __toESM(require_global_ponyfill(), 1);
-
-// node_modules/@whatwg-node/server/esm/utils.js
 function isAsyncIterable3(body) {
   return body != null && typeof body === "object" && typeof body[Symbol.asyncIterator] === "function";
 }
@@ -28965,8 +28716,6 @@ function createCustomAbortControllerSignal() {
   });
 }
 __name(createCustomAbortControllerSignal, "createCustomAbortControllerSignal");
-
-// node_modules/@whatwg-node/server/esm/uwebsockets.js
 function isUWSResponse(res) {
   return !!res.onData;
 }
@@ -29197,8 +28946,6 @@ function sendResponseToUwsOpts(uwsResponse, fetchResponse, controller, fetchAPI)
   });
 }
 __name(sendResponseToUwsOpts, "sendResponseToUwsOpts");
-
-// node_modules/@whatwg-node/server/esm/createServerAdapter.js
 function isRequestAccessible(serverContext) {
   try {
     return !!serverContext?.request;
@@ -29533,8 +29280,6 @@ function createServerAdapter(serverAdapterBaseObject, options) {
   return serverAdapter;
 }
 __name(createServerAdapter, "createServerAdapter");
-
-// node_modules/@whatwg-node/server/esm/plugins/useCors.js
 function getCORSHeadersByRequestAndOptions(request, corsOptions) {
   const currentOrigin = request.headers.get("origin");
   if (corsOptions === false || currentOrigin == null) {
@@ -29638,11 +29383,7 @@ function useCORS(options) {
   };
 }
 __name(useCORS, "useCORS");
-
-// node_modules/graphql-yoga/esm/error.js
 var import_graphql43 = __toESM(require_graphql2(), 1);
-
-// node_modules/@graphql-tools/utils/esm/errors.js
 var import_graphql42 = __toESM(require_graphql2(), 1);
 var possibleGraphQLErrorProperties3 = [
   "message",
@@ -29679,14 +29420,10 @@ function getSchemaCoordinate(error) {
   return error.coordinate;
 }
 __name(getSchemaCoordinate, "getSchemaCoordinate");
-
-// node_modules/@graphql-tools/utils/esm/isAsyncIterable.js
 function isAsyncIterable4(value) {
   return value?.[Symbol.asyncIterator] != null;
 }
 __name(isAsyncIterable4, "isAsyncIterable");
-
-// node_modules/graphql-yoga/esm/error.js
 function isAggregateError(obj) {
   return obj != null && typeof obj === "object" && "errors" in obj;
 }
@@ -29811,8 +29548,6 @@ function areGraphQLErrors(obj) {
   obj.some(isGraphQLError2);
 }
 __name(areGraphQLErrors, "areGraphQLErrors");
-
-// node_modules/graphql-yoga/esm/plugins/allowed-headers.js
 function useAllowedResponseHeaders(allowedHeaders) {
   return {
     onResponse({ response }) {
@@ -29837,11 +29572,7 @@ function removeDisallowedHeaders(headers, allowedHeaders) {
   }
 }
 __name(removeDisallowedHeaders, "removeDisallowedHeaders");
-
-// node_modules/graphql-yoga/esm/plugins/request-parser/get.js
 var import_fetch2 = __toESM(require_global_ponyfill(), 1);
-
-// node_modules/graphql-yoga/esm/plugins/request-parser/utils.js
 var import_fetch = __toESM(require_global_ponyfill(), 1);
 function handleURLSearchParams(searchParams) {
   const operationName = searchParams.get("operationName") || void 0;
@@ -29867,8 +29598,6 @@ function isContentTypeMatch(request, expectedContentType) {
   return contentType === expectedContentType || !!contentType?.startsWith(`${expectedContentType};`);
 }
 __name(isContentTypeMatch, "isContentTypeMatch");
-
-// node_modules/graphql-yoga/esm/plugins/request-parser/get.js
 function isGETRequest(request) {
   return request.method === "GET";
 }
@@ -29879,8 +29608,6 @@ function parseGETRequest(request) {
   return handleURLSearchParams(searchParams);
 }
 __name(parseGETRequest, "parseGETRequest");
-
-// node_modules/graphql-yoga/esm/plugins/request-parser/post-form-url-encoded.js
 function isPOSTFormUrlEncodedRequest(request) {
   return request.method === "POST" && isContentTypeMatch(request, "application/x-www-form-urlencoded");
 }
@@ -29889,8 +29616,6 @@ function parsePOSTFormUrlEncodedRequest(request) {
   return request.text().then(parseURLSearchParams);
 }
 __name(parsePOSTFormUrlEncodedRequest, "parsePOSTFormUrlEncodedRequest");
-
-// node_modules/graphql-yoga/esm/plugins/request-parser/post-graphql-string.js
 function isPOSTGraphQLStringRequest(request) {
   return request.method === "POST" && isContentTypeMatch(request, "application/graphql");
 }
@@ -29899,8 +29624,6 @@ function parsePOSTGraphQLStringRequest(request) {
   return request.text().then((query) => ({ query }));
 }
 __name(parsePOSTGraphQLStringRequest, "parsePOSTGraphQLStringRequest");
-
-// node_modules/graphql-yoga/esm/plugins/request-parser/post-json.js
 var import_graphql44 = __toESM(require_graphql2(), 1);
 function isPOSTJsonRequest(request) {
   return request.method === "POST" && (isContentTypeMatch(request, "application/json") || isContentTypeMatch(request, "application/graphql+json"));
@@ -29953,8 +29676,6 @@ function parsePOSTJsonRequest(request) {
   });
 }
 __name(parsePOSTJsonRequest, "parsePOSTJsonRequest");
-
-// node_modules/graphql-yoga/esm/plugins/request-parser/post-multipart.js
 function isPOSTMultipartRequest(request) {
   return request.method === "POST" && isContentTypeMatch(request, "multipart/form-data");
 }
@@ -30028,8 +29749,6 @@ function setObjectKeyPath(object, keyPath, value) {
   }
 }
 __name(setObjectKeyPath, "setObjectKeyPath");
-
-// node_modules/graphql-yoga/esm/plugins/request-validation/use-check-graphql-query-params.js
 var expectedParameters = /* @__PURE__ */ new Set(["query", "variables", "operationName", "extensions"]);
 function assertInvalidParams(params, extraParamNames) {
   if (params == null || typeof params !== "object") {
@@ -30159,8 +29878,6 @@ function isObject2(val) {
   return extendedTypeof(val) === "object";
 }
 __name(isObject2, "isObject");
-
-// node_modules/graphql-yoga/esm/plugins/request-validation/use-check-method-for-graphql.js
 function isValidMethodForGraphQL(method) {
   return method === "GET" || method === "POST";
 }
@@ -30185,8 +29902,6 @@ function useCheckMethodForGraphQL() {
   };
 }
 __name(useCheckMethodForGraphQL, "useCheckMethodForGraphQL");
-
-// node_modules/graphql-yoga/esm/plugins/request-validation/use-http-validation-error.js
 function useHTTPValidationError() {
   return {
     onValidate() {
@@ -30205,8 +29920,6 @@ function useHTTPValidationError() {
   };
 }
 __name(useHTTPValidationError, "useHTTPValidationError");
-
-// node_modules/graphql-yoga/esm/plugins/request-validation/use-limit-batching.js
 function useLimitBatching(limit) {
   return {
     onRequestParse() {
@@ -30240,8 +29953,6 @@ function useLimitBatching(limit) {
   };
 }
 __name(useLimitBatching, "useLimitBatching");
-
-// node_modules/graphql-yoga/esm/plugins/request-validation/use-prevent-mutation-via-get.js
 var import_graphql45 = __toESM(require_graphql2(), 1);
 function assertMutationViaGet(method, document, operationName) {
   const operation = document ? (0, import_graphql45.getOperationAST)(document, operationName) ?? void 0 : void 0;
@@ -30298,8 +30009,6 @@ function usePreventMutationViaGET() {
   };
 }
 __name(usePreventMutationViaGET, "usePreventMutationViaGET");
-
-// node_modules/graphql-yoga/esm/plugins/use-health-check.js
 function useHealthCheck({ id = Date.now().toString(), logger = console, endpoint = "/health" } = {}) {
   return {
     onRequest({ endResponse: endResponse2, fetchAPI, request }) {
@@ -30317,8 +30026,6 @@ function useHealthCheck({ id = Date.now().toString(), logger = console, endpoint
   };
 }
 __name(useHealthCheck, "useHealthCheck");
-
-// node_modules/lru-cache/dist/esm/index.js
 var perf = typeof performance === "object" && performance && typeof performance.now === "function" ? performance : Date;
 var warned = /* @__PURE__ */ new Set();
 var PROCESS = typeof process === "object" && !!process ? process : {};
@@ -31700,16 +31407,12 @@ var LRUCache = class _LRUCache {
     }
   }
 };
-
-// node_modules/graphql-yoga/esm/utils/create-lru-cache.js
 var DEFAULT_MAX = 1024;
 var DEFAULT_TTL = 36e5;
 function _createLRUCache({ max = DEFAULT_MAX, ttl = DEFAULT_TTL } = {}) {
   return new LRUCache({ max, ttl });
 }
 __name(_createLRUCache, "_createLRUCache");
-
-// node_modules/graphql-yoga/esm/plugins/use-parser-and-validation-cache.js
 function useParserAndValidationCache({ documentCache = _createLRUCache(), errorCache = _createLRUCache(), validationCache = true }) {
   const validationCacheByRules = _createLRUCache();
   return {
@@ -31769,8 +31472,6 @@ function useParserAndValidationCache({ documentCache = _createLRUCache(), errorC
   };
 }
 __name(useParserAndValidationCache, "useParserAndValidationCache");
-
-// node_modules/graphql-yoga/esm/plugins/use-request-parser.js
 var DEFAULT_MATCHER = /* @__PURE__ */ __name(() => true, "DEFAULT_MATCHER");
 function useRequestParser(options) {
   const matchFn = options.match || DEFAULT_MATCHER;
@@ -31783,8 +31484,6 @@ function useRequestParser(options) {
   };
 }
 __name(useRequestParser, "useRequestParser");
-
-// node_modules/graphql-yoga/esm/plugins/result-processor/accept.js
 function getMediaTypesForRequestInOrder(request) {
   const accepts = (request.headers.get("accept") || "*/*").replace(/\s/g, "").toLowerCase().split(",");
   const mediaTypes = [];
@@ -31810,8 +31509,6 @@ function isMatchingMediaType(askedMediaType, processorMediaType) {
   return false;
 }
 __name(isMatchingMediaType, "isMatchingMediaType");
-
-// node_modules/graphql-yoga/esm/plugins/result-processor/stringify.js
 function jsonStringifyResultWithoutInternals(result) {
   if (Array.isArray(result)) {
     return `[${result.map((r) => {
@@ -31855,8 +31552,6 @@ function omitInternalsFromError(err) {
   return err;
 }
 __name(omitInternalsFromError, "omitInternalsFromError");
-
-// node_modules/graphql-yoga/esm/plugins/result-processor/multipart.js
 function processMultipartResult(result, fetchAPI) {
   const headersInit = {
     Connection: "keep-alive",
@@ -31918,8 +31613,6 @@ function processMultipartResult(result, fetchAPI) {
   return new fetchAPI.Response(readableStream, responseInit);
 }
 __name(processMultipartResult, "processMultipartResult");
-
-// node_modules/graphql-yoga/esm/plugins/result-processor/regular.js
 function processRegularResult(executionResult, fetchAPI, acceptedHeader) {
   if (isAsyncIterable4(executionResult)) {
     return new fetchAPI.Response(null, {
@@ -31943,8 +31636,6 @@ function processRegularResult(executionResult, fetchAPI, acceptedHeader) {
   return new fetchAPI.Response(responseBody, responseInit);
 }
 __name(processRegularResult, "processRegularResult");
-
-// node_modules/graphql-yoga/esm/plugins/result-processor/sse.js
 function getSSEProcessor() {
   return /* @__PURE__ */ __name(function processSSEResult(result, fetchAPI) {
     let pingIntervalMs = 12e3;
@@ -32021,8 +31712,6 @@ function getSSEProcessor() {
   }, "processSSEResult");
 }
 __name(getSSEProcessor, "getSSEProcessor");
-
-// node_modules/graphql-yoga/esm/plugins/use-result-processor.js
 var multipart = {
   mediaTypes: ["multipart/mixed"],
   asyncIterables: true,
@@ -32074,8 +31763,6 @@ function useResultProcessors() {
   };
 }
 __name(useResultProcessors, "useResultProcessors");
-
-// node_modules/graphql-yoga/esm/landing-page-html.js
 var landing_page_html_default = `<!doctype html><html lang=en><head><meta charset=utf-8><title>Welcome to GraphQL Yoga</title><link rel=icon href=https://raw.githubusercontent.com/graphql-hive/graphql-yoga/refs/heads/main/website/src/app/favicon.ico><style>body,html{padding:0;margin:0;height:100%;font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif;color:#fff;background-color:#000}main>section.hero{display:flex;height:90vh;justify-content:center;align-items:center;flex-direction:column}.logo{display:flex;align-items:center}.buttons{margin-top:24px}h1{font-size:80px}h2{color:#888;max-width:50%;margin-top:0;text-align:center}a{color:#fff;text-decoration:none;margin-left:10px;margin-right:10px;font-weight:700;transition:color .3s ease;padding:4px;overflow:visible}a.graphiql:hover{color:rgba(255,0,255,.7)}a.docs:hover{color:rgba(28,200,238,.7)}a.tutorial:hover{color:rgba(125,85,245,.7)}svg{margin-right:24px}.not-what-your-looking-for{margin-top:5vh}.not-what-your-looking-for>*{margin-left:auto;margin-right:auto}.not-what-your-looking-for>p{text-align:center}.not-what-your-looking-for>h2{color:#464646}.not-what-your-looking-for>p{max-width:600px;line-height:1.3em}.not-what-your-looking-for>pre{max-width:300px}</style></head><body id=body><main><section class=hero><div class=logo><div><svg xmlns=http://www.w3.org/2000/svg viewBox="-0.41 0.445 472.812 499.811" height=150><defs><linearGradient id=paint0_linear_1677_11483 x1=16 y1=14 x2=87.2132 y2=44.5982 gradientUnits=userSpaceOnUse gradientTransform="matrix(8.139854, 0, 0, 8.139854, -130.346407, -113.25101)"><stop stop-color=#7433FF /><stop offset=1 stop-color=#FFA3FD /></linearGradient><linearGradient id=paint1_linear_1677_11483 x1=16 y1=14 x2=87.2132 y2=44.5982 gradientUnits=userSpaceOnUse gradientTransform="matrix(8.139854, 0, 0, 8.139854, -130.346407, -113.25101)"><stop stop-color=#7433FF /><stop offset=1 stop-color=#FFA3FD /></linearGradient><linearGradient id=paint2_linear_1677_11483 x1=16 y1=14 x2=87.2132 y2=44.5982 gradientUnits=userSpaceOnUse gradientTransform="matrix(8.139854, 0, 0, 8.139854, -130.346407, -113.25101)"><stop stop-color=#7433FF /><stop offset=1 stop-color=#FFA3FD /></linearGradient><linearGradient id=paint3_linear_1677_11483 x1=16 y1=14 x2=87.2132 y2=44.5982 gradientUnits=userSpaceOnUse><stop stop-color=#7433FF /><stop offset=1 stop-color=#FFA3FD /></linearGradient><linearGradient id=paint4_linear_1677_11483 x1=16 y1=14 x2=87.2132 y2=44.5982 gradientUnits=userSpaceOnUse><stop stop-color=#7433FF /><stop offset=1 stop-color=#FFA3FD /></linearGradient><linearGradient id=paint5_linear_1677_11483 x1=16 y1=14 x2=87.2132 y2=44.5982 gradientUnits=userSpaceOnUse><stop stop-color=#7433FF /><stop offset=1 stop-color=#FFA3FD /></linearGradient><filter id=filter0_f_1677_11483 x=23 y=-25 width=100 height=100 filterUnits=userSpaceOnUse color-interpolation-filters=sRGB><feFlood flood-opacity=0 result=BackgroundImageFix /><feBlend mode=normal in=SourceGraphic in2=BackgroundImageFix result=shape /><feGaussianBlur stdDeviation=12 result=effect1_foregroundBlur_1677_11483 /></filter><filter id=filter1_f_1677_11483 x=-24 y=19 width=100 height=100 filterUnits=userSpaceOnUse color-interpolation-filters=sRGB><feFlood flood-opacity=0 result=BackgroundImageFix /><feBlend mode=normal in=SourceGraphic in2=BackgroundImageFix result=shape /><feGaussianBlur stdDeviation=12 result=effect1_foregroundBlur_1677_11483 /></filter><linearGradient id=paint6_linear_1677_11483 x1=30 y1=28 x2=66.1645 y2=44.4363 gradientUnits=userSpaceOnUse gradientTransform="matrix(8.139854, 0, 0, 8.139854, -130.346407, -113.25101)"><stop stop-color=#7433FF /><stop offset=1 stop-color=#FFA3FD /></linearGradient><filter id=filter2_f_1677_11483 x=-12 y=-44 width=100 height=100 filterUnits=userSpaceOnUse color-interpolation-filters=sRGB><feFlood flood-opacity=0 result=BackgroundImageFix /><feBlend mode=normal in=SourceGraphic in2=BackgroundImageFix result=shape /><feGaussianBlur stdDeviation=12 result=effect1_foregroundBlur_1677_11483 /></filter><filter id=filter3_f_1677_11483 x=13 y=19 width=100 height=100 filterUnits=userSpaceOnUse color-interpolation-filters=sRGB><feFlood flood-opacity=0 result=BackgroundImageFix /><feBlend mode=normal in=SourceGraphic in2=BackgroundImageFix result=shape /><feGaussianBlur stdDeviation=12 result=effect1_foregroundBlur_1677_11483 /></filter></defs><mask id=mask0_1677_11483 style=mask-type:alpha maskUnits=userSpaceOnUse x=16 y=14 width=58 height=62><path d="M21 25.3501C21.7279 25.3501 22.4195 25.5056 23.0433 25.7853L42.1439 14.8C43.0439 14.3 44.1439 14 45.1439 14C46.2439 14 47.2439 14.3 48.1439 14.8L64.5439 24.3C63.3439 25.1 62.4439 26.3 61.8439 27.7L45.9438 18.5C45.6439 18.3 45.344 18.3 45.0441 18.3C44.7441 18.3 44.4439 18.4 44.1439 18.5L25.8225 29.0251C25.9382 29.4471 26 29.8914 26 30.3501C26 33.1115 23.7614 35.3501 21 35.3501C18.2386 35.3501 16 33.1115 16 30.3501C16 27.5887 18.2386 25.3501 21 25.3501Z" fill=url(#paint3_linear_1677_11483) /><path d="M67.2438 35.0329C65.3487 34.3219 64 32.4934 64 30.35C64 27.5886 66.2386 25.35 69 25.35C71.7614 25.35 74 27.5886 74 30.35C74 32.1825 73.0142 33.7848 71.5439 34.6554V55.2C71.5439 57.4 70.3439 59.4 68.5439 60.5L52.1439 69.9C52.1439 68.4 51.6438 66.9 50.7438 65.8L66.3439 56.8C66.9439 56.5 67.2438 55.9 67.2438 55.2V35.0329Z" fill=url(#paint4_linear_1677_11483) /><path d="M49.8439 69.1055C49.9458 69.5034 50 69.9204 50 70.3501C50 73.1115 47.7614 75.3501 45 75.3501C42.5102 75.3501 40.4454 73.5302 40.0633 71.1481L21.8439 60.6C19.9439 59.5 18.8439 57.5 18.8439 55.3V36.8C19.5439 37 20.3439 37.2 21.0439 37.2C21.7439 37.2 22.4439 37.1 23.0439 36.9V55.3C23.0439 56 23.4438 56.6 23.9438 56.9L41.3263 66.9583C42.2398 65.9694 43.5476 65.3501 45 65.3501C47.3291 65.3501 49.2862 66.9426 49.8419 69.0981L49.8436 69.0997L49.8439 69.1055Z" fill=url(#paint5_linear_1677_11483) /></mask><mask id=mask1_1677_11483 style=mask-type:alpha maskUnits=userSpaceOnUse x=30 y=28 width=30 height=30><path fill-rule=evenodd clip-rule=evenodd d="M49.3945 32.3945C49.3945 34.7088 47.5796 38.5469 45 38.5469C42.4271 38.5469 40.6055 34.7112 40.6055 32.3945C40.6055 29.9714 42.5769 28 45 28C47.4231 28 49.3945 29.9714 49.3945 32.3945ZM35.332 49.0433V48.2148C35.332 42.8117 37.8535 41.0004 39.8796 39.545L39.8801 39.5447C40.3928 39.1767 40.8604 38.8404 41.2488 38.4742C42.3293 39.6642 43.626 40.3047 45 40.3047C46.3752 40.3047 47.6725 39.6642 48.7529 38.4754C49.1408 38.841 49.6078 39.1773 50.1199 39.5447L50.1204 39.545C52.1465 41.0004 54.668 42.8117 54.668 48.2148V49.0433L53.8406 49.092C49.9848 49.3185 46.8646 46.9002 45 43.5777C43.1159 46.935 39.9847 49.318 36.1594 49.092L35.332 49.0433ZM58.1463 51.0747L58.1463 51.0746C57.0179 50.891 50.0128 49.7507 45.0007 55.693C40.0116 49.7553 33.1965 50.8592 31.9095 51.0677L31.9095 51.0677C31.7906 51.087 31.7189 51.0986 31.7002 51.0963C31.7005 51.0969 31.7011 51.1045 31.7023 51.1187C31.726 51.4003 31.9682 54.2745 34.0566 56.2422L30 58H60L55.8956 56.2422C57.8537 54.4764 58.1396 52.2685 58.2508 51.4092V51.4091C58.2697 51.2628 58.2836 51.1556 58.2998 51.0963C58.2881 51.0977 58.2356 51.0892 58.1463 51.0747ZM40.4836 50.104C42.3956 49.3212 43.6746 48.1737 45 46.61C46.332 48.1841 47.6159 49.3259 49.5164 50.104C49.5356 50.1425 49.5557 50.1805 49.5756 50.2182C49.5793 50.2253 49.583 50.2323 49.5867 50.2393C48.0911 50.8127 46.4264 51.825 45.0047 53.1444C43.5906 51.8221 41.9673 50.8196 40.4256 50.2153C40.4455 50.1784 40.4648 50.1415 40.4836 50.104Z" fill=black /></mask><path d="M 40.59 93.095 C 46.517 93.095 52.14 94.365 57.22 96.635 L 212.7 7.22 C 220.025 3.149 228.978 0.706 237.12 0.706 C 246.073 0.706 254.213 3.149 261.54 7.22 L 395.032 84.547 C 385.264 91.059 377.939 100.827 373.055 112.224 L 243.631 37.338 C 241.19 35.71 238.747 35.71 236.305 35.71 C 233.863 35.71 231.42 36.523 228.978 37.338 L 79.84 123.009 C 80.786 126.443 81.29 130.058 81.29 133.793 C 81.29 156.269 63.065 174.493 40.59 174.493 C 18.116 174.493 -0.109 156.269 -0.109 133.793 C -0.109 111.32 18.116 93.095 40.59 93.095 Z" fill=url(#paint0_linear_1677_11483) /><path d="M 417.01 171.913 C 401.585 166.126 390.603 151.238 390.603 133.793 C 390.603 111.32 408.83 93.095 431.303 93.095 C 453.777 93.095 472.001 111.32 472.001 133.793 C 472.001 148.706 463.976 161.755 452.011 168.835 L 452.011 336.07 C 452.011 353.977 442.243 370.258 427.591 379.21 L 294.098 455.726 C 294.098 443.516 290.029 431.306 282.703 422.353 L 409.683 349.093 C 414.568 346.651 417.01 341.767 417.01 336.07 L 417.01 171.913 Z" fill=url(#paint1_linear_1677_11483) /><path d="M 275.376 449.253 C 276.206 452.495 276.646 455.889 276.646 459.389 C 276.646 481.863 258.422 500.087 235.947 500.087 C 215.679 500.087 198.87 485.272 195.761 465.883 L 47.46 380.025 C 31.995 371.071 23.041 354.792 23.041 336.884 L 23.041 186.296 C 28.738 187.923 35.25 189.553 40.948 189.553 C 46.646 189.553 52.345 188.738 57.228 187.111 L 57.228 336.884 C 57.228 342.582 60.485 347.465 64.554 349.908 L 206.042 431.777 C 213.481 423.728 224.127 418.689 235.947 418.689 C 254.905 418.689 270.833 431.656 275.36 449.196 L 275.376 449.214 L 275.376 449.253 Z" fill=url(#paint2_linear_1677_11483) /><g mask=url(#mask0_1677_11483) transform="matrix(8.139854, 0, 0, 8.139854, -130.346375, -113.251038)"><g filter=url(#filter0_f_1677_11483)><circle cx=73 cy=25 r=26 fill=#ED2E7E /></g><g filter=url(#filter1_f_1677_11483)><circle cx=26 cy=69 r=26 fill=#1CC8EE /></g></g><path fill-rule=evenodd clip-rule=evenodd d="M 271.713 150.431 C 271.713 169.275 256.948 200.517 235.947 200.517 C 215.003 200.517 200.172 169.292 200.172 150.431 C 200.172 130.708 216.225 114.666 235.947 114.666 C 255.67 114.666 271.713 130.708 271.713 150.431 Z M 157.251 285.952 L 157.251 279.212 C 157.251 235.233 177.771 220.485 194.27 208.641 C 198.447 205.644 202.247 202.901 205.414 199.923 C 214.204 209.608 224.763 214.826 235.947 214.826 C 247.138 214.826 257.697 209.608 266.496 199.931 C 269.653 202.911 273.456 205.644 277.622 208.641 C 294.114 220.485 314.642 235.233 314.642 279.212 L 314.642 285.952 L 307.912 286.351 C 276.525 288.191 251.128 268.509 235.947 241.468 C 220.611 268.795 195.126 288.191 163.981 286.351 L 157.251 285.952 Z M 342.953 302.492 C 333.771 300.994 276.751 291.715 235.955 340.082 C 195.345 291.749 139.865 300.734 129.389 302.436 C 128.428 302.59 127.841 302.688 127.687 302.665 C 127.687 302.673 127.695 302.729 127.702 302.85 C 127.897 305.138 129.867 328.532 146.872 344.55 L 113.849 358.862 L 358.044 358.862 L 324.639 344.55 C 340.576 330.177 342.905 312.202 343.807 305.212 C 343.962 304.022 344.077 303.153 344.206 302.665 C 344.108 302.68 343.686 302.606 342.953 302.492 Z M 199.188 294.59 C 214.751 288.215 225.161 278.879 235.947 266.15 C 246.788 278.96 257.241 288.255 272.707 294.59 C 272.869 294.898 273.031 295.207 273.196 295.518 C 273.219 295.574 273.252 295.631 273.285 295.688 C 261.107 300.361 247.555 308.598 235.989 319.334 C 224.477 308.573 211.258 300.417 198.715 295.493 C 198.87 295.191 199.033 294.891 199.188 294.59 Z" fill=url(#paint6_linear_1677_11483) /><g mask=url(#mask1_1677_11483) transform="matrix(8.139854, 0, 0, 8.139854, -130.346375, -113.251038)"><g filter=url(#filter2_f_1677_11483)><circle cx=38 cy=6 r=26 fill=#ED2E7E /></g><g filter=url(#filter3_f_1677_11483)><circle cx=63 cy=69 r=26 fill=#1CC8EE /></g></g></svg></div><h1>GraphQL Yoga</h1><p>Version: 5.21.2</p></div><h2>The batteries-included cross-platform GraphQL Server.</h2><div class=buttons><a href=https://www.the-guild.dev/graphql/yoga-server/docs class=docs>Read the Docs</a> <a href=https://www.the-guild.dev/graphql/yoga-server/tutorial/basic class=tutorial>Start the Tutorial </a><a href=__GRAPHIQL_LINK__ class=graphiql>Visit GraphiQL</a></div></section><section class=not-what-your-looking-for><h2>Not the page you are looking for? \u{1F440}</h2><p>This page is shown be default whenever a 404 is hit.<br>You can disable this by behavior via the <code>landingPage</code> option.</p><pre>
           <code>
 import { createYoga } from 'graphql-yoga';
@@ -32093,8 +31780,6 @@ const yoga = createYoga({
 })
           </code>
         </pre></section></main></body></html>`;
-
-// node_modules/graphql-yoga/esm/plugins/use-unhandled-route.js
 var defaultRenderLandingPage = /* @__PURE__ */ __name(function defaultRenderLandingPage2(opts) {
   return new opts.fetchAPI.Response(landing_page_html_default.replace(/__GRAPHIQL_LINK__/g, opts.graphqlEndpoint).replace(/__REQUEST_PATH__/g, opts.url.pathname), {
     status: 200,
@@ -32135,8 +31820,6 @@ function useUnhandledRoute(args) {
   };
 }
 __name(useUnhandledRoute, "useUnhandledRoute");
-
-// node_modules/graphql-yoga/esm/process-request.js
 var import_graphql46 = __toESM(require_graphql2(), 1);
 function processResult({ request, result, fetchAPI, onResultProcessHooks, serverContext }) {
   let resultProcessor;
@@ -32189,14 +31872,10 @@ function processRequest({ params, enveloped }) {
   });
 }
 __name(processRequest, "processRequest");
-
-// node_modules/graphql-yoga/esm/utils/is-response.js
 function isResponse(value) {
   return value?.status && value?.headers;
 }
 __name(isResponse, "isResponse");
-
-// node_modules/graphql-yoga/esm/utils/mask-error.js
 function serializeError(error) {
   if (isGraphQLError2(error)) {
     return error.toJSON();
@@ -32239,8 +31918,6 @@ var maskError = /* @__PURE__ */ __name((error, message, isDev2 = true) => {
   }
   return createGraphQLError3(message, errorOptions);
 }, "maskError");
-
-// node_modules/graphql-yoga/esm/server.js
 var YogaServer = class {
   static {
     __name(this, "YogaServer");
@@ -32615,11 +32292,7 @@ function createYoga(options) {
   });
 }
 __name(createYoga, "createYoga");
-
-// worker/graphql.js
 var import_graphql49 = __toESM(require_graphql2(), 1);
-
-// worker/db.js
 function mapUser(row) {
   if (!row) return null;
   return {
@@ -32811,6 +32484,44 @@ async function setReviewLike(db, userId, reviewId, liked) {
   return getReview(db, reviewId, userId);
 }
 __name(setReviewLike, "setReviewLike");
+var COMMENT_SELECT = `
+  SELECT c.*, u.username, u.display_name, u.avatar, u.theme, u.letterboxd_username
+  FROM review_comments c
+  JOIN users u ON u.id = c.user_id`;
+function mapComment(row) {
+  if (!row) return null;
+  return {
+    id: row.id,
+    user: mapUser(row),
+    body: row.body,
+    createdAt: row.created_at
+  };
+}
+__name(mapComment, "mapComment");
+async function listComments(db, reviewId) {
+  const result = await db.prepare(`${COMMENT_SELECT} WHERE c.review_id = ? ORDER BY c.created_at ASC, c.id ASC LIMIT 100`).bind(reviewId).all();
+  return result.results.map(mapComment);
+}
+__name(listComments, "listComments");
+async function addComment(db, userId, reviewId, body) {
+  const clean = typeof body === "string" ? body.trim() : "";
+  if (clean.length < 1) throw new Error("Comment cannot be empty");
+  if (clean.length > 2000) throw new Error("Comment must be 2000 characters or fewer");
+  if (!await getReview(db, reviewId, userId)) throw new Error("Review not found");
+  const id = crypto.randomUUID();
+  const now = (/* @__PURE__ */ new Date()).toISOString();
+  await db.prepare(`
+    INSERT INTO review_comments (id, review_id, user_id, body, created_at, updated_at)
+    VALUES (?, ?, ?, ?, ?, ?)
+  `).bind(id, reviewId, userId, clean, now, now).run();
+  return mapComment(await db.prepare(`${COMMENT_SELECT} WHERE c.id = ?`).bind(id).first());
+}
+__name(addComment, "addComment");
+async function deleteComment(db, userId, commentId) {
+  const result = await db.prepare("DELETE FROM review_comments WHERE id = ? AND user_id = ?").bind(commentId, userId).run();
+  return Boolean(result.meta.changes);
+}
+__name(deleteComment, "deleteComment");
 async function getMovie(db, id) {
   return mapMovie(await db.prepare("SELECT * FROM movies WHERE id = ?").bind(id).first());
 }
@@ -32844,33 +32555,33 @@ async function upsertMovie(db, movie) {
   const id = crypto.randomUUID();
   const mediaType = movie.mediaType === "tv" ? "tv" : "movie";
   if (movie.tmdbId) {
-    let existing = await db.prepare("SELECT * FROM movies WHERE media_type = ? AND tmdb_media_id = ?").bind(mediaType, movie.tmdbId).first();
+    let existing2 = await db.prepare("SELECT * FROM movies WHERE media_type = ? AND tmdb_media_id = ?").bind(mediaType, movie.tmdbId).first();
     let placeholder = await db.prepare("SELECT * FROM movies WHERE media_type = ? AND lower(title) = lower(?) AND ifnull(year, -1) = ifnull(?, -1) AND tmdb_media_id IS NULL").bind(mediaType, movie.title, movie.year ?? null).first();
-    if (!existing && placeholder) {
+    if (!existing2 && placeholder) {
       try {
         await db.prepare("UPDATE movies SET tmdb_media_id = ?, updated_at = ? WHERE id = ? AND tmdb_media_id IS NULL").bind(movie.tmdbId, now, placeholder.id).run();
-        existing = await db.prepare("SELECT * FROM movies WHERE id = ?").bind(placeholder.id).first();
+        existing2 = await db.prepare("SELECT * FROM movies WHERE id = ?").bind(placeholder.id).first();
       } catch {
-        existing = await db.prepare("SELECT * FROM movies WHERE media_type = ? AND tmdb_media_id = ?").bind(mediaType, movie.tmdbId).first();
+        existing2 = await db.prepare("SELECT * FROM movies WHERE media_type = ? AND tmdb_media_id = ?").bind(mediaType, movie.tmdbId).first();
       }
     }
-    if (!existing) {
+    if (!existing2) {
       await db.prepare(`
         INSERT INTO movies (id, title, year, director, poster, tmdb_media_id, media_type, created_at, updated_at)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
         ON CONFLICT(media_type, tmdb_media_id) WHERE tmdb_media_id IS NOT NULL DO NOTHING
       `).bind(id, movie.title, movie.year ?? null, movie.director || "", movie.poster || "", movie.tmdbId, mediaType, now, now).run();
-      existing = await db.prepare("SELECT * FROM movies WHERE media_type = ? AND tmdb_media_id = ?").bind(mediaType, movie.tmdbId).first();
+      existing2 = await db.prepare("SELECT * FROM movies WHERE media_type = ? AND tmdb_media_id = ?").bind(mediaType, movie.tmdbId).first();
     }
     placeholder = await db.prepare("SELECT * FROM movies WHERE media_type = ? AND lower(title) = lower(?) AND ifnull(year, -1) = ifnull(?, -1) AND tmdb_media_id IS NULL").bind(mediaType, movie.title, movie.year ?? null).first();
-    if (placeholder && placeholder.id !== existing.id) {
+    if (placeholder && placeholder.id !== existing2.id) {
       await db.batch([
         db.prepare(`
           INSERT OR IGNORE INTO watchlist_items (user_id, movie_id, created_at)
           SELECT user_id, ?, created_at FROM watchlist_items WHERE movie_id = ?
-        `).bind(existing.id, placeholder.id),
+        `).bind(existing2.id, placeholder.id),
         db.prepare("DELETE FROM watchlist_items WHERE movie_id = ?").bind(placeholder.id),
-        db.prepare("UPDATE reviews SET movie_id = ?, updated_at = ? WHERE movie_id = ?").bind(existing.id, now, placeholder.id),
+        db.prepare("UPDATE reviews SET movie_id = ?, updated_at = ? WHERE movie_id = ?").bind(existing2.id, now, placeholder.id),
         db.prepare("DELETE FROM movies WHERE id = ?").bind(placeholder.id)
       ]);
     }
@@ -32879,20 +32590,28 @@ async function upsertMovie(db, movie) {
         director = CASE WHEN ? <> '' THEN ? ELSE director END,
         poster = CASE WHEN ? <> '' THEN ? ELSE poster END,
         updated_at = ? WHERE id = ?
+    `).bind(movie.title, movie.year ?? null, movie.director || "", movie.director || "", movie.poster || "", movie.poster || "", now, existing2.id).run();
+    existing2 = await db.prepare("SELECT * FROM movies WHERE id = ?").bind(existing2.id).first();
+    return mapMovie(existing2);
+  }
+  const existing = await db.prepare("SELECT * FROM movies WHERE media_type = ? AND lower(title) = lower(?) AND ifnull(year, -1) = ifnull(?, -1) ORDER BY CASE WHEN tmdb_media_id IS NULL THEN 1 ELSE 0 END, rowid LIMIT 1").bind(mediaType, movie.title, movie.year ?? null).first();
+  if (existing) {
+    await db.prepare(`
+      UPDATE movies SET title = ?, year = ?,
+        director = CASE WHEN ? <> '' THEN ? ELSE director END,
+        poster = CASE WHEN ? <> '' THEN ? ELSE poster END,
+        updated_at = ? WHERE id = ?
     `).bind(movie.title, movie.year ?? null, movie.director || "", movie.director || "", movie.poster || "", movie.poster || "", now, existing.id).run();
-    existing = await db.prepare("SELECT * FROM movies WHERE id = ?").bind(existing.id).first();
-    return mapMovie(existing);
+    return mapMovie(await db.prepare("SELECT * FROM movies WHERE id = ?").bind(existing.id).first());
   }
   await db.prepare(`
     INSERT INTO movies (id, title, year, director, poster, media_type, created_at, updated_at)
     VALUES (?, ?, ?, ?, ?, ?, ?, ?)
     ON CONFLICT DO NOTHING
   `).bind(id, movie.title, movie.year ?? null, movie.director || "", movie.poster || "", mediaType, now, now).run();
-  return mapMovie(await db.prepare("SELECT * FROM movies WHERE media_type = ? AND lower(title) = lower(?) AND ifnull(year, -1) = ifnull(?, -1) AND tmdb_media_id IS NULL").bind(mediaType, movie.title, movie.year ?? null).first());
+  return mapMovie(await db.prepare("SELECT * FROM movies WHERE id = ?").bind(id).first());
 }
 __name(upsertMovie, "upsertMovie");
-
-// worker/export-import.js
 var IMPORT_LIMITS = Object.freeze({ records: 2e4, files: 100, chunkRecords: 10, chunkBytes: 200 * 1024, rawBytes: 50 * 1024 * 1024, dailyWrites: 4e4 });
 var CATEGORIES = /* @__PURE__ */ new Set(["diary", "watched", "ratings", "reviews", "watchlist", "lists", "likes", "comments", "other"]);
 var encoder2 = new TextEncoder();
@@ -33132,6 +32851,232 @@ async function finalizeExportImport(db, userId, jobId) {
   return statusForJob(db, userId, job.id);
 }
 __name(finalizeExportImport, "finalizeExportImport");
+function extractXmlTag(xml, tag) {
+  const match = xml.match(new RegExp(`<${tag}(?:\\s[^>]*)?>([\\s\\S]*?)<\\/${tag}>`, "i"));
+  return match ? match[1] : "";
+}
+__name(extractXmlTag, "extractXmlTag");
+function decodeXmlEntities(value) {
+  return value.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&apos;/g, "'").replace(/&amp;/g, "&");
+}
+__name(decodeXmlEntities, "decodeXmlEntities");
+function parseLetterboxdRssFeed(xml) {
+  const entries = [];
+  const blocks = String(xml || "").split(/<item[^>]*>/i).slice(1);
+  for (const raw of blocks) {
+    const end = raw.toLowerCase().indexOf("</item>");
+    if (end < 0) continue;
+    const block2 = raw.slice(0, end);
+    const link = decodeXmlEntities(extractXmlTag(block2, "link")).trim();
+    if (!link) continue;
+    const filmTitle = decodeXmlEntities(extractXmlTag(block2, "letterboxd:filmTitle")).trim();
+    const filmYear = decodeXmlEntities(extractXmlTag(block2, "letterboxd:filmYear")).trim();
+    const watchedDate = decodeXmlEntities(extractXmlTag(block2, "letterboxd:watchedDate")).trim();
+    const ratingRaw = decodeXmlEntities(extractXmlTag(block2, "letterboxd:memberRating")).trim();
+    let review = decodeXmlEntities(extractXmlTag(block2, "description").replace(/^<!\[CDATA\[|\]\]>$/g, "").replace(/<[^>]+>/g, " ").replace(/&nbsp;/g, " ").replace(/\s+/g, " ")).trim();
+    const spoilers = /^This review may contain spoilers\.?\s*/i.test(review) ? 1 : 0;
+    review = review.replace(/^This review may contain spoilers\.?\s*/i, "").trim();
+    const rating = ratingRaw ? Number(ratingRaw) : NaN;
+    entries.push({ link, filmTitle, filmYear, watchedDate, rating: Number.isFinite(rating) ? rating : null, review, spoilers });
+  }
+  return entries;
+}
+__name(parseLetterboxdRssFeed, "parseLetterboxdRssFeed");
+async function importLetterboxdRss(db, userId, username, env) {
+  const clean = String(username || "").trim().replace(/^https?:\/\/(?:www\.)?letterboxd\.com\//i, "").replace(/\/.*$/, "").replace(/\/+$/, "");
+  if (!/^[a-z0-9_-]{2,40}$/i.test(clean)) throw new Error("Enter a valid Letterboxd username");
+  const base = `https://letterboxd.com/${encodeURIComponent(clean)}`;
+  const settled = await Promise.allSettled([fetch(`${base}/rss/`), fetch(`${base}/rss/reviews/`)]);
+  const ok = settled.filter((result) => result.status === "fulfilled" && result.value.ok);
+  if (ok.length === 0) throw new Error("Could not reach the Letterboxd feed. Check the username and that the account is public.");
+  const seen = /* @__PURE__ */ new Set();
+  const entries = [];
+  for (const result of ok) {
+    let xml = "";
+    try {
+      xml = await result.value.text();
+    } catch {
+      continue;
+    }
+    for (const entry of parseLetterboxdRssFeed(xml)) {
+      if (seen.has(entry.link)) continue;
+      seen.add(entry.link);
+      entries.push(entry);
+    }
+  }
+  let imported = 0, skipped = 0;
+  const errors = [];
+  let estimate = 0;
+  const now = (/* @__PURE__ */ new Date()).toISOString();
+  for (const entry of entries) {
+    try {
+      const rawTitle = (entry.filmTitle || "").trim();
+      const title = rawTitle || entry.link.split("/")[4]?.replace(/[_-]/g, " ").trim() || "";
+      if (!title) {
+        skipped++;
+        continue;
+      }
+      const year = entry.filmYear ? Number(entry.filmYear) : NaN;
+      const rating = entry.rating != null ? Math.round(entry.rating * 2) / 2 : null;
+      const review = entry.review.slice(0, 2e4);
+      if (!(rating != null && rating >= 0.5 && rating <= 5) && !review) {
+        skipped++;
+        continue;
+      }
+      const watchedAt = new Date(entry.watchedDate ? `${entry.watchedDate}T00:00:00Z` : now);
+      if (isNaN(watchedAt.valueOf())) {
+        skipped++;
+        continue;
+      }
+      let movie = await upsertMovie(db, {
+        title: title.slice(0, 300),
+        year: Number.isFinite(year) && year >= 1870 && year <= 2200 ? year : null,
+        director: "",
+        poster: "",
+        tmdbId: null,
+        mediaType: "movie"
+      });
+      if (!movie) {
+        skipped++;
+        continue;
+      }
+      if (!movie.tmdbId && !movie.poster && env) {
+        try {
+          const lookup = await searchTmdbMovie(env, movie.title, movie.year);
+          if (lookup) {
+            const existingTmdb = await db.prepare("SELECT * FROM movies WHERE media_type = ? AND tmdb_media_id = ?").bind(movie.mediaType || "movie", lookup.tmdbId).first();
+            if (existingTmdb && existingTmdb.id !== movie.id) {
+              await db.batch([
+                db.prepare(`INSERT OR IGNORE INTO watchlist_items (user_id, movie_id, created_at) SELECT user_id, ?, created_at FROM watchlist_items WHERE movie_id = ?`).bind(existingTmdb.id, movie.id),
+                db.prepare("DELETE FROM watchlist_items WHERE movie_id = ?").bind(movie.id),
+                db.prepare("UPDATE reviews SET movie_id = ?, updated_at = ? WHERE movie_id = ?").bind(existingTmdb.id, now, movie.id),
+                db.prepare("DELETE FROM movies WHERE id = ?").bind(movie.id)
+              ]);
+              movie = mapMovie(existingTmdb);
+            } else {
+              await db.prepare("UPDATE movies SET tmdb_media_id = ?, poster = ?, updated_at = ? WHERE id = ?").bind(lookup.tmdbId, lookup.poster, now, movie.id).run();
+            }
+            estimate += 1;
+          }
+        } catch {
+        }
+      }
+      const externalId = entry.link.slice(0, 200);
+      const effectiveRating = rating != null && rating >= 0.5 && rating <= 5 ? rating : 3;
+      const result = await db.prepare(`INSERT INTO reviews (id, user_id, movie_id, rating, text, text_format, spoilers, watched_at, source, external_id, external_url, created_at, updated_at)
+        VALUES (?, ?, ?, ?, ?, 'plain', ?, ?, 'letterboxd', ?, ?, ?, ?)
+        ON CONFLICT(user_id, source, external_id) WHERE external_id IS NOT NULL DO NOTHING`).bind(crypto.randomUUID(), userId, movie.id, effectiveRating, review, entry.spoilers || 0, watchedAt.toISOString(), externalId, externalId, now, now).run();
+      if (result.meta.changes) {
+        imported++;
+        estimate += 4;
+      } else {
+        skipped++;
+      }
+    } catch (error) {
+      if (String(error?.message || error).includes("APP_WRITE_BUDGET_EXCEEDED")) throw new Error("This app's UTC-day D1 write budget is paused. Nothing more was imported; resume after 00:00 UTC.");
+      errors.push(String(error?.message || error).slice(0, 200));
+    }
+  }
+  if (estimate) {
+    try {
+      await db.batch([budgetStatement(db, estimate, now)]);
+    } catch (error) {
+      budgetError(error);
+    }
+  }
+  const summary = errors.slice(0, 5).join("; ").slice(0, 1e3);
+  try {
+    await db.prepare(`UPDATE users SET letterboxd_username = ?, letterboxd_last_import_at = ?, letterboxd_last_import_error = ?, updated_at = ? WHERE id = ?`).bind(clean, now, summary || null, now, userId).run();
+  } catch (error) {
+    budgetError(error);
+  }
+  return { username: clean, imported, skipped, errors: errors.slice(0, 50), lastImportAt: now, lastImportError: summary || null };
+}
+__name(importLetterboxdRss, "importLetterboxdRss");
+async function mergeExportImport(db, userId, jobId) {
+  const job = assertJobOwnershipState(await db.prepare("SELECT * FROM export_import_jobs WHERE id = ?").bind(jobId).first(), userId, ["complete"]);
+  const records = await db.prepare(`SELECT * FROM export_records WHERE job_id = ? ORDER BY row_index`).bind(job.id).all();
+  let reviewsImported = 0, watchlistImported = 0, skipped = 0;
+  const errors = [];
+  let estimate = 0;
+  const now = (/* @__PURE__ */ new Date()).toISOString();
+  const flushBudget = async () => {
+    if (!estimate) return;
+    try {
+      await db.batch([budgetStatement(db, estimate, now)]);
+    } catch (error) {
+      budgetError(error);
+    }
+    estimate = 0;
+  };
+  for (const record of records.results) {
+    try {
+      const title = (record.title || "").trim();
+      if (!title) {
+        skipped++;
+        continue;
+      }
+      const movie = await upsertMovie(db, {
+        title: title.slice(0, 300),
+        year: record.year && record.year >= 1870 && record.year <= 2200 ? record.year : null,
+        director: "",
+        poster: "",
+        tmdbId: null,
+        mediaType: "movie"
+      });
+      if (!movie) {
+        skipped++;
+        continue;
+      }
+      if (record.category === "watchlist") {
+        const added = await db.prepare("INSERT OR IGNORE INTO watchlist_items (user_id, movie_id, created_at) VALUES (?, ?, ?)").bind(userId, movie.id, now).run();
+        if (added.meta.changes) {
+          watchlistImported++;
+          estimate += 3;
+        } else {
+          skipped++;
+        }
+        continue;
+      }
+      if (!["diary", "watched", "ratings", "reviews"].includes(record.category)) {
+        skipped++;
+        continue;
+      }
+      const review = (record.record_text || "").trim().slice(0, 2e4);
+      const rating = record.rating != null ? Math.round(Number(record.rating) * 2) / 2 : null;
+      const isReviewEntry = record.category === "reviews" || record.category === "ratings";
+      if (!(rating != null && rating >= 0.5 && rating <= 5) && !(isReviewEntry && review)) {
+        skipped++;
+        continue;
+      }
+      const watchedAt = new Date(record.record_date ? `${record.record_date}T00:00:00Z` : now);
+      if (isNaN(watchedAt.valueOf())) {
+        skipped++;
+        continue;
+      }
+      const externalId = (record.letterboxd_uri || `lbx:${record.fingerprint}`).slice(0, 200);
+      const effectiveRating = rating != null && rating >= 0.5 && rating <= 5 ? rating : 3;
+      const result = await db.prepare(`INSERT INTO reviews (id, user_id, movie_id, rating, text, text_format, spoilers, watched_at, source, external_id, external_url, created_at, updated_at)
+        VALUES (?, ?, ?, ?, ?, 'plain', 0, ?, 'letterboxd', ?, ?, ?, ?)
+        ON CONFLICT(user_id, source, external_id) WHERE external_id IS NOT NULL DO NOTHING`).bind(crypto.randomUUID(), userId, movie.id, effectiveRating, review, watchedAt.toISOString(), externalId, record.letterboxd_uri || "", now, now).run();
+      if (result.meta.changes) {
+        reviewsImported++;
+        estimate += 4;
+      } else {
+        skipped++;
+      }
+    } catch (error) {
+      if (String(error?.message || error).includes("APP_WRITE_BUDGET_EXCEEDED")) {
+        await flushBudget();
+        throw new Error("This app's UTC-day D1 write budget is paused. The merge stopped partway; resume after 00:00 UTC and merge again (already-merged records are skipped).");
+      }
+      errors.push(String(error?.message || error).slice(0, 200));
+    }
+  }
+  await flushBudget();
+  return { jobId: job.id, reviewsImported, watchlistImported, skipped, errors: errors.slice(0, 50), budgetPaused: false };
+}
+__name(mergeExportImport, "mergeExportImport");
 async function cleanupExportImports(db, userId) {
   const oldCount = (await db.prepare(`SELECT count(*) AS count FROM export_records r
     JOIN export_import_jobs j ON j.id = r.job_id
@@ -33229,8 +33174,6 @@ async function listLibrary(db, userId, { category, after, limit }) {
   };
 }
 __name(listLibrary, "listLibrary");
-
-// worker/movies.js
 async function searchMovies(env, query, limit, { fetchImpl = fetch, page: requestedPage = 1 } = {}) {
   const safeQuery = sanitizeSearchQuery(query);
   const page = Math.min(Math.max(Number(requestedPage) || 1, 1), 500);
@@ -33331,13 +33274,47 @@ function tmdbMediaCandidates(results, limit) {
     const title = String(item.media_type === "tv" ? item.name || "" : item.title || "").trim().slice(0, 300);
     const date = item.media_type === "tv" ? item.first_air_date : item.release_date;
     const year = /^\d{4}/.test(date || "") ? Number(date.slice(0, 4)) : null;
-    const poster = /^\/[A-Za-z0-9._/-]+$/.test(item.poster_path || "") ? `https://image.tmdb.org/t/p/w500${item.poster_path}` : "";
+    const poster = /^\/[A-Za-z0-9._/-]+$/.test(item.poster_path || "") ? `https://image.tmdb.org/t/p/w780${item.poster_path}` : "";
     return Number.isInteger(tmdbId) && tmdbId > 0 && title ? [{ tmdbId, title, year, director: "", poster, mediaType: item.media_type }] : [];
   }).slice(0, limit);
 }
 __name(tmdbMediaCandidates, "tmdbMediaCandidates");
-
-// worker/operation-budget.js
+async function searchTmdbMovie(env, title, year, fetchImpl = fetch) {
+  if (!env.TMDB_API_READ_TOKEN && !env.TMDB_API_KEY) return null;
+  const url = new URL("https://api.themoviedb.org/3/search/movie");
+  url.searchParams.set("query", String(title || "").trim().slice(0, 200));
+  url.searchParams.set("include_adult", "false");
+  const headers = { accept: "application/json" };
+  if (env.TMDB_API_READ_TOKEN) headers.authorization = `Bearer ${env.TMDB_API_READ_TOKEN}`;
+  else url.searchParams.set("api_key", env.TMDB_API_KEY);
+  let data;
+  try {
+    const response = await fetchImpl(url, { headers, signal: AbortSignal.timeout(7e3) });
+    if (!response.ok) return null;
+    data = await response.json();
+  } catch {
+    return null;
+  }
+  const normalize = (value) => String(value || "").toLocaleLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  const needle = normalize(title);
+  const yearNumber = Number.isFinite(Number(year)) ? Number(year) : null;
+  const scored = [];
+  for (const item of Array.isArray(data.results) ? data.results : []) {
+    const tmdbId = Number(item.id);
+    const candidateTitle = String(item.title || "").trim();
+    const candidateYear = /^\d{4}/.test(item.release_date || "") ? Number(item.release_date.slice(0, 4)) : null;
+    const poster = /^\/[A-Za-z0-9._/-]+$/.test(item.poster_path || "") ? `https://image.tmdb.org/t/p/w780${item.poster_path}` : "";
+    if (!Number.isInteger(tmdbId) || tmdbId < 1 || !candidateTitle || !needle) continue;
+    const exact = candidateTitle.toLocaleLowerCase() === String(title || "").toLocaleLowerCase().trim();
+    const normalized = normalize(candidateTitle) === needle;
+    if (!exact && !normalized) continue;
+    const yearMatch = yearNumber != null && candidateYear === yearNumber;
+    scored.push({ tmdbId, poster, score: (exact ? 4 : 2) + (yearMatch ? 1 : 0) });
+  }
+  scored.sort((a, b) => b.score - a.score);
+  return scored.length ? { tmdbId: scored[0].tmdbId, poster: scored[0].poster } : null;
+}
+__name(searchTmdbMovie, "searchTmdbMovie");
 var import_depth_limit = __toESM(require_dist(), 1);
 var import_graphql48 = __toESM(require_graphql2(), 1);
 function countRootFields(selections, fragments, visiting = /* @__PURE__ */ new Set()) {
@@ -33387,13 +33364,11 @@ var operationLimitsPlugin = {
     addValidationRule(operationBudgetRule);
   }
 };
-
-// worker/graphql.js
 var yogaCache = /* @__PURE__ */ new Map();
 var typeDefs = (
   /* GraphQL */
   `
-  type User { id: ID!, username: String!, displayName: String!, avatar: String!, theme: String!, isFollowing: Boolean! }
+  type User { id: ID!, username: String!, displayName: String!, avatar: String!, theme: String!, isFollowing: Boolean!, letterboxdUsername: String!, lastImportAt: String, lastImportError: String }
   type Movie { id: ID!, title: String!, year: Int, director: String!, poster: String!, tmdbId: Int, mediaType: String! }
   type MovieSearchPage { items: [Movie!]!, page: Int!, totalPages: Int!, totalResults: Int! }
   type WatchlistItem { movie: Movie!, addedAt: String! }
@@ -33413,6 +33388,12 @@ var typeDefs = (
     likeCount: Int!
     viewerLiked: Boolean!
   }
+  type Comment {
+    id: ID!
+    user: User!
+    body: String!
+    createdAt: String!
+  }
   type ExportImportFile { path: String!, declaredCount: Int!, uploadedCount: Int! }
   type ExportCategoryCount { category: String!, count: Int! }
   type ExportImportJob {
@@ -33420,6 +33401,12 @@ var typeDefs = (
     createdAt: String!, completedAt: String, error: String, files: [ExportImportFile!]!, categories: [ExportCategoryCount!]!
   }
   type ExportImportStatus { current: ExportImportJob, active: ExportImportJob, appDailyWriteCeiling: Int!, budgetNotice: String!, cleanupRemaining: Int! }
+  type LetterboxdImportResult {
+    username: String!, imported: Int!, skipped: Int!, errors: [String!]!, lastImportAt: String, lastImportError: String
+  }
+  type ImportMergeResult {
+    jobId: ID!, reviewsImported: Int!, watchlistImported: Int!, skipped: Int!, errors: [String!]!, budgetPaused: Boolean!
+  }
   type LibraryEntry {
     fingerprint: ID!, category: String!, file: String!, title: String, year: Int, letterboxdUri: String,
     date: String, rating: Float, rewatch: Boolean, tags: String, text: String, listName: String, position: Int, rawJson: String!
@@ -33460,11 +33447,13 @@ var typeDefs = (
   input UpdateProfileInput { displayName: String!, username: String! }
   type Query {
     me: User
+    review(id: ID!): Review
     reviews(limit: Int = 200): [Review!]!
     friends: [User!]!
     followers: [User!]!
     searchUsers(query: String!, limit: Int = 10): [User!]!
     friendActivity(limit: Int = 20): [Review!]!
+    comments(reviewId: ID!): [Comment!]!
     searchMovies(query: String!, page: Int = 1, limit: Int = 20): MovieSearchPage!
     trendingMovies(limit: Int = 8): [Movie!]!
     watchlist(limit: Int = 100, offset: Int = 0): [WatchlistItem!]!
@@ -33476,6 +33465,8 @@ var typeDefs = (
     updateReview(id: ID!, input: UpdateReviewInput!): Review!
     deleteReview(id: ID!): Boolean!
     setReviewLiked(id: ID!, liked: Boolean!): Review!
+    addComment(reviewId: ID!, body: String!): Comment!
+    deleteComment(id: ID!): Boolean!
     addToWatchlist(input: WatchlistMovieInput!): WatchlistItem!
     removeFromWatchlist(movieId: ID!): Boolean!
     updateAvatar(avatar: String!): User!
@@ -33488,6 +33479,8 @@ var typeDefs = (
     finalizeExportImport(jobId: ID!): ExportImportJob!
     cleanupExportImports: ExportImportStatus!
     cancelExportImport(jobId: ID!): ExportImportStatus!
+    importLetterboxd(username: String!): LetterboxdImportResult!
+    mergeExportImport(jobId: ID!): ImportMergeResult!
   }
 `
 );
@@ -33546,6 +33539,7 @@ __name(createReview, "createReview");
 var resolvers = {
   Query: {
     me: /* @__PURE__ */ __name((_, __, context) => mapUser(context.currentUser), "me"),
+    review: /* @__PURE__ */ __name((_, { id }, context) => getReview(context.env.DB, id, context.currentUser?.id), "review"),
     reviews: /* @__PURE__ */ __name((_, { limit }, context) => {
       const user = requireUser(context);
       return listReviews(context.env.DB, user.id, boundedLimit(limit, 200));
@@ -33559,6 +33553,12 @@ var resolvers = {
       return searchUsers(context.env.DB, user.id, clean, boundedLimit(limit, 20));
     }, "searchUsers"),
     friendActivity: /* @__PURE__ */ __name((_, { limit }, context) => listFriendActivity(context.env.DB, requireUser(context).id, boundedLimit(limit)), "friendActivity"),
+    comments: /* @__PURE__ */ __name(async (_, { reviewId }, context) => {
+      requireUser(context);
+      validateId(reviewId, "review");
+      if (!await getReview(context.env.DB, reviewId, context.currentUser.id)) throw new Error("Review not found");
+      return listComments(context.env.DB, reviewId);
+    }, "comments"),
     searchMovies: /* @__PURE__ */ __name((_, { query, page, limit }, context) => {
       requireUser(context);
       return searchMovies(context.env, query, boundedLimit(limit, 20), { page });
@@ -33595,6 +33595,17 @@ var resolvers = {
       validateId(id, "review");
       return setReviewLike(context.env.DB, user.id, id, liked);
     }, "setReviewLiked"),
+    addComment: /* @__PURE__ */ __name(async (_, { reviewId, body }, context) => {
+      const user = requireUser(context);
+      validateId(reviewId, "review");
+      return addComment(context.env.DB, user.id, reviewId, body);
+    }, "addComment"),
+    deleteComment: /* @__PURE__ */ __name(async (_, { id }, context) => {
+      const user = requireUser(context);
+      validateId(id);
+      if (!await deleteComment(context.env.DB, user.id, id)) throw new Error("Comment not found");
+      return true;
+    }, "deleteComment"),
     addToWatchlist: /* @__PURE__ */ __name(async (_, { input }, context) => {
       const user = requireUser(context);
       const movie = await resolveMovie(context.env, input);
@@ -33642,7 +33653,9 @@ var resolvers = {
     uploadExportChunk: /* @__PURE__ */ __name((_, { input }, context) => uploadExportChunk(context.env.DB, requireUser(context).id, input), "uploadExportChunk"),
     finalizeExportImport: /* @__PURE__ */ __name((_, { jobId }, context) => finalizeExportImport(context.env.DB, requireUser(context).id, jobId), "finalizeExportImport"),
     cleanupExportImports: /* @__PURE__ */ __name((_, __, context) => cleanupExportImports(context.env.DB, requireUser(context).id), "cleanupExportImports"),
-    cancelExportImport: /* @__PURE__ */ __name((_, { jobId }, context) => cancelExportImport(context.env.DB, requireUser(context).id, jobId), "cancelExportImport")
+    cancelExportImport: /* @__PURE__ */ __name((_, { jobId }, context) => cancelExportImport(context.env.DB, requireUser(context).id, jobId), "cancelExportImport"),
+    importLetterboxd: /* @__PURE__ */ __name((_, { username }, context) => importLetterboxdRss(context.env.DB, requireUser(context).id, username, context.env), "importLetterboxd"),
+    mergeExportImport: /* @__PURE__ */ __name((_, { jobId }, context) => mergeExportImport(context.env.DB, requireUser(context).id, jobId), "mergeExportImport")
   }
 };
 function createGraphQL(env) {
@@ -33661,8 +33674,6 @@ function getGraphQL(env) {
   return yogaCache.get(mode);
 }
 __name(getGraphQL, "getGraphQL");
-
-// worker/index.js
 var MAX_BODY_BYTES = 256 * 1024;
 var RATE_WINDOW_MS = 6e4;
 var RATE_MAX = 120;
@@ -33742,6 +33753,38 @@ async function boundedRequest(request) {
   return new Request(request, { body });
 }
 __name(boundedRequest, "boundedRequest");
+const AUTH_POSTER_FALLBACKS = ["https://image.tmdb.org/t/p/original/oYuLEt3zVCKq57qu2F8dT7NIa6f.jpg", "https://image.tmdb.org/t/p/original/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg", "https://image.tmdb.org/t/p/original/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg"];
+function randomAuthPosterFallback() {
+  return AUTH_POSTER_FALLBACKS[Math.floor(Math.random() * AUTH_POSTER_FALLBACKS.length)];
+}
+__name(randomAuthPosterFallback, "randomAuthPosterFallback");
+async function handleAuthPoster(request, env) {
+  try {
+    const mediaType = Math.random() < 0.5 ? "movie" : "tv";
+    const url = new URL(`https://api.themoviedb.org/3/discover/${mediaType}`);
+    url.searchParams.set("sort_by", "popularity.desc");
+    url.searchParams.set("page", String(Math.floor(Math.random() * 25) + 1));
+    url.searchParams.set("include_adult", "false");
+    url.searchParams.set("include_video", "false");
+    url.searchParams.set("with_origin_country", "US");
+    if (mediaType === "movie") url.searchParams.set("primary_release_date.gte", "1980-01-01");
+    else url.searchParams.set("first_air_date.gte", "1980-01-01");
+    const headers = { accept: "application/json" };
+    if (env.TMDB_API_READ_TOKEN) headers.authorization = `Bearer ${env.TMDB_API_READ_TOKEN}`;
+    else if (env.TMDB_API_KEY) url.searchParams.set("api_key", env.TMDB_API_KEY);
+    else return withNoStore(Response.redirect(randomAuthPosterFallback(), 302));
+    const response = await fetch(url, { headers, signal: AbortSignal.timeout(7e3) });
+    if (!response.ok) return withNoStore(Response.redirect(randomAuthPosterFallback(), 302));
+    const data = await response.json();
+    const results = Array.isArray(data.results) ? data.results.filter((item) => item && item.poster_path) : [];
+    const pick = results.length ? results[Math.floor(Math.random() * results.length)] : null;
+    const poster = pick ? `https://image.tmdb.org/t/p/original${pick.poster_path}` : randomAuthPosterFallback();
+    return withNoStore(Response.redirect(poster, 302));
+  } catch {
+    return withNoStore(Response.redirect(randomAuthPosterFallback(), 302));
+  }
+}
+__name(handleAuthPoster, "handleAuthPoster");
 async function handleFetch(request, env) {
   const url = new URL(request.url);
   if (env.ENVIRONMENT === "production" && url.hostname === "www.bettrboxd.com") {
@@ -33749,6 +33792,9 @@ async function handleFetch(request, env) {
     return Response.redirect(url, 308);
   }
   const isAuth = ["/auth/signup", "/auth/login", "/auth/logout"].includes(url.pathname);
+  if (url.pathname === "/auth/google" || url.pathname === "/auth/google/callback") {
+    return handleGoogleAuthRequest(request, env);
+  }
   if (isAuth) {
     if (url.pathname !== "/auth/logout" && await throttled(request, env, "AUTH_RATE_LIMITER")) return withNoStore(Response.json({ error: "Too many requests" }, { status: 429, headers: { "retry-after": "60" } }));
     if (url.pathname === "/auth/login" && await loginIdentifierThrottled(request, env)) return withNoStore(Response.json({ error: "Too many requests" }, { status: 429, headers: { "retry-after": "60" } }));
@@ -33767,6 +33813,7 @@ async function handleFetch(request, env) {
       return withCors(Response.json({ ok: false, database: "disconnected" }, { status: 503 }), request, env);
     }
   }
+  if (url.pathname === "/auth-poster") return handleAuthPoster(request, env);
   if (url.pathname !== "/graphql") return env.ASSETS ? env.ASSETS.fetch(request) : new Response("Not found", { status: 404 });
   if (await throttled(request, env, "API_RATE_LIMITER")) return withCors(Response.json({ errors: [{ message: "Too many requests" }] }, { status: 429, headers: { "retry-after": "60" } }), request, env);
   const safeRequest = await boundedRequest(request);
@@ -33795,4 +33842,3 @@ export {
   index_default as default,
   handleFetch
 };
-//# sourceMappingURL=index.js.map
