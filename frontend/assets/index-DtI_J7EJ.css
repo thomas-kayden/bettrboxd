@@ -2093,3 +2093,18 @@ body:has(main.auth-gate) .mobile-nav-dock,
 body:has(main.auth-gate) .mobile-primary-nav{
   display:none!important;
 }
+
+/* bettrboxd-fix: the React dock must be mobile-only. Force-hide on desktop and
+   re-enable only within the mobile breakpoint (later than earlier display rules). */
+.mobile-react-nav-overlay,
+[data-theme=light] .mobile-react-nav-overlay,[data-mode=light] .mobile-react-nav-overlay,
+[data-theme=dark] .mobile-react-nav-overlay,[data-mode=dark] .mobile-react-nav-overlay{
+  display:none!important;
+}
+@media (width<=760px){
+  .mobile-react-nav-overlay,
+  [data-theme=light] .mobile-react-nav-overlay,[data-mode=light] .mobile-react-nav-overlay,
+  [data-theme=dark] .mobile-react-nav-overlay,[data-mode=dark] .mobile-react-nav-overlay{
+    display:flex!important;
+  }
+}
