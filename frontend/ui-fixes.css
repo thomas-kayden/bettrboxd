@@ -1,0 +1,361 @@
+/* Keep the comment composer reachable when a review has more content than the modal. */
+.review-dialog .dialog-body {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Keep the existing share choices in the page instead of using an anchored OS popover. */
+.animated-share {
+  overflow: visible !important;
+}
+
+.animated-share.is-open {
+  position: relative;
+}
+
+.animated-share.is-open .animated-share-actions {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 20;
+}
+
+.dialog-actions .animated-share.is-open .animated-share-actions {
+  top: calc(100% + 8px);
+  right: 0;
+}
+
+.dialog-comments .comments-list {
+  max-height: none;
+  overflow: visible;
+}
+
+/* Friend and review cards clip their posters; let an open share menu escape below them. */
+.review-poster-wrap:has(.animated-share.is-open) {
+  overflow: visible;
+  z-index: 30;
+}
+
+.poster-action-stack:has(.animated-share.is-open) {
+  z-index: 31;
+}
+
+/* Give the review copy priority and fill the poster column without letterboxing. */
+.review-dialog {
+  width: min(1180px, 100%);
+  height: min(680px, 100dvh - 48px);
+  grid-template-columns: minmax(360px, 34%) 1fr;
+}
+
+.review-dialog > img {
+  object-fit: cover;
+}
+
+.review-dialog .dialog-body {
+  padding: 38px 42px 34px;
+}
+
+@media (width <= 480px) {
+  .review-dialog {
+    width: 100%;
+    height: min(560px, 100dvh - 24px);
+    grid-template-columns: 1fr;
+  }
+
+  .review-dialog .dialog-body {
+    padding: 16px 20px 22px;
+  }
+}
+
+/* Make the auth loading state feel like part of Bettrboxd instead of a blank page. */
+.auth-gate:has(.auth-loading-card) {
+  min-height: 100dvh;
+  background:
+    radial-gradient(circle at 50% 35%, rgb(255 255 255 / 85%), transparent 38%),
+    linear-gradient(145deg, #f4f1eb 0%, #e8eef0 100%);
+}
+
+.auth-loading-card {
+  width: min(380px, calc(100% - 40px));
+  padding: 48px 36px 42px;
+  border: 1px solid rgb(23 34 41 / 10%);
+  border-radius: 24px;
+  background: rgb(255 255 255 / 78%);
+  box-shadow: 0 24px 70px rgb(23 34 41 / 12%);
+  backdrop-filter: blur(18px);
+}
+
+.auth-loading-card .logo-mark {
+  display: flex;
+  flex: 0 0 76px;
+  width: 76px;
+  height: 28px;
+  margin-bottom: 28px;
+}
+
+.auth-loading-card .logo-mark i {
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  margin-right: -5px;
+}
+
+.auth-loading-card h1 {
+  color: #172229;
+  letter-spacing: -0.04em;
+  font-size: 28px;
+}
+
+.auth-loading-card p {
+  color: #667781;
+  margin-top: 10px;
+}
+
+[data-theme="dark"] .auth-gate:has(.auth-loading-card) {
+  background:
+    radial-gradient(circle at 50% 35%, rgb(51 69 79 / 70%), transparent 42%),
+    linear-gradient(145deg, #141b1f 0%, #0d1215 100%);
+}
+
+[data-theme="dark"] .auth-loading-card {
+  border-color: rgb(255 255 255 / 12%);
+  background: rgb(24 34 41 / 88%);
+  box-shadow: 0 24px 70px rgb(0 0 0 / 32%);
+}
+
+[data-theme="dark"] .auth-loading-card h1 {
+  color: #f4f1eb;
+}
+
+/* Branded recovery state when the account request fails. */
+.auth-gate:has(.auth-error) {
+  min-height: 100dvh;
+  background:
+    radial-gradient(circle at 50% 28%, rgb(255 255 255 / 88%), transparent 40%),
+    linear-gradient(145deg, #f4f1eb 0%, #e8eef0 100%);
+}
+
+.auth-gate:has(.auth-error) .auth-gate-card {
+  width: min(420px, calc(100% - 40px));
+  padding: 42px 36px 36px;
+  border: 1px solid rgb(23 34 41 / 10%);
+  border-radius: 24px;
+  background: rgb(255 255 255 / 82%);
+  box-shadow: 0 24px 70px rgb(23 34 41 / 14%);
+  text-align: center;
+  backdrop-filter: blur(18px);
+}
+
+.auth-gate:has(.auth-error) .auth-gate-card .logo-mark {
+  margin: 0 auto 24px;
+}
+
+.auth-gate:has(.auth-error) .auth-gate-card h1 {
+  color: #172229;
+  letter-spacing: -0.04em;
+  font-size: 28px;
+}
+
+.auth-gate:has(.auth-error) .auth-gate-card > p {
+  color: #667781;
+  margin: 10px 0 22px;
+}
+
+.auth-gate:has(.auth-error) .auth-gate-card button {
+  width: auto;
+  min-width: 132px;
+  height: 40px;
+  min-height: 40px;
+  margin: 0 auto;
+  padding: 0 22px;
+  border-radius: 10px;
+}
+
+[data-theme="dark"] .auth-gate:has(.auth-error) {
+  background:
+    radial-gradient(circle at 50% 28%, rgb(51 69 79 / 70%), transparent 42%),
+    linear-gradient(145deg, #141b1f 0%, #0d1215 100%);
+}
+
+[data-theme="dark"] .auth-gate:has(.auth-error) .auth-gate-card {
+  border-color: rgb(255 255 255 / 12%);
+  background: rgb(24 34 41 / 90%);
+  box-shadow: 0 24px 70px rgb(0 0 0 / 32%);
+}
+
+[data-theme="dark"] .auth-gate:has(.auth-error) .auth-gate-card h1 {
+  color: #f4f1eb;
+}
+
+/* Use a compact Kumo-link treatment instead of a large secondary button. */
+.see-all-reviews {
+  min-width: 0;
+  min-height: 0;
+  padding: 8px 0;
+  border: 0;
+  border-radius: 0;
+  color: var(--color-kumo-brand, #1683d8);
+  background: transparent;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-decoration: none;
+}
+
+.see-all-reviews:hover,
+.see-all-reviews:focus-visible {
+  border: 0;
+  color: var(--color-kumo-brand, #0b6db7);
+  background: transparent;
+  text-decoration: underline;
+}
+
+.see-all-reviews svg {
+  width: 15px;
+  height: 15px;
+}
+
+/* Kumo-link placement: the action belongs below the section, not beside the cards. */
+.cards .see-all-reviews {
+  grid-column: 1 / span 4;
+  justify-self: end;
+  place-self: end;
+  margin-top: -22px;
+  gap: 4px;
+  padding: 0;
+  line-height: 1.35;
+  color: #1683d8 !important;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: currentColor;
+  text-decoration: none !important;
+  border-bottom: 0;
+}
+
+.cards .see-all-reviews svg {
+  display: none;
+}
+
+.cards .see-all-reviews:hover,
+.cards .see-all-reviews:focus-visible {
+  color: #064b86 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+}
+
+/* Comments read as a dedicated conversation panel while the modal keeps one scrollbar. */
+.review-dialog .dialog-comments {
+  margin-top: 30px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.review-dialog .dialog-comments-heading {
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-kumo-line, #d5d2ca);
+}
+
+.review-dialog .comments-empty {
+  display: none;
+}
+
+/* Do not expose transient comment-fetch failures in the review surface. */
+.review-dialog .comments-error {
+  display: none;
+}
+
+.username-only-hidden {
+  display: none !important;
+}
+
+.review-dialog .comment-form {
+  position: static;
+  align-items: flex-start;
+  margin: 14px 0 0;
+  padding: 0 0 8px;
+  border-top: 0;
+  background: transparent;
+}
+
+.review-dialog .comment-input {
+  min-height: 42px;
+  max-height: 130px;
+}
+
+.review-dialog .comment-form-actions {
+  gap: 12px;
+}
+
+.review-dialog .comment-count-hint {
+  white-space: nowrap;
+}
+
+[data-theme="dark"] .review-dialog .dialog-comments {
+  background: transparent;
+}
+
+[data-theme="dark"] .review-dialog .comment-form {
+  background: transparent;
+}
+
+.share-fix-panel {
+  position: fixed;
+  z-index: 1000;
+  max-height: min(420px, calc(100dvh - 24px));
+  padding: 14px;
+  overflow: auto;
+  color: #172229;
+  border: 1px solid #d5d2ca;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 18px 50px rgb(23 34 41 / 22%);
+}
+
+.share-fix-preview {
+  max-height: 260px;
+  margin: 0;
+  overflow: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font: 13px/1.5 Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.share-fix-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.share-fix-actions button {
+  flex: 1;
+  padding: 8px 10px;
+  color: #1683d8;
+  border: 1px solid #d5d2ca;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+  font: 500 12px Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.share-fix-actions button:hover {
+  color: #064b86;
+  background: transparent;
+}
+
+[data-theme="dark"] .share-fix-panel {
+  color: #f4f1eb;
+  border-color: #39434a;
+  background: #182229;
+}
+
+@media (max-width: 900px) {
+  .cards .see-all-reviews {
+    grid-column: 1 / -1;
+  }
+}

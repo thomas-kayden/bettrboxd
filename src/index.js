@@ -32499,8 +32499,13 @@ function mapComment(row) {
 }
 __name(mapComment, "mapComment");
 async function listComments(db, reviewId) {
-  const result = await db.prepare(`${COMMENT_SELECT} WHERE c.review_id = ? ORDER BY c.created_at ASC, c.id ASC LIMIT 100`).bind(reviewId).all();
-  return result.results.map(mapComment);
+  try {
+    const result = await db.prepare(`${COMMENT_SELECT} WHERE c.review_id = ? ORDER BY c.created_at ASC, c.id ASC LIMIT 100`).bind(reviewId).all();
+    return result.results.map(mapComment);
+  } catch (error) {
+    if (/no such table.*review_comments/i.test(error?.message || "")) return [];
+    throw error;
+  }
 }
 __name(listComments, "listComments");
 async function addComment(db, userId, reviewId, body) {
@@ -33785,6 +33790,22 @@ async function handleAuthPoster(request, env) {
   }
 }
 __name(handleAuthPoster, "handleAuthPoster");
+async function handleSharePoster(request) {
+  const source = new URL(request.url).searchParams.get("url") || "";
+  if (!source.startsWith("https://image.tmdb.org/t/p/")) return new Response("Not found", { status: 404 });
+  try {
+    const response = await fetch(source, { signal: AbortSignal.timeout(7e3) });
+    if (!response.ok) return new Response("Not found", { status: 404 });
+    const headers = new Headers({
+      "cache-control": "public, max-age=86400",
+      "content-type": response.headers.get("content-type") || "image/jpeg"
+    });
+    return new Response(response.body, { headers });
+  } catch {
+    return new Response("Not found", { status: 404 });
+  }
+}
+__name(handleSharePoster, "handleSharePoster");
 async function handleFetch(request, env) {
   const url = new URL(request.url);
   if (env.ENVIRONMENT === "production" && url.hostname === "www.bettrboxd.com") {
@@ -33814,6 +33835,7 @@ async function handleFetch(request, env) {
     }
   }
   if (url.pathname === "/auth-poster") return handleAuthPoster(request, env);
+  if (url.pathname === "/share-poster") return handleSharePoster(request);
   if (url.pathname !== "/graphql") return env.ASSETS ? env.ASSETS.fetch(request) : new Response("Not found", { status: 404 });
   if (await throttled(request, env, "API_RATE_LIMITER")) return withCors(Response.json({ errors: [{ message: "Too many requests" }] }, { status: 429, headers: { "retry-after": "60" } }), request, env);
   const safeRequest = await boundedRequest(request);
