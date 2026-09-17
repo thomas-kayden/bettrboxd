@@ -37,8 +37,27 @@
       });
   }
 
-  var observer = new MutationObserver(reorderFriendsTabs);
+  function simplifyFriendSearch() {
+    var input = document.querySelector(".friends-find.add-page-search input");
+    if (!input) return;
+    input.placeholder = "Search by username";
+    input.setAttribute("aria-label", "Search by username");
+  }
+
+  function normalizeFriendUsernames() {
+    document.querySelectorAll(".friends-person-card b, .friends-find-row b").forEach(function (name) {
+      if (!name.textContent.trim().startsWith("@")) name.textContent = "@" + name.textContent.trim();
+    });
+  }
+
+  var observer = new MutationObserver(function () {
+    reorderFriendsTabs();
+    simplifyFriendSearch();
+    normalizeFriendUsernames();
+  });
   observer.observe(document.documentElement, { childList: true, subtree: true });
   reorderFriendsTabs();
+  simplifyFriendSearch();
+  normalizeFriendUsernames();
   window.setInterval(reorderFriendsTabs, 250);
 })();

@@ -1,5 +1,10 @@
 (function () {
+  var syncing = false;
+
   function simplifyIdentity() {
+    document.querySelectorAll(".username-only-hidden").forEach(function (field) {
+      if (!field.querySelector('input[name="displayName"]')) field.classList.remove("username-only-hidden");
+    });
     var displayName = document.querySelector('input[name="displayName"]');
     var username = document.querySelector('input[name="username"]');
     if (!displayName || !username) return;
@@ -19,16 +24,20 @@
 
     if (!username.dataset.identitySyncBound) {
       username.dataset.identitySyncBound = "true";
-      username.addEventListener("input", sync);
-      username.addEventListener("change", sync);
+      username.addEventListener("input", function () { window.setTimeout(sync, 0); });
+      username.addEventListener("change", function () { window.setTimeout(sync, 0); });
     }
-    sync();
+    if (document.activeElement !== username) sync();
 
     function sync() {
+      if (syncing) return;
       var value = username.value.replace(/^@/, "");
+      if (displayName.value === value) return;
       var setter = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, "value")?.set;
+      syncing = true;
       setter?.call(displayName, value);
       displayName.dispatchEvent(new Event("input", { bubbles: true }));
+      window.queueMicrotask(function () { syncing = false; });
     }
   }
 
@@ -42,8 +51,4 @@
   observer.observe(document.documentElement, { childList: true, subtree: true });
   simplifyIdentity();
   simplifyHomeHeading();
-  window.setInterval(function () {
-    simplifyIdentity();
-    simplifyHomeHeading();
-  }, 500);
 })();

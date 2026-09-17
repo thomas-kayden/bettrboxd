@@ -21037,9 +21037,8 @@ __name(cleanName, "cleanName");
 function accessProfile(claims) {
   const email = typeof claims.email === "string" ? claims.email.trim() : "";
   const emailName = email.includes("@") ? email.split("@")[0] : "";
-  const displayName = cleanName(claims.name || claims.given_name || emailName, "Member");
-  const usernameBase = (emailName || displayName).normalize("NFKD").replace(/[^A-Za-z0-9._-]+/g, "").slice(0, 60) || "member";
-  return { displayName, usernameBase: usernameBase.length >= 2 ? usernameBase : `user${usernameBase}` };
+  const usernameBase = (emailName || "member").normalize("NFKD").replace(/[^A-Za-z0-9._-]+/g, "").slice(0, 60) || "member";
+  return { usernameBase: usernameBase.length >= 2 ? usernameBase : `user${usernameBase}` };
 }
 __name(accessProfile, "accessProfile");
 async function identitySuffix(issuer, subject) {
@@ -21054,7 +21053,7 @@ async function provisionAccessUser(env, claims) {
   if (existing) return existing;
   const configured = await linkConfiguredAccessUser(env, issuer, subject);
   if (configured) return configured;
-  const { displayName, usernameBase } = accessProfile(claims);
+  const { usernameBase } = accessProfile(claims);
   const suffix = await identitySuffix(issuer, subject);
   for (let attempt = 0; attempt < 3; attempt += 1) {
     const username = attempt === 0 ? usernameBase : `${usernameBase.slice(0, 68)}-${suffix}${attempt === 2 ? "2" : ""}`;
@@ -21062,7 +21061,7 @@ async function provisionAccessUser(env, claims) {
     const now = (/* @__PURE__ */ new Date()).toISOString();
     try {
       await env.DB.batch([
-        env.DB.prepare(`INSERT INTO users (id, username, display_name, avatar, theme, created_at, updated_at) VALUES (?, ?, ?, '', 'light', ?, ?)`).bind(id, username, displayName, now, now),
+        env.DB.prepare(`INSERT INTO users (id, username, display_name, avatar, theme, created_at, updated_at) VALUES (?, ?, ?, '', 'light', ?, ?)`).bind(id, username, username, now, now),
         env.DB.prepare("INSERT INTO access_identities (issuer, subject, user_id, created_at) VALUES (?, ?, ?, ?)").bind(issuer, subject, id, now)
       ]);
       return findAccessUser(env, issuer, subject);
@@ -21229,11 +21228,9 @@ function validateAvatarDataUrl(value) {
 }
 __name(validateAvatarDataUrl, "validateAvatarDataUrl");
 function validateProfileInput(input) {
-  const displayName = typeof input?.displayName === "string" ? input.displayName.normalize("NFKC").replace(/[\p{Cc}\p{Cf}]/gu, " ").replace(/\s+/g, " ").trim() : "";
   const username = typeof input?.username === "string" ? input.username.trim() : "";
-  if (!displayName || displayName.length > 120) throw new Error("Display name must be between 1 and 120 characters");
   if (!/^[A-Za-z0-9._-]{2,80}$/.test(username)) throw new Error("Username must be 2 to 80 letters, numbers, dots, dashes, or underscores");
-  return { displayName, username };
+  return { displayName: username, username };
 }
 __name(validateProfileInput, "validateProfileInput");
 function boundedLimit(limit, maximum = 50) {
@@ -21335,7 +21332,7 @@ function publicUser(user) {
   return {
     id: user.id,
     username: user.username,
-    displayName: user.display_name,
+    displayName: user.username,
     avatar: user.avatar || "",
     theme: user.theme || "light"
   };
@@ -21371,7 +21368,7 @@ async function signup(request, env) {
       env.DB.prepare(`
         INSERT INTO users (id, username, display_name, avatar, theme, created_at, updated_at)
         VALUES (?, ?, ?, '', 'light', ?, ?)
-      `).bind(id, input.username, input.displayName, now, now),
+      `).bind(id, input.username, input.username, now, now),
       env.DB.prepare(`
         INSERT INTO native_credentials (user_id, email, password_salt, password_hash, password_iterations, created_at, updated_at)
         VALUES (?, ?, ?, ?, ?, ?, ?)
@@ -21587,7 +21584,7 @@ async function googleLinkOrCreate(env, profile) {
     return existing.id;
   }
   const username = await googleUniqueUsername(env, googleUsernameBase(profile.email || ""));
-  const displayName = (profile.name || profile.given_name || username).slice(0, 120);
+  const displayName = username;
   const avatar = typeof profile.picture === "string" ? profile.picture : "";
   const id = crypto.randomUUID();
   const now = (/* @__PURE__ */ new Date()).toISOString();
@@ -32298,7 +32295,7 @@ function mapUser(row) {
   return {
     id: row.user_id ?? row.id,
     username: row.username,
-    displayName: row.display_name,
+     displayName: row.username,
     avatar: row.avatar || "",
     theme: row.theme || "light",
     isFollowing: Boolean(row.is_following),
@@ -33806,6 +33803,46 @@ async function handleSharePoster(request) {
   }
 }
 __name(handleSharePoster, "handleSharePoster");
+function escapeHtml(value) {
+  return String(value || "").replace(/[&<>"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[character]);
+}
+__name(escapeHtml, "escapeHtml");
+async function handleReviewSharePage(request, env) {
+  const reviewId = new URL(request.url).searchParams.get("review") || "";
+  if (!/^[0-9a-f-]{36}$/i.test(reviewId)) return env.ASSETS.fetch(request);
+  const review = await env.DB.prepare(`
+    SELECT r.rating, r.text, u.username, u.display_name, m.title, m.poster, m.year
+    FROM reviews r
+    JOIN users u ON u.id = r.user_id
+    JOIN movies m ON m.id = r.movie_id
+    WHERE r.id = ?
+  `).bind(reviewId).first();
+  if (!review) return env.ASSETS.fetch(request);
+  const asset = await env.ASSETS.fetch(request);
+  const html = await asset.text();
+  const title = `${review.username}'s review of ${review.title}`;
+  const description = `${review.rating}/5${review.text ? ` - ${review.text}` : ""}`.slice(0, 300);
+  const canonical = new URL(request.url).toString();
+  const logo = `${new URL(request.url).origin}/share-logo.svg`;
+  const metadata = `
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="${escapeHtml(title)}">
+    <meta property="og:description" content="${escapeHtml(description)}">
+    <meta property="og:url" content="${escapeHtml(canonical)}">
+    <meta property="og:image" content="${escapeHtml(logo)}">
+    <meta property="og:image:alt" content="Bettrboxd">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="${escapeHtml(title)}">
+    <meta name="twitter:description" content="${escapeHtml(description)}">
+    <meta name="twitter:image" content="${escapeHtml(logo)}">
+  `;
+  const body = html.replace("</head>", `${metadata}</head>`).replace(/<title>[^<]*<\/title>/, `<title>${escapeHtml(title)} | Bettrboxd</title>`);
+  const headers = new Headers(asset.headers);
+  headers.set("content-type", "text/html; charset=utf-8");
+  headers.set("cache-control", "public, max-age=300");
+  return new Response(body, { status: asset.status, headers });
+}
+__name(handleReviewSharePage, "handleReviewSharePage");
 async function handleFetch(request, env) {
   const url = new URL(request.url);
   if (env.ENVIRONMENT === "production" && url.hostname === "www.bettrboxd.com") {
@@ -33836,6 +33873,7 @@ async function handleFetch(request, env) {
   }
   if (url.pathname === "/auth-poster") return handleAuthPoster(request, env);
   if (url.pathname === "/share-poster") return handleSharePoster(request);
+  if (request.method === "GET" && url.pathname === "/" && url.searchParams.has("review")) return handleReviewSharePage(request, env);
   if (url.pathname !== "/graphql") return env.ASSETS ? env.ASSETS.fetch(request) : new Response("Not found", { status: 404 });
   if (await throttled(request, env, "API_RATE_LIMITER")) return withCors(Response.json({ errors: [{ message: "Too many requests" }] }, { status: 429, headers: { "retry-after": "60" } }), request, env);
   const safeRequest = await boundedRequest(request);

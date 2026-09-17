@@ -49,10 +49,40 @@
 
 .review-dialog > img {
   object-fit: cover;
+  object-position: center;
+  background: #080a0b;
 }
 
 .review-dialog .dialog-body {
   padding: 38px 42px 34px;
+}
+
+@media (min-width: 761px) {
+  .review-dialog,
+  .review-dialog:has(.edit-review-form) {
+    box-sizing: border-box;
+    width: min(1180px, calc(100vw - 64px));
+    height: 680px !important;
+    min-height: 0;
+    max-height: calc(100dvh - 48px);
+    grid-template-columns: minmax(360px, 34%) minmax(0, 1fr) !important;
+    grid-template-rows: minmax(0, 1fr);
+    transition: none !important;
+  }
+
+  .review-dialog .dialog-body,
+  .review-dialog:has(.edit-review-form) .dialog-body {
+    min-height: 0;
+    overflow-y: auto;
+  }
+
+  .review-dialog > img,
+  .review-dialog > .dialog-poster-placeholder {
+    height: 100% !important;
+    min-height: 0;
+    object-fit: cover !important;
+    background: #080a0b !important;
+  }
 }
 
 @media (width <= 480px) {
@@ -187,6 +217,22 @@
   color: #f4f1eb;
 }
 
+@media (max-width: 640px) {
+  /* Prevent mobile Safari from zooming when the search field receives focus. */
+  .search-field input {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  /* The modal owns the screen while a review is open. */
+  body:has(.review-overlay) .mobile-nav-dock-overlay,
+  body:has(.review-overlay) .mobile-nav-dock,
+  body:has(.review-overlay) #mobile-react-nav-root {
+    display: none !important;
+  }
+}
+
 /* Use a compact Kumo-link treatment instead of a large secondary button. */
 .see-all-reviews {
   min-width: 0;
@@ -272,6 +318,72 @@
 
 .username-only-hidden {
   display: none !important;
+}
+
+/* Use one calm, regular title treatment across every review surface. */
+.cards .card-body > h3,
+.filmography-list .card-body > h3,
+.friends-review-grid .card-body > h3,
+.watchlist-grid .card-body > h3,
+.home-trending-row > button b {
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+}
+
+.cards .card-body > .meta,
+.filmography-list .card-body > .meta,
+.friends-review-grid .card-body > .meta,
+.watchlist-grid .card-body > .meta,
+.home-trending-row > button small {
+  font-weight: 400 !important;
+  margin-top: 3px;
+  font-size: 12px !important;
+}
+
+/* Username is the sole identity label; do not repeat it as a second @ line. */
+.friends-person-card small,
+.friends-find-row small {
+  display: none !important;
+}
+
+/* Desktop composer: give the selected film a visual anchor on the left. */
+@media (min-width: 761px) {
+  .writer,
+  .review-box.is-writing .writer {
+    display: grid !important;
+    grid-template-columns: minmax(220px, 32%) minmax(0, 1fr) !important;
+    grid-template-rows: 1fr !important;
+  }
+
+  .writer-poster,
+  .writer-poster-placeholder,
+  .review-box.is-writing .writer-poster,
+  .review-box.is-writing .writer-poster-placeholder {
+    display: flex !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  .writer-poster,
+  .review-box.is-writing .writer-poster {
+    display: block !important;
+  }
+
+  .writer > .writer-poster,
+  .writer > .writer-poster-placeholder {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+  }
+
+  .writer > .writer-body {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    min-width: 0;
+  }
 }
 
 .review-dialog .comment-form {

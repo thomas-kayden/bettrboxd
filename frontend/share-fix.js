@@ -1,13 +1,12 @@
 (function () {
   var reviewIndex = [];
-
   function loadReviewIndex() {
     fetch("/graphql", {
       method: "POST",
       credentials: "same-origin",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
-        query: "query ShareReviews { reviews { id title year text rating user { username displayName } movie { poster } } friendActivity(limit: 200) { id title year text rating user { username displayName } movie { poster } } }",
+        query: "query ShareReviews { reviews { id text rating user { username displayName } movie { title year poster } } friendActivity(limit: 200) { id text rating user { username displayName } movie { title year poster } } }",
       }),
     })
       .then(function (response) { return response.ok ? response.json() : null; })
@@ -43,7 +42,7 @@
     var cleanReview = normalize(review);
     var cleanUsername = normalize(username);
     var candidates = reviewIndex.filter(function (item) {
-      var itemTitle = normalize(item.title);
+      var itemTitle = normalize(item.movie?.title);
       var itemUsername = normalize(item.user?.username || item.user?.displayName);
       var itemDisplayName = normalize(item.user?.displayName);
       return itemTitle === cleanTitle &&
@@ -87,9 +86,6 @@
     document.body.append(anchor);
     anchor.focus({ preventScroll: true });
     var shareData = { text: text };
-    if (matchedReview.posterFile && navigator.canShare?.({ files: [matchedReview.posterFile] })) {
-      shareData.files = [matchedReview.posterFile];
-    }
     navigator.share(shareData).catch(function (error) {
       if (error?.name !== "AbortError") console.error("Failed to share review:", error);
     }).finally(function () { anchor.remove(); });
