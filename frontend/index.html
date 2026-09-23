@@ -4,7 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f4f1eb" />
-    <meta name="description" content="Bettrboxd: a focused place for your films and reviews." />
+    <meta name="description" content="Bettrboxd" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Bettrboxd" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/bettrboxd-180.png" />
     <script>
       try {
         const theme = localStorage.getItem("bettrboxd-theme") === "dark" ? "dark" : "light";
@@ -13,7 +19,7 @@
         document.querySelector('meta[name="theme-color"]').content = theme === "light" ? "#f4f1eb" : "#14181c";
       } catch {}
     </script>
-    <title>Bettrboxd | Your films, your words</title>
+    <title>Bettrboxd</title>
     <script>
       (function () {
         var NativeMutationObserver = window.MutationObserver;
@@ -33,12 +39,15 @@
     <script type="module" crossorigin src="/assets/index-D7aCFurX.js?v=phosphor-nav-3"></script>
     <script defer src="/assets/mobile-navigation.js?v=react-phosphor-22"></script>
     <script defer src="/share-fix.js?v=native-share-text-restore-2"></script>
-    <script defer src="/friends-order.js?v=username-at-1"></script>
+    <script defer src="/friends-order.js?v=username-at-2"></script>
     <script defer src="/empty-state-fix.js?v=empty-states-1"></script>
+    <script defer src="/section-actions.js?v=see-all-card-count-1"></script>
+    <script defer src="/search-copy.js?v=film-search-copy-2"></script>
     <script defer src="/watchlist-fix.js?v=watchlist-years-1"></script>
+    <script defer src="/pwa.js?v=pwa-1"></script>
     <script defer src="/username-only.js?v=username-only-7"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-DtI_J7EJ.css?v=react-phosphor-39">
-    <link rel="stylesheet" href="/ui-fixes.css?v=stable-modal-final-1">
+    <link rel="stylesheet" href="/ui-fixes.css?v=mobile-search-unified-1">
   </head>
   <body>
     <div id="root"></div>

@@ -1,0 +1,14 @@
+{
+  "name": "Bettrboxd",
+  "short_name": "Bettrboxd",
+  "description": "Bettrboxd",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f4f1eb",
+  "theme_color": "#f4f1eb",
+  "icons": [
+    { "src": "/icons/bettrboxd-180.png", "sizes": "180x180", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/bettrboxd-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
