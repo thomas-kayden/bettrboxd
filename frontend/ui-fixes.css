@@ -219,7 +219,83 @@
 
 @media (max-width: 640px) {
   /* Prevent mobile Safari from zooming when the search field receives focus. */
+  .intro,
+  .search-state,
+  .search-field {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
   .search-field input {
+    width: 100%;
+    min-width: 0;
+    font-size: 16px !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 1100px) {
+  .review-add-intro,
+  .add-page-search,
+  .watchlist-add-search,
+  .friends-find.add-page-search {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .add-page-search .search-field,
+  .watchlist-add-search .search-field,
+  .friends-find.add-page-search .search-field {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .add-page-search .search-field input,
+  .watchlist-add-search .search-field input,
+  .friends-find.add-page-search .search-field input {
+    flex: 1 1 auto;
+    width: 100%;
+    min-width: 0;
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .intro .search-field,
+  .review-add-page .search-field,
+  .watchlist-add-search .search-field,
+  .friends-find.add-page-search .search-field {
+    box-sizing: border-box;
+    width: calc(100% - 32px);
+    max-width: 760px;
+    height: 62px;
+    min-height: 62px;
+    margin-inline: auto;
+    padding: 0 18px;
+    border-radius: 999px;
+  }
+
+  .intro .search-field:focus-within,
+  .review-add-page .search-field:focus-within,
+  .watchlist-add-search .search-field:focus-within,
+  .friends-find.add-page-search .search-field:focus-within {
+    border-color: var(--letterboxd-green) !important;
+    transform: none;
+    box-shadow: 0 0 0 3px rgb(0 224 84 / 14%);
+  }
+
+  .intro .search-field input,
+  .review-add-page .search-field input,
+  .watchlist-add-search .search-field input,
+  .friends-find.add-page-search .search-field input {
     font-size: 16px !important;
   }
 }
@@ -233,6 +309,23 @@
   }
 }
 
+/* Tablets, including iPad Pro landscape, use the focused single-column auth layout. */
+@media (min-width: 761px) and (max-width: 1100px) {
+  .auth-gate {
+    grid-template-columns: 1fr !important;
+    padding: 24px;
+  }
+
+  .auth-poster-wall {
+    display: none !important;
+  }
+
+  .auth-gate-card {
+    width: min(460px, calc(100vw - 48px));
+    margin: auto;
+  }
+}
+
 /* Use a compact Kumo-link treatment instead of a large secondary button. */
 .see-all-reviews {
   min-width: 0;
@@ -241,7 +334,7 @@
   border: 0;
   border-radius: 0;
   color: var(--color-kumo-brand, #1683d8);
-  background: transparent;
+  background: transparent !important;
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 0;
@@ -277,6 +370,20 @@
   text-decoration-color: currentColor;
   text-decoration: none !important;
   border-bottom: 0;
+}
+
+@media (max-width: 1100px) {
+  .cards,
+  .filmography-list,
+  .home-trending-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 28px 16px;
+  }
+
+  .cards .see-all-reviews {
+    grid-column: 1 / -1;
+    margin-top: 0;
+  }
 }
 
 .cards .see-all-reviews svg {
@@ -317,6 +424,11 @@
 }
 
 .username-only-hidden {
+  display: none !important;
+}
+
+/* Usernames are the only identity label in profile settings. */
+.settings-identity > span > b {
   display: none !important;
 }
 

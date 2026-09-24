@@ -32891,6 +32891,10 @@ async function importLetterboxdRss(db, userId, username, env) {
   const settled = await Promise.allSettled([fetch(`${base}/rss/`), fetch(`${base}/rss/reviews/`)]);
   const ok = settled.filter((result) => result.status === "fulfilled" && result.value.ok);
   if (ok.length === 0) throw new Error("Could not reach the Letterboxd feed. Check the username and that the account is public.");
+  const previousProfile = await db.prepare("SELECT letterboxd_username FROM users WHERE id = ?").bind(userId).first();
+  if (previousProfile?.letterboxd_username && previousProfile.letterboxd_username.toLocaleLowerCase() !== clean.toLocaleLowerCase()) {
+    await db.prepare("DELETE FROM reviews WHERE user_id = ? AND source = 'letterboxd'").bind(userId).run();
+  }
   const seen = /* @__PURE__ */ new Set();
   const entries = [];
   for (const result of ok) {
