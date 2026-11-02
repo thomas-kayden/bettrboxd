@@ -1,6 +1,6 @@
 # Bettrboxd
 
-Your films, your words. Live at https://bettrboxd.com
+A modern social alternative to Letterboxd with cleaner, more intuitive UI/UX for tracking and reviewing films, connecting with friends, and commenting on reviews. Live at https://bettrboxd.com
 
 A Cloudflare Workers app: GraphQL API + auth served from a Worker bundle, backed by D1, with a Vite-built static frontend served via Workers Assets.
 
