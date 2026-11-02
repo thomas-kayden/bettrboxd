@@ -1,5 +1,7 @@
 # Bettrboxd
 
+<img width="1512" height="907" alt="bettrboxd cover image" src="https://github.com/user-attachments/assets/5de48f9a-3b92-455c-a960-db6436554cc5" />
+
 A modern social alternative to Letterboxd with cleaner, more intuitive UI/UX for tracking and reviewing films, connecting with friends, and commenting on reviews. Live at https://bettrboxd.com
 
 A Cloudflare Workers app: GraphQL API + auth served from a Worker bundle, backed by D1, with a Vite-built static frontend served via Workers Assets.
